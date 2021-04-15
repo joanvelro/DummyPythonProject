@@ -31,7 +31,7 @@ def set_up_logger(path):
         return logger
 
 
-def load_data(path):
+def load_data(path, logger):
     """ Load input data
     :param path: path of the csv file to upload
     :return df: dataframe with the data
@@ -42,11 +42,11 @@ def load_data(path):
         return df
     except Exception as exception_msg:
         df = []
-        print('(!) Error in load_data: ' + str(exception_msg))
+        logger.error('(!) Error in load_data: ' + str(exception_msg))
         return df
 
 
-def check_nan(dataframe):
+def check_nan(dataframe, logger):
     """ Check if the input dataframe contains NaN values and fill with 0
     :param dataframe: Data Frame if input data
     :return df0: output dataframe with 0 values in NaN values
@@ -59,11 +59,11 @@ def check_nan(dataframe):
                     df0[col].fillna(value=0, inplace=True)
         return df0
     except Exception as exception_msg:
-        print('(!) Error in check_nan: ' + str(exception_msg))
+        logger.error('(!) Error in check_nan: ' + str(exception_msg))
         return df0
 
 
-def get_frequencies(df, column):
+def get_frequencies(df, column, logger):
     """ Obtain some distribution of frequency to known how is distributed the incidences
     :param df: Data frame
     :param column: Column to obtain the distribution of frequency of occurrence
@@ -83,6 +83,27 @@ def get_frequencies(df, column):
         return df_aux
 
     except Exception as exception_msg:
-        print('(!) Error in get_frequencies: ' + str(exception_msg))
+        logger.error('(!) Error in get_frequencies: ' + str(exception_msg))
         df_aux = []
         return df_aux
+
+
+def plot_barplot(df, var_x, var_y, path, logger):
+    """ Plot a barplot to compare the incidence of crimes according to characteristics
+    :param df: Dataframe to plot
+    :param var_x: x-axis variable
+    :param var_y: y-axis variable
+    :param path: path where it is saved plot in png format
+    """
+    import matplotlib.pyplot
+
+    try:
+        matplotlib.pyplot.bar(x=df[var_x].values,
+                              height=df[var_y].values)
+        matplotlib.pyplot.grid()
+        matplotlib.pyplot.show()
+        matplotlib.pyplot.savefig(path)
+        matplotlib.pyplot.close()
+    except Exception as exception_msg:
+        logger.error('(!) Error in plot_barplot:{} when: {} '.format(str(exception_msg), var_x))
+
