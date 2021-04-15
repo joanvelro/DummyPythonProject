@@ -16,57 +16,45 @@ import configparser
 import module
 
 
-# Load configuration info
-config_object = configparser.ConfigParser()
-config_object.read('config.ini')
-data_path = config_object._sections['paths']['data_path']
-logs_path = config_object._sections['paths']['logs_path']
+def main_data_analysis():
+    """ Main program of Data Analysis
 
-# Initialize logs
-logger = module.set_up_logger(path=logs_path)
-logger.info('Initialize logger')
+    """
+    # Load configuration info
+    config_object = configparser.ConfigParser()
+    config_object.read('config.ini')
+    data_path = config_object._sections['paths']['data_path']
+    logs_path = config_object._sections['paths']['logs_path']
 
-# Load data
-logger.info('Load data')
-df = module.load_data(path=data_path)
-df.reset_index(inplace=True)
+    # Initialize logs
+    logger = module.set_up_logger(path=logs_path)
+    logger.info('Initialize logger')
 
-# Obtain some distribution of frequency to known how is distributed the incidences
-# Get distribution of frequency of OFFENSE_CODE
-df_aux1 = df.groupby(['OFFENSE_CODE'])['index'].count().reset_index() \
-    .sort_values(by=['index'], ascending=False) \
-    .reset_index(drop=True).rename(columns={'index': 'COUNT_CRIMES'})
+    # Load data
+    logger.info('Load data')
+    df = module.load_data(path=data_path)
+    df.reset_index(inplace=True)
 
-# Get distribution of frequency of OFFENSE_CODE
-df_aux2 = df.groupby(['OFFENSE_CODE_GROUP'])['index'].count().reset_index() \
-    .sort_values(by=['index'], ascending=False) \
-    .reset_index(drop=True).rename(columns={'index': 'COUNT_CRIMES'})
+    # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
+    df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
 
-# Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
-df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
+    # Check that the dataframe do not contains NaN values
+    logger.info('Check NaN values')
+    df = module.check_nan(dataframe=df)
 
-# Get distribution of frequency of OFFENSE_CODE
-df_aux3 = df.groupby(['REPORTING_AREA'])['index'].count().reset_index() \
-    .sort_values(by=['index'], ascending=False) \
-    .reset_index(drop=True).rename(columns={'index': 'COUNT_CRIMES'})
+    # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
+    # Add results to the logging file
+    logger.info('Obtain distribution of frequency of crimes occurence')
+    df_freq_var1 = module.get_frequencies(df, 'OFFENSE_CODE')
+    logger.info('OFFENSE_CODE')
+    for obs in range(0, 3):
+        logger.info(df_freq_var1.loc[obs]['FREQ_CRIMES_PERCENTAGE'])
+    df_freq_var2 = module.get_frequencies(df, 'OFFENSE_CODE_GROUP')
+    df_freq_var3 = module.get_frequencies(df, 'REPORTING_AREA')
+    df_freq_var4 = module.get_frequencies(df, 'DAY_OF_WEEK')
+    df_freq_var5 = module.get_frequencies(df, 'MONTH')
+    df_freq_var6 = module.get_frequencies(df, 'UCR_PART')
 
-# Get distribution of frequency in TIME
-df_aux4 = df.groupby(['YEAR', 'MONTH', 'DAY_OF_WEEK', 'HOUR'])['index'].count() \
-    .reset_index().rename(columns={'index': 'COUNT_CRIMES'}).sort_values(by=['COUNT_CRIMES'], ascending=False)
 
-# Get distribution of frequency in DAY_OF_WEEK
-df_aux5 = df.groupby(['DAY_OF_WEEK'])['index'].count() \
-    .reset_index().rename(columns={'index': 'COUNT_CRIMES'}) \
-    .sort_values(by=['COUNT_CRIMES'], ascending=False)
-
-# Get distribution of frequency in MONTH
-df_aux6 = df.groupby(['MONTH'])['index'].count() \
-    .reset_index().rename(columns={'index': 'COUNT_CRIMES'}) \
-    .sort_values(by=['COUNT_CRIMES'], ascending=False)
-# Get frequency in percentage
-df_aux6['FREQ_CRIMES_PERC'] = 100 * df_aux6['COUNT_CRIMES'] / df.shape[0]
-
-# Get distribution of frequency in UCR_PART
-df_aux7 = df.groupby(['UCR_PART'])['index'].count() \
-    .reset_index().rename(columns={'index': 'COUNT_CRIMES'}) \
-    .sort_values(by=['COUNT_CRIMES'], ascending=False)
+#if __name__ == "__main__":
+#    main_data_analysis()

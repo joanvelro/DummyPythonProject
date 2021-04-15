@@ -4,3 +4,33 @@
 2021-04-15 12:06:57,548 - logs\\log_file_data_analyis - INFO - Load data
 2021-04-15 12:12:53,563 - logs\\log_file_data_analyis - INFO - Initialize logger
 2021-04-15 12:12:53,563 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:25:52,359 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:25:52,359 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:26:27,363 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:26:27,363 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:44:56,016 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:44:56,016 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:47:58,007 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:47:58,007 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:49:46,245 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:49:46,245 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:50:12,169 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:50:12,170 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:56:59,022 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 12:56:59,022 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 12:56:59,439 - logs\\log_file_data_analyis - INFO -    OFFENSE_CODE  COUNT_CRIMES  FREQ_CRIMES_PERCENTAGE
+0          3115         12424                  6.2120
+1          3006         11772                  5.8860
+2          3831         10289                  5.1445
+3          1402          9726                  4.8630
+4           802          9103                  4.5515
+2021-04-15 13:03:57,694 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 13:03:57,695 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 13:03:58,017 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 13:03:58,130 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 13:03:58,138 - logs\\log_file_data_analyis - INFO -    OFFENSE_CODE  COUNT_CRIMES  FREQ_CRIMES_PERCENTAGE
+0          3115         12424                  6.2120
+1          3006         11772                  5.8860
+2          3831         10289                  5.1445
+3          1402          9726                  4.8630
+4           802          9103                  4.5515
