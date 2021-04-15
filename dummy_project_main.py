@@ -1,5 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+.. module:: main
+   :synopsis: Exploratory Data Analysis of the data set that contains the crimes in the city
+    Data path and other configuration settings are indicated in config.ini
+
+.. moduleauthor:: Jose Angel Velasco
+
+
+"""
 """ Exploratory Data Analysis of the data set that contains the crimes in the city
     Data path and other configuration settings are indicated in config.ini
 
@@ -17,7 +26,11 @@ import dummy_project_utils
 
 
 def main():
-    """ Main program of Crime Data Analysis
+    """
+        **Main program of Crime Data Analysis**
+
+        This function execute a descriptive analysis of the crimes data set and provides insight about
+        and it can support de decision process related to surveillance schedule
     """
     # Load configuration info
     config_object = configparser.ConfigParser()

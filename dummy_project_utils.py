@@ -1,5 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+.. module:: utils
+   :synopsis: This script define the different functions to be used in the project
+
+.. moduleauthor:: Jose Angel Velasco
+
+
+"""
+
 """ This script define the different functions to be used in the project
 
     (C) Tessella Spain by Capgemini Engineering - 2021
@@ -10,10 +19,16 @@ FONTSIZE = 12
 
 
 def set_up_logger(path):
-    """ Set up logger to capture logs
-    :param path: path where to store logs example: 'logs\\log_file_name'
-    :return logger: logger
-    :param logger: logger to record exception
+    """
+        **Set up logger**
+
+        Configure the logger to record all the envents in the execution of the code
+
+        :param path: path where to store logs example: 'logs\\log_file_name'
+        :type path: str
+        :param logger: logger to record exception
+        :return: logger logger
+
     """
     import logging
     try:
@@ -34,10 +49,16 @@ def set_up_logger(path):
 
 
 def load_data(path, logger):
-    """ Load input data
-    :param path: path of the csv file to upload
-    :return df: dataframe with the data
-    :param logger: logger to record exception
+    """
+        **Load input data**
+
+        Load the crimes input data
+
+        :param path: path of the csv file to upload
+        :type path: str
+        :param logger: logger to record exception
+        :return: dataframe with the data
+
     """
     import pandas
     try:
@@ -50,10 +71,14 @@ def load_data(path, logger):
 
 
 def check_nan(dataframe, logger):
-    """ Check if the input dataframe contains NaN values and fill with 0
-    :param dataframe: Data Frame if input data
-    :return df0: output dataframe with 0 values in NaN values
-    :param logger: logger to record exception
+    """
+        **Check NaNs**
+
+        Check if the input dataframe contains NaN values and fill with 0
+
+        :param dataframe: Data Frame if input data
+        :param logger: logger to record exception
+        :return: output dataframe with 0 values in NaN values
     """
     df0 = dataframe.copy()
     try:
@@ -68,10 +93,15 @@ def check_nan(dataframe, logger):
 
 
 def get_frequencies(df, column, logger):
-    """ Obtain some distribution of frequency to known how is distributed the incidences
-    :param df: Data frame
-    :param column: Column to obtain the distribution of frequency of occurrence
-    :param logger: logger to record exception
+    """
+        **Get frequencies**
+
+        Obtain some distribution of frequency to known how is distributed the incidences
+
+        :param df: Data frame
+        :param column: Column to obtain the distribution of frequency of occurrence
+        :param logger: logger to record exception
+        :return: dataframe with the crimes frequencies
     """
 
     try:
@@ -94,12 +124,17 @@ def get_frequencies(df, column, logger):
 
 
 def plot_barplot(df, var_x, var_y, path, logger):
-    """ Plot a barplot to compare the incidence of crimes according to characteristics
-    :param df: Dataframe to plot
-    :param var_x: x-axis variable
-    :param var_y: y-axis variable
-    :param path: path where it is saved plot in png format
-    :param logger: logger to record exception
+    """
+
+        **Plot Barplot**
+
+        Plot a barplot to compare the incidence of crimes according to characteristics
+
+        :param df: Dataframe to plot
+        :param var_x: x-axis variable
+        :param var_y: y-axis variable
+        :param path: path where it is saved plot in png format
+        :param logger: logger to record exception
     """
     import matplotlib.pyplot
 
@@ -122,12 +157,17 @@ def plot_barplot(df, var_x, var_y, path, logger):
 
 
 def plot_scatterplot(df, var_x, var_y, scale, path, logger):
-    """ Plot a scatter plot with the coordinates of the crimes
-    :param df: Dataframe to plot
-    :param var_x: x-axis variable
-    :param var_y: y-axis variable
-    :param scale: scale of the point
-    :param path: path where it is saved plot in png format
+    """
+
+        **Plot scatter**
+
+        plot with the coordinates of the crimes
+
+        :param df: Dataframe to plot
+        :param var_x: x-axis variable
+        :param var_y: y-axis variable
+        :param scale: scale of the point
+        :param path: path where it is saved plot in png format
     """
     import matplotlib.pyplot
 

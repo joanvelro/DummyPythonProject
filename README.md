@@ -8,17 +8,19 @@
 │
 ├── README.md                            # This file
 │
-├── figures                              # Results , figures, etc       
+│
+├── figures                              # output results and figures      
 ├── docs                                 # Auto-generated documentation        
 ├── data                                 # data folder
-│       └── crimes_dataset.csv           # crimes data set 
-├── logs                                 # logs 
-│    └── log_file_name.log
+│    └── crimes_dataset.csv              # input crimes data set 
+├── logs                                 # logs folder 
+│ 
+│                              
 ├── dummy_project_main.py                # main script
 ├── dummy_project_utils.py               # auxiliar functions
-├── config.ini                           # paths and other settings
+├── config.ini                           # general settings
 ├── requirements.txt                     # dependencies
-├── Dockerfile                           # To reproduce the environment 
+├── Dockerfile                           # Dockerfile 
 └── 
 ```
 

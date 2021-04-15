@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dummy_project_main &#8212; Crimes Dummy Project v.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for dummy_project_main</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module:: main</span>
+<span class="sd">   :synopsis: Exploratory Data Analysis of the data set that contains the crimes in the city</span>
+<span class="sd">    Data path and other configuration settings are indicated in config.ini</span>
+
+<span class="sd">.. moduleauthor:: Jose Angel Velasco</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot; Exploratory Data Analysis of the data set that contains the crimes in the city</span>
+<span class="sd">    Data path and other configuration settings are indicated in config.ini</span>
+
+<span class="sd">    (C) Tessella Spain by Capgemini Engineering - 2021</span>
+<span class="sd">    joseangel.velascorodriguez@altran.com</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># Import dependencies</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">configparser</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
+
+<span class="c1"># Import custom libraries</span>
+<span class="kn">import</span> <span class="nn">dummy_project_utils</span>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../index.html#dummy_project_main.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        **Main program of Crime Data Analysis**</span>
+
+<span class="sd">        This function execute a descriptive analysis of the crimes data set and provides insight about</span>
+<span class="sd">        and it can support de decision process related to surveillance schedule</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Load configuration info</span>
+    <span class="n">config_object</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+    <span class="n">config_object</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;data_path&#39;</span><span class="p">]</span>
+    <span class="n">logs_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;logs_path&#39;</span><span class="p">]</span>
+    <span class="n">figures_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;figures_path&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Initialize logs</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">set_up_logger</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">logs_path</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize logger&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Load data</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Load data&#39;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Exist registers in REPORTING AREA column without an acceptable value, change for &quot;unknown&quot;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="s1">&#39;unknown&#39;</span>
+
+    <span class="c1"># Check that the dataframe do not contains NaN values</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Check NaN values&#39;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">check_nan</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+    <span class="c1"># Extract X and Y coordinates</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="c1"># Filter by the crimes that have a valid location</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)]</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+
+    <span class="c1"># Determine frequency of crimes per location</span>
+    <span class="n">df_freq_loc_crimes</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">get_frequencies</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+                                                             <span class="n">column</span><span class="o">=</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span>
+                                                             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+    <span class="c1"># Extract X and Y coordinates</span>
+    <span class="n">df_freq_loc_crimes</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_freq_loc_crimes</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">df_freq_loc_crimes</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_freq_loc_crimes</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+
+    <span class="c1"># Plot scatterplot of crimes</span>
+    <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">plot_scatterplot</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df_freq_loc_crimes</span><span class="p">,</span>
+                                         <span class="n">var_x</span><span class="o">=</span><span class="s1">&#39;Location_X&#39;</span><span class="p">,</span>
+                                         <span class="n">var_y</span><span class="o">=</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">,</span>
+                                         <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;FREQ_CRIMES_PERCENTAGE&#39;</span><span class="p">,</span>
+                                         <span class="n">path</span><span class="o">=</span><span class="n">figures_path</span> <span class="o">+</span> <span class="s1">&#39;crimes_map.png&#39;</span><span class="p">,</span>
+                                         <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+    <span class="c1"># Obtain some distribution of frequency of occurrence to known how is distributed the crimes</span>
+    <span class="c1"># Add results to the logging file</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Obtain distribution of frequency of crimes occurence&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Define relevant columns</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">,</span> <span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">,</span> <span class="s1">&#39;HOUR&#39;</span><span class="p">,</span> <span class="s1">&#39;MONTH&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Iter per columns ang ger the distribution of crimes ocurrence</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
+
+        <span class="c1"># Get crimes frequencies</span>
+        <span class="n">df_freq</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">get_frequencies</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+                                                      <span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span>
+                                                      <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+        <span class="c1"># Plot crimes frequencies</span>
+        <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">plot_barplot</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df_freq</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">],</span>
+                                         <span class="n">var_x</span><span class="o">=</span><span class="n">column</span><span class="p">,</span>
+                                         <span class="n">var_y</span><span class="o">=</span><span class="s1">&#39;FREQ_CRIMES_PERCENTAGE&#39;</span><span class="p">,</span>
+                                         <span class="n">path</span><span class="o">=</span><span class="n">figures_path</span> <span class="o">+</span> <span class="s1">&#39;crimes_distribution_per_</span><span class="si">{}</span><span class="s1">.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">column</span><span class="p">),</span>
+                                         <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+        <span class="c1"># report the first 5 values in the log</span>
+        <span class="k">for</span> <span class="n">obs</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;column value:</span><span class="si">{}</span><span class="s1"> frequency of crimes:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df_freq</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">obs</span><span class="p">][</span><span class="n">column</span><span class="p">],</span>
+                                                                        <span class="n">df_freq</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">obs</span><span class="p">][</span><span class="s1">&#39;FREQ_CRIMES_PERCENTAGE&#39;</span><span class="p">]))</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Crimes Dummy Project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;(C), Tessella Spain by Capgemini Engineering - 2021.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
