@@ -1,0 +1,178 @@
+2021-04-15 16:50:46,166 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:50:46,166 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:50:46,483 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:50:46,590 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 16:50:46,590 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - column value:3115.0 frequency of crimes:6.212
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - column value:3006.0 frequency of crimes:5.886
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - column value:3831.0 frequency of crimes:5.1445
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - column value:1402.0 frequency of crimes:4.863
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - column value:802.0 frequency of crimes:4.5515
+2021-04-15 16:50:55,806 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE_GROUP
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - column value:Motor Vehicle Accident Response frequency of crimes:11.7915
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - column value:Larceny frequency of crimes:7.8545
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - column value:Medical Assistance frequency of crimes:7.3975
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - column value:Investigate Person frequency of crimes:6.2105
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:5.4305
+2021-04-15 16:50:56,938 - logs\\log_file_data_analyis - INFO - REPORTING_AREA
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - column value:unknown frequency of crimes:6.971
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - column value:111 frequency of crimes:0.6835
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - column value:117 frequency of crimes:0.5935
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - column value:186 frequency of crimes:0.5885
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - column value:329 frequency of crimes:0.572
+2021-04-15 16:51:00,622 - logs\\log_file_data_analyis - INFO - DAY_OF_WEEK
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - column value:Friday frequency of crimes:15.261
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - column value:Wednesday frequency of crimes:14.6085
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - column value:Thursday frequency of crimes:14.596
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - column value:Tuesday frequency of crimes:14.4605
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - column value:Monday frequency of crimes:14.174
+2021-04-15 16:51:01,453 - logs\\log_file_data_analyis - INFO - MONTH
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - column value:8.0 frequency of crimes:9.072
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - column value:7.0 frequency of crimes:8.847
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - column value:6.0 frequency of crimes:8.7715
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - column value:9.0 frequency of crimes:8.731
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - column value:10.0 frequency of crimes:8.7145
+2021-04-15 16:51:02,309 - logs\\log_file_data_analyis - INFO - UCR_PART
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - ERROR - (!) Error in plot_barplot:'value' must be an instance of str or bytes, not a int when: UCR_PART 
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - INFO - column value:Part Three frequency of crimes:50.6455
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - INFO - column value:Part Two frequency of crimes:30.146
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - INFO - column value:Part One frequency of crimes:18.769
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:0.403
+2021-04-15 16:51:02,339 - logs\\log_file_data_analyis - INFO - column value:0 frequency of crimes:0.0365
+2021-04-15 16:51:40,004 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:51:40,004 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:51:40,321 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:51:40,430 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 16:51:40,430 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE
+2021-04-15 16:51:40,791 - logs\\log_file_data_analyis - INFO - column value:3115.0 frequency of crimes:6.212
+2021-04-15 16:51:40,791 - logs\\log_file_data_analyis - INFO - column value:3006.0 frequency of crimes:5.886
+2021-04-15 16:51:40,792 - logs\\log_file_data_analyis - INFO - column value:3831.0 frequency of crimes:5.1445
+2021-04-15 16:51:40,792 - logs\\log_file_data_analyis - INFO - column value:1402.0 frequency of crimes:4.863
+2021-04-15 16:51:40,793 - logs\\log_file_data_analyis - INFO - column value:802.0 frequency of crimes:4.5515
+2021-04-15 16:51:40,793 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE_GROUP
+2021-04-15 16:51:41,401 - logs\\log_file_data_analyis - INFO - column value:Motor Vehicle Accident Response frequency of crimes:11.7915
+2021-04-15 16:51:41,402 - logs\\log_file_data_analyis - INFO - column value:Larceny frequency of crimes:7.8545
+2021-04-15 16:51:41,403 - logs\\log_file_data_analyis - INFO - column value:Medical Assistance frequency of crimes:7.3975
+2021-04-15 16:51:41,403 - logs\\log_file_data_analyis - INFO - column value:Investigate Person frequency of crimes:6.2105
+2021-04-15 16:51:41,404 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:5.4305
+2021-04-15 16:51:41,404 - logs\\log_file_data_analyis - INFO - REPORTING_AREA
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - column value:unknown frequency of crimes:6.971
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - column value:111 frequency of crimes:0.6835
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - column value:117 frequency of crimes:0.5935
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - column value:186 frequency of crimes:0.5885
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - column value:329 frequency of crimes:0.572
+2021-04-15 16:51:45,791 - logs\\log_file_data_analyis - INFO - DAY_OF_WEEK
+2021-04-15 16:51:45,923 - logs\\log_file_data_analyis - INFO - column value:Friday frequency of crimes:15.261
+2021-04-15 16:51:45,923 - logs\\log_file_data_analyis - INFO - column value:Wednesday frequency of crimes:14.6085
+2021-04-15 16:51:45,924 - logs\\log_file_data_analyis - INFO - column value:Thursday frequency of crimes:14.596
+2021-04-15 16:51:45,924 - logs\\log_file_data_analyis - INFO - column value:Tuesday frequency of crimes:14.4605
+2021-04-15 16:51:45,925 - logs\\log_file_data_analyis - INFO - column value:Monday frequency of crimes:14.174
+2021-04-15 16:51:45,925 - logs\\log_file_data_analyis - INFO - MONTH
+2021-04-15 16:51:46,043 - logs\\log_file_data_analyis - INFO - column value:8.0 frequency of crimes:9.072
+2021-04-15 16:51:46,044 - logs\\log_file_data_analyis - INFO - column value:7.0 frequency of crimes:8.847
+2021-04-15 16:51:46,044 - logs\\log_file_data_analyis - INFO - column value:6.0 frequency of crimes:8.7715
+2021-04-15 16:51:46,044 - logs\\log_file_data_analyis - INFO - column value:9.0 frequency of crimes:8.731
+2021-04-15 16:51:46,045 - logs\\log_file_data_analyis - INFO - column value:10.0 frequency of crimes:8.7145
+2021-04-15 16:51:46,045 - logs\\log_file_data_analyis - INFO - UCR_PART
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - ERROR - (!) Error in plot_barplot:'value' must be an instance of str or bytes, not a int when: UCR_PART 
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - INFO - column value:Part Three frequency of crimes:50.6455
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - INFO - column value:Part Two frequency of crimes:30.146
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - INFO - column value:Part One frequency of crimes:18.769
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:0.403
+2021-04-15 16:51:46,096 - logs\\log_file_data_analyis - INFO - column value:0 frequency of crimes:0.0365
+2021-04-15 16:52:36,828 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:52:36,828 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:52:37,135 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:52:37,236 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 16:52:37,236 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - column value:3115.0 frequency of crimes:6.212
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - column value:3006.0 frequency of crimes:5.886
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - column value:3831.0 frequency of crimes:5.1445
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - column value:1402.0 frequency of crimes:4.863
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - column value:802.0 frequency of crimes:4.5515
+2021-04-15 16:52:37,589 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE_GROUP
+2021-04-15 16:52:38,137 - logs\\log_file_data_analyis - INFO - column value:Motor Vehicle Accident Response frequency of crimes:11.7915
+2021-04-15 16:52:38,137 - logs\\log_file_data_analyis - INFO - column value:Larceny frequency of crimes:7.8545
+2021-04-15 16:52:38,137 - logs\\log_file_data_analyis - INFO - column value:Medical Assistance frequency of crimes:7.3975
+2021-04-15 16:52:38,137 - logs\\log_file_data_analyis - INFO - column value:Investigate Person frequency of crimes:6.2105
+2021-04-15 16:52:38,153 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:5.4305
+2021-04-15 16:52:38,153 - logs\\log_file_data_analyis - INFO - REPORTING_AREA
+2021-04-15 16:52:42,368 - logs\\log_file_data_analyis - INFO - column value:unknown frequency of crimes:6.971
+2021-04-15 16:52:42,368 - logs\\log_file_data_analyis - INFO - column value:111 frequency of crimes:0.6835
+2021-04-15 16:52:42,369 - logs\\log_file_data_analyis - INFO - column value:117 frequency of crimes:0.5935
+2021-04-15 16:52:42,369 - logs\\log_file_data_analyis - INFO - column value:186 frequency of crimes:0.5885
+2021-04-15 16:52:42,369 - logs\\log_file_data_analyis - INFO - column value:329 frequency of crimes:0.572
+2021-04-15 16:52:42,369 - logs\\log_file_data_analyis - INFO - DAY_OF_WEEK
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - column value:Friday frequency of crimes:15.261
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - column value:Wednesday frequency of crimes:14.6085
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - column value:Thursday frequency of crimes:14.596
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - column value:Tuesday frequency of crimes:14.4605
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - column value:Monday frequency of crimes:14.174
+2021-04-15 16:52:42,471 - logs\\log_file_data_analyis - INFO - MONTH
+2021-04-15 16:52:42,571 - logs\\log_file_data_analyis - INFO - column value:8.0 frequency of crimes:9.072
+2021-04-15 16:52:42,571 - logs\\log_file_data_analyis - INFO - column value:7.0 frequency of crimes:8.847
+2021-04-15 16:52:42,571 - logs\\log_file_data_analyis - INFO - column value:6.0 frequency of crimes:8.7715
+2021-04-15 16:52:42,571 - logs\\log_file_data_analyis - INFO - column value:9.0 frequency of crimes:8.731
+2021-04-15 16:52:42,571 - logs\\log_file_data_analyis - INFO - column value:10.0 frequency of crimes:8.7145
+2021-04-15 16:53:28,327 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:53:28,327 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:53:28,643 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:53:28,743 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 16:53:28,743 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE
+2021-04-15 16:53:28,927 - logs\\log_file_data_analyis - INFO - column value:3115.0 frequency of crimes:6.212
+2021-04-15 16:53:28,928 - logs\\log_file_data_analyis - INFO - column value:3006.0 frequency of crimes:5.886
+2021-04-15 16:53:28,929 - logs\\log_file_data_analyis - INFO - column value:3831.0 frequency of crimes:5.1445
+2021-04-15 16:53:28,929 - logs\\log_file_data_analyis - INFO - column value:1402.0 frequency of crimes:4.863
+2021-04-15 16:53:28,930 - logs\\log_file_data_analyis - INFO - column value:802.0 frequency of crimes:4.5515
+2021-04-15 16:53:28,930 - logs\\log_file_data_analyis - INFO - OFFENSE_CODE_GROUP
+2021-04-15 16:53:29,123 - logs\\log_file_data_analyis - INFO - column value:Motor Vehicle Accident Response frequency of crimes:11.7915
+2021-04-15 16:53:29,124 - logs\\log_file_data_analyis - INFO - column value:Larceny frequency of crimes:7.8545
+2021-04-15 16:53:29,125 - logs\\log_file_data_analyis - INFO - column value:Medical Assistance frequency of crimes:7.3975
+2021-04-15 16:53:29,126 - logs\\log_file_data_analyis - INFO - column value:Investigate Person frequency of crimes:6.2105
+2021-04-15 16:53:29,126 - logs\\log_file_data_analyis - INFO - column value:Other frequency of crimes:5.4305
+2021-04-15 16:53:29,126 - logs\\log_file_data_analyis - INFO - REPORTING_AREA
+2021-04-15 16:53:29,332 - logs\\log_file_data_analyis - INFO - column value:unknown frequency of crimes:6.971
+2021-04-15 16:53:29,332 - logs\\log_file_data_analyis - INFO - column value:111 frequency of crimes:0.6835
+2021-04-15 16:53:29,333 - logs\\log_file_data_analyis - INFO - column value:117 frequency of crimes:0.5935
+2021-04-15 16:53:29,333 - logs\\log_file_data_analyis - INFO - column value:186 frequency of crimes:0.5885
+2021-04-15 16:53:29,334 - logs\\log_file_data_analyis - INFO - column value:329 frequency of crimes:0.572
+2021-04-15 16:53:29,334 - logs\\log_file_data_analyis - INFO - DAY_OF_WEEK
+2021-04-15 16:53:29,499 - logs\\log_file_data_analyis - INFO - column value:Friday frequency of crimes:15.261
+2021-04-15 16:53:29,500 - logs\\log_file_data_analyis - INFO - column value:Wednesday frequency of crimes:14.6085
+2021-04-15 16:53:29,502 - logs\\log_file_data_analyis - INFO - column value:Thursday frequency of crimes:14.596
+2021-04-15 16:53:29,503 - logs\\log_file_data_analyis - INFO - column value:Tuesday frequency of crimes:14.4605
+2021-04-15 16:53:29,504 - logs\\log_file_data_analyis - INFO - column value:Monday frequency of crimes:14.174
+2021-04-15 16:53:29,504 - logs\\log_file_data_analyis - INFO - MONTH
+2021-04-15 16:53:29,622 - logs\\log_file_data_analyis - INFO - column value:8.0 frequency of crimes:9.072
+2021-04-15 16:53:29,622 - logs\\log_file_data_analyis - INFO - column value:7.0 frequency of crimes:8.847
+2021-04-15 16:53:29,623 - logs\\log_file_data_analyis - INFO - column value:6.0 frequency of crimes:8.7715
+2021-04-15 16:53:29,623 - logs\\log_file_data_analyis - INFO - column value:9.0 frequency of crimes:8.731
+2021-04-15 16:53:29,623 - logs\\log_file_data_analyis - INFO - column value:10.0 frequency of crimes:8.7145
+2021-04-15 16:57:32,804 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:57:32,804 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:57:33,147 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:57:33,265 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 16:58:01,521 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 16:58:01,521 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 16:58:01,837 - logs\\log_file_data_analyis - INFO - Check NaN values
+2021-04-15 16:58:01,984 - logs\\log_file_data_analyis - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-15 17:11:39,091 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:11:39,091 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:17:38,201 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:17:38,201 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:18:02,286 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:18:02,302 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:19:41,353 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:19:41,369 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:22:48,711 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:22:48,711 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:23:58,123 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:23:58,123 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:26:35,524 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:26:35,524 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:26:56,532 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:26:56,548 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:38:22,250 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:38:22,250 - logs\\log_file_data_analyis - INFO - Load data
+2021-04-15 17:39:03,661 - logs\\log_file_data_analyis - INFO - Initialize logger
+2021-04-15 17:39:03,661 - logs\\log_file_data_analyis - INFO - Load data

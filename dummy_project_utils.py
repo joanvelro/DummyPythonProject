@@ -105,5 +105,26 @@ def plot_barplot(df, var_x, var_y, path, logger):
         matplotlib.pyplot.savefig(path)
         matplotlib.pyplot.close()
     except Exception as exception_msg:
-        logger.error('(!) Error in plot_barplot:{} when: {} '.format(str(exception_msg), var_x))
+        logger.error('(!) Error in plot_barplot:{}'.format(str(exception_msg)))
 
+
+def plot_scatterplot(df, var_x, var_y, path, logger):
+    """ Plot a scatter plot with the coordinates of the crimes
+    :param df: Dataframe to plot
+    :param var_x: x-axis variable
+    :param var_y: y-axis variable
+    :param path: path where it is saved plot in png format
+    """
+    import matplotlib.pyplot
+
+    try:
+        matplotlib.pyplot.scatter(x=df[var_x],
+                                  y=df[var_y])
+        matplotlib.pyplot.grid()
+        matplotlib.pyplot.xlabel(var_x)
+        matplotlib.pyplot.xlabel(var_y)
+        matplotlib.pyplot.show()
+        matplotlib.pyplot.savefig(path)
+        matplotlib.pyplot.close()
+    except Exception as exception_msg:
+        logger.error('(!) Error in plot_scatterplot:{}'.format(str(exception_msg)))

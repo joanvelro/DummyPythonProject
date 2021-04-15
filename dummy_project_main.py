@@ -13,7 +13,7 @@ import configparser
 import matplotlib.pyplot
 
 # Import custom libraries
-from libs import module
+import dummy_project_utils
 
 
 def main():
@@ -27,46 +27,58 @@ def main():
     figures_path = config_object._sections['paths']['figures_path']
 
     # Initialize logs
-    logger = module.set_up_logger(path=logs_path)
+    logger = dummy_project_utils.set_up_logger(path=logs_path)
     logger.info('Initialize logger')
 
     # Load data
     logger.info('Load data')
-    df = module.load_data(path=data_path, logger=logger)
+    df = dummy_project_utils.load_data(path=data_path, logger=logger)
     df.reset_index(inplace=True)
 
     # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
     df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
 
-    # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
-    df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
+    # Extract X and Y coordinates
+    df['Location_X'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[0]))
+    df['Location_Y'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[1]))
+
+    # Filter by the crimes that have a valid location
+    df = df[(df['Location_X']!=0) & (df['Location_Y']!=0)]
+    df = df[(df['Location_X'] != -1) | (df['Location_Y'] != -1)]
+
+    # Plot scatterplot of crimes
+    dummy_project_utils.plot_scatterplot(df=df,
+                                         var_x='Location_X',
+                                         var_y='Location_Y',
+                                         path=figures_path + '\\scatter_plot_crimes.png',
+                                         logger=logger)
 
     # Check that the dataframe do not contains NaN values
     logger.info('Check NaN values')
-    df = module.check_nan(dataframe=df, logger=logger)
+    df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
 
     # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
     # Add results to the logging file
     logger.info('Obtain distribution of frequency of crimes occurence')
 
     # Define relevant columns
-    columns = ['OFFENSE_CODE', 'OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'MONTH', 'UCR_PART']
+    columns = ['OFFENSE_CODE', 'OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH', 'LOCATION']
 
     # Iter per columns ang ger the distribution of crimes ocurrence
     for column in columns:
         logger.info(column)
 
         # Get crimes frequencies
-        df_freq = module.get_frequencies(df=df,
-                                         column=column,
-                                         logger=logger)
+        df_freq = dummy_project_utils.get_frequencies(df=df,
+                                                      column=column,
+                                                      logger=logger)
 
         # Plot crimes frequencies
-        module.plot_barplot(df=df_freq,
-                            var_x=column,
-                            var_y='FREQ_CRIMES_PERCENTAGE',
-                            path=figures_path + '\\plot_{}.png'.format(column),
-                            logger=logger)
+        dummy_project_utils.plot_barplot(df=df_freq[0:20],
+                                         var_x=column,
+                                         var_y='FREQ_CRIMES_PERCENTAGE',
+                                         path=figures_path + '\\plot_{}.png'.format(column),
+                                         logger=logger)
 
         # report the first 5 values in the log
         for obs in range(0, 5):
