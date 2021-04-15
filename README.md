@@ -6,19 +6,19 @@
 
 ```
 │
-├── README.md                           # This file
+├── README.md                            # This file
 │
-├── figures                             # Results , figures, etc       
-├── docs                                # Auto-generated documentation        
-├── data                             # data 
-│       └── name_file.csv  #  data set 
+├── figures                              # Results , figures, etc       
+├── docs                                 # Auto-generated documentation        
+├── data                                 # data folder
+│       └── crimes_dataset.csv           # crimes data set 
 ├── logs                                 # logs 
 │    └── log_file_name.log
-├── dummy_project_main.py                  # main script
-├── dummy_project_utils.py                  # auxiliar functions
-├── config.ini                             # paths and other settings
-├── requirements.txt                       # dependencies
-├── Dockerfile                             # To reproduce the environment 
+├── dummy_project_main.py                # main script
+├── dummy_project_utils.py               # auxiliar functions
+├── config.ini                           # paths and other settings
+├── requirements.txt                     # dependencies
+├── Dockerfile                           # To reproduce the environment 
 └── 
 ```
 
