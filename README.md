@@ -8,16 +8,17 @@
 │
 ├── README.md                           # This file
 │
-│
+├── figures                             # Results , figures, etc       
 ├── docs                                # Auto-generated documentation        
 ├── data                             # data 
 │       └── name_file.csv  #  data set 
 ├── logs                                 # logs 
 │    └── log_file_name.log
-├── main.py                                # main script
-├── module.py                              # auxiliar functions
+├── dummy_project_main.py                  # main script
+├── dummy_project_utils.py                  # auxiliar functions
 ├── config.ini                             # paths and other settings
-├── requirements.txt                       # dependencies 
+├── requirements.txt                       # dependencies
+├── Dockerfile                             # To reproduce the environment 
 └── 
 ```
 
@@ -25,3 +26,6 @@
 ```
 RUN pip install requirements.txt
 ```
+
+
+(C) Tessella Spain by Capgemini Engineering - 2021 

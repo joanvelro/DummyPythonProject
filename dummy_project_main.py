@@ -3,7 +3,7 @@
 """ Exploratory Data Analysis of the data set that contains the crimes in the city
     Data path and other configuration settings are indicated in config.ini
 
-    (C) Tessella by Capgemini Engineering - 2021
+    (C) Tessella Spain by Capgemini Engineering - 2021
     joseangel.velascorodriguez@altran.com
 """
 # Import dependencies
@@ -38,31 +38,42 @@ def main():
     # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
     df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
 
+    # Check that the dataframe do not contains NaN values
+    logger.info('Check NaN values')
+    df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
+
     # Extract X and Y coordinates
     df['Location_X'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[0]))
     df['Location_Y'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[1]))
 
     # Filter by the crimes that have a valid location
-    df = df[(df['Location_X']!=0) & (df['Location_Y']!=0)]
+    df = df[(df['Location_X'] != 0) & (df['Location_Y'] != 0)]
     df = df[(df['Location_X'] != -1) | (df['Location_Y'] != -1)]
 
+    # Determine frequency of crimes per location
+    df_freq_loc_crimes = dummy_project_utils.get_frequencies(df=df,
+                                                             column='Location',
+                                                             logger=logger)
+    # Extract X and Y coordinates
+    df_freq_loc_crimes['Location_X'] = df_freq_loc_crimes['Location'].apply(
+        lambda x: float(x.strip('()').split(',')[0]))
+    df_freq_loc_crimes['Location_Y'] = df_freq_loc_crimes['Location'].apply(
+        lambda x: float(x.strip('()').split(',')[1]))
+
     # Plot scatterplot of crimes
-    dummy_project_utils.plot_scatterplot(df=df,
+    dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
                                          var_x='Location_X',
                                          var_y='Location_Y',
-                                         path=figures_path + '\\scatter_plot_crimes.png',
+                                         scale='FREQ_CRIMES_PERCENTAGE',
+                                         path=figures_path + 'crimes_map.png',
                                          logger=logger)
-
-    # Check that the dataframe do not contains NaN values
-    logger.info('Check NaN values')
-    df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
 
     # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
     # Add results to the logging file
     logger.info('Obtain distribution of frequency of crimes occurence')
 
     # Define relevant columns
-    columns = ['OFFENSE_CODE', 'OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH', 'LOCATION']
+    columns = ['OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH']
 
     # Iter per columns ang ger the distribution of crimes ocurrence
     for column in columns:
@@ -77,7 +88,7 @@ def main():
         dummy_project_utils.plot_barplot(df=df_freq[0:20],
                                          var_x=column,
                                          var_y='FREQ_CRIMES_PERCENTAGE',
-                                         path=figures_path + '\\plot_{}.png'.format(column),
+                                         path=figures_path + 'crimes_distribution_per_{}.png'.format(column),
                                          logger=logger)
 
         # report the first 5 values in the log

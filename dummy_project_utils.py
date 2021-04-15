@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-"""
-    This script define the different function to be used in the project
+""" This script define the different functions to be used in the project
 
-    (C) Tessella by Capgemini Engineering - 2021
+    (C) Tessella Spain by Capgemini Engineering - 2021
     joseangel.velascorodriguez@altran.com
 """
+# GLOBAL VARIABLES
+FONTSIZE = 12
 
 
 def set_up_logger(path):
     """ Set up logger to capture logs
     :param path: path where to store logs example: 'logs\\log_file_name'
     :return logger: logger
+    :param logger: logger to record exception
     """
     import logging
     try:
@@ -35,6 +37,7 @@ def load_data(path, logger):
     """ Load input data
     :param path: path of the csv file to upload
     :return df: dataframe with the data
+    :param logger: logger to record exception
     """
     import pandas
     try:
@@ -50,6 +53,7 @@ def check_nan(dataframe, logger):
     """ Check if the input dataframe contains NaN values and fill with 0
     :param dataframe: Data Frame if input data
     :return df0: output dataframe with 0 values in NaN values
+    :param logger: logger to record exception
     """
     df0 = dataframe.copy()
     try:
@@ -67,6 +71,7 @@ def get_frequencies(df, column, logger):
     """ Obtain some distribution of frequency to known how is distributed the incidences
     :param df: Data frame
     :param column: Column to obtain the distribution of frequency of occurrence
+    :param logger: logger to record exception
     """
 
     try:
@@ -94,37 +99,50 @@ def plot_barplot(df, var_x, var_y, path, logger):
     :param var_x: x-axis variable
     :param var_y: y-axis variable
     :param path: path where it is saved plot in png format
+    :param logger: logger to record exception
     """
     import matplotlib.pyplot
 
     try:
-        matplotlib.pyplot.bar(x=df[var_x].values,
-                              height=df[var_y].values)
-        matplotlib.pyplot.grid()
-        matplotlib.pyplot.show()
+        matplotlib.pyplot.figure(figsize=(14, 14))
+        matplotlib.pyplot.barh(y=df[var_x].values,
+                               width=df[var_y].values,
+                               align='center',
+                               )
+        matplotlib.pyplot.grid(True)
+        matplotlib.pyplot.xlabel(var_x, fontsize=FONTSIZE)
+        matplotlib.pyplot.ylabel(var_y, fontsize=FONTSIZE)
+        matplotlib.pyplot.xticks(rotation=45)
+        matplotlib.pyplot.tick_params(axis='both', labelsize=FONTSIZE)
         matplotlib.pyplot.savefig(path)
-        matplotlib.pyplot.close()
+        matplotlib.pyplot.show()
+        # matplotlib.pyplot.close()
     except Exception as exception_msg:
         logger.error('(!) Error in plot_barplot:{}'.format(str(exception_msg)))
 
 
-def plot_scatterplot(df, var_x, var_y, path, logger):
+def plot_scatterplot(df, var_x, var_y, scale, path, logger):
     """ Plot a scatter plot with the coordinates of the crimes
     :param df: Dataframe to plot
     :param var_x: x-axis variable
     :param var_y: y-axis variable
+    :param scale: scale of the point
     :param path: path where it is saved plot in png format
     """
     import matplotlib.pyplot
 
     try:
+        matplotlib.pyplot.figure(figsize=(14, 10))
         matplotlib.pyplot.scatter(x=df[var_x],
-                                  y=df[var_y])
-        matplotlib.pyplot.grid()
-        matplotlib.pyplot.xlabel(var_x)
-        matplotlib.pyplot.xlabel(var_y)
-        matplotlib.pyplot.show()
+                                  y=df[var_y],
+                                  s=200 * df[scale],
+                                  alpha=0.9,
+                                  edgecolors='blue')
+        matplotlib.pyplot.grid(True)
+        matplotlib.pyplot.xlabel(var_x, fontsize=FONTSIZE)
+        matplotlib.pyplot.ylabel(var_y, fontsize=FONTSIZE)
         matplotlib.pyplot.savefig(path)
-        matplotlib.pyplot.close()
+        matplotlib.pyplot.show()
+        # matplotlib.pyplot.close()
     except Exception as exception_msg:
         logger.error('(!) Error in plot_scatterplot:{}'.format(str(exception_msg)))
