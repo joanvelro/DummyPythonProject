@@ -5,15 +5,9 @@
    :synopsis: Exploratory Data Analysis of the data set that contains the crimes in the city
     Data path and other configuration settings are indicated in config.ini
 
-.. moduleauthor:: Jose Angel Velasco
+.. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021
 
 
-"""
-""" Exploratory Data Analysis of the data set that contains the crimes in the city
-    Data path and other configuration settings are indicated in config.ini
-
-    (C) Tessella Spain by Capgemini Engineering - 2021
-    joseangel.velascorodriguez@altran.com
 """
 # Import dependencies
 import pandas
@@ -74,12 +68,12 @@ def main():
         lambda x: float(x.strip('()').split(',')[1]))
 
     # Plot scatterplot of crimes
-    dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
-                                         var_x='Location_X',
-                                         var_y='Location_Y',
-                                         scale='FREQ_CRIMES_PERCENTAGE',
-                                         path=figures_path + 'crimes_map.png',
-                                         logger=logger)
+    error = dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
+                                                 var_x='Location_X',
+                                                 var_y='Location_Y',
+                                                 scale='FREQ_CRIMES_PERCENTAGE',
+                                                 path=figures_path + 'crimes_map.png',
+                                                 logger=logger)
 
     # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
     # Add results to the logging file

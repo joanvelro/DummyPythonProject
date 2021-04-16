@@ -4,16 +4,12 @@
 .. module:: utils
    :synopsis: This script define the different functions to be used in the project
 
-.. moduleauthor:: Jose Angel Velasco
+.. moduleauthor:: Jose Angel Velasco (C) Tessella Spain by Capgemini Engineering - 2021
 
 
 """
 
-""" This script define the different functions to be used in the project
 
-    (C) Tessella Spain by Capgemini Engineering - 2021
-    joseangel.velascorodriguez@altran.com
-"""
 # GLOBAL VARIABLES
 FONTSIZE = 12
 
@@ -58,6 +54,7 @@ def load_data(path, logger):
         :type path: str
         :param logger: logger to record exception
         :return: dataframe with the data
+
 
     """
     import pandas
