@@ -13,7 +13,10 @@ import pandas
 import numpy
 import sys
 import os
-import configparser
+
+
+# Move one level up directory
+# os.chdir(os.path.dirname(os.getcwd()))
 
 
 import dummy_project_utils
@@ -33,7 +36,7 @@ class TestFunction(unittest.TestCase):
             :param self:
         """
 
-        data_path = 'data\\crimes_dataset.csv'
+        data_path = 'data/crimes_dataset.csv'
         logs_path = 'logs\\log_file_data_analyis'
         logger = dummy_project_utils.set_up_logger(logs_path)
         # get result
@@ -51,7 +54,7 @@ class TestFunction(unittest.TestCase):
         """
 
         # define input data
-        data_path = 'data\\crimes_dataset.csv'
+        data_path = 'data/crimes_dataset.csv'
         logs_path = 'logs\\log_file_data_analyis'
         logger = dummy_project_utils.set_up_logger(path=logs_path)
         # get result
