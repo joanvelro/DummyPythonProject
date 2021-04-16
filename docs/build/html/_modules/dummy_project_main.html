@@ -38,15 +38,9 @@
 <span class="sd">   :synopsis: Exploratory Data Analysis of the data set that contains the crimes in the city</span>
 <span class="sd">    Data path and other configuration settings are indicated in config.ini</span>
 
-<span class="sd">.. moduleauthor:: Jose Angel Velasco</span>
+<span class="sd">.. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021</span>
 
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">&quot;&quot;&quot; Exploratory Data Analysis of the data set that contains the crimes in the city</span>
-<span class="sd">    Data path and other configuration settings are indicated in config.ini</span>
-
-<span class="sd">    (C) Tessella Spain by Capgemini Engineering - 2021</span>
-<span class="sd">    joseangel.velascorodriguez@altran.com</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="c1"># Import dependencies</span>
 <span class="kn">import</span> <span class="nn">pandas</span>
@@ -107,12 +101,12 @@
         <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
 
     <span class="c1"># Plot scatterplot of crimes</span>
-    <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">plot_scatterplot</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df_freq_loc_crimes</span><span class="p">,</span>
-                                         <span class="n">var_x</span><span class="o">=</span><span class="s1">&#39;Location_X&#39;</span><span class="p">,</span>
-                                         <span class="n">var_y</span><span class="o">=</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">,</span>
-                                         <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;FREQ_CRIMES_PERCENTAGE&#39;</span><span class="p">,</span>
-                                         <span class="n">path</span><span class="o">=</span><span class="n">figures_path</span> <span class="o">+</span> <span class="s1">&#39;crimes_map.png&#39;</span><span class="p">,</span>
-                                         <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">plot_scatterplot</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df_freq_loc_crimes</span><span class="p">,</span>
+                                                 <span class="n">var_x</span><span class="o">=</span><span class="s1">&#39;Location_X&#39;</span><span class="p">,</span>
+                                                 <span class="n">var_y</span><span class="o">=</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">,</span>
+                                                 <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;FREQ_CRIMES_PERCENTAGE&#39;</span><span class="p">,</span>
+                                                 <span class="n">path</span><span class="o">=</span><span class="n">figures_path</span> <span class="o">+</span> <span class="s1">&#39;crimes_map.png&#39;</span><span class="p">,</span>
+                                                 <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
 
     <span class="c1"># Obtain some distribution of frequency of occurrence to known how is distributed the crimes</span>
     <span class="c1"># Add results to the logging file</span>

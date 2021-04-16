@@ -24,3 +24,8 @@ Auxiliar Functions
 =====================
 .. automodule:: dummy_project_utils
    :members:
+
+Tests
+=====================
+.. automodule:: dummy_project_test
+   :members:
