@@ -156,24 +156,22 @@ def main():
     ratio_imbalance = df_aux2.loc[0] / df_aux2.loc[1]
     logger.info('Ratio imbalance (no. samples label 1/ no. sables plabel 0): {}'.format(ratio_imbalance))
 
-    # Initialize encoder for input features
-    logger.info('Encode input features (label encoder)')
-    le = sklearn.preprocessing.LabelEncoder()
-
-    # encode input features
-    for column in X.columns:
-        le.fit(X[column])
-        X[column + '_ENCODED'] = le.transform(X[column])
+    # Encode input features
+    X = dummy_project_utils.enconde_input_features(x=X, logger=logger)
 
     # Split train and test data sets
     logger.info('Split train-test data sets')
+    # TO DO: replace unpacking like this
     X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X.iloc[:, -4:],
                                                                                 y,
                                                                                 test_size=0.33,
                                                                                 random_state=42)
 
     # Initalize classification algorithm (gradient boosted decision trees) with hyperparameters manually introduced
-    logger.info('Initialize classification model: {}'.format('GradientBoostingClassifier'))
+    # To do : train with more classification models (logistic, random forest, adaboost, neural network,..)
+    # To do : apply cross-validation and hyperparameter optimization
+    model_name = 'GradientBoostingClassifier'
+    logger.info('Initialize classification model: {}'.format(model_name))
     model = sklearn.ensemble.GradientBoostingClassifier(loss='deviance',
                                                         n_estimators=100,
                                                         learning_rate=1.0,
@@ -201,36 +199,20 @@ def main():
     logger.info('Predict on test dataset')
     y_hat = model.predict(X=X_test)
 
-    # Calculate confusion matrix
-    logger.info('Test confusion matrix')
-    CM = sklearn.metrics.confusion_matrix(y_true=y_test,
-                                          y_pred=y_hat)
-
-    # Get  true positives  / (true positives  + false positives)
-    precision = sklearn.metrics.precision_score(y_true=y_test,
-                                                y_pred=y_hat)
-
-    # Get  ratio true positives / (true positives + false negatives)
-    recall = sklearn.metrics.recall_score(y_true=y_test,
-                                          y_pred=y_hat)
-
-    # get Area Under the Receiver Operating Characteristic Curve (ROC AUC)
-    roc = sklearn.metrics.roc_auc_score(y_true=y_test,
-                                        y_score=y_hat,
-                                        average='macro')
-
-    logger.info('Test Precision: {}'.format(precision))
-    logger.info('Test Recall: {}'.format(recall))
-    logger.info('Test AUC ROC: {}'.format(roc))
+    # Calculate classification metrics
+    dummy_project_utils.calculate_classification_metrics(y_hat=y_hat,
+                                                         y_test=y_test,
+                                                         logger=logger)
 
     # Plot test confusion matrix
     sklearn.metrics.plot_confusion_matrix(model, X_test, y_test)
     matplotlib.pyplot.show()
 
     # Save model
-    model_file_name = 'clf_model_gbdt.sav'
-    logger.info('Save model in: {}{}'.format(models_path, model_file_name))
-    pickle.dump(model, open(models_path + model_file_name, 'wb'))
+    dummy_project_utils.save_model(model=model,
+                                   model_name=model_name,
+                                   logger=logger,
+                                   models_path=models_path)
 
     logger.info('::: Finish ::: ')
 
