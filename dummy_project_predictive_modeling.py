@@ -44,7 +44,7 @@ def main():
     logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
     logger.info('Initialize logger')
 
-    logger.info('Start Predictive modelling')
+    logger.info('::: Start Predictive modelling :::')
 
     # Load data
     logger.info('Load data from: {}'.format(data_path))
@@ -229,10 +229,10 @@ def main():
 
     # Save model
     model_file_name = 'clf_model_gbdt.sav'
-    logger.info('Save model in: {}\\{}'.format(models_path, model_file_name))
-    pickle.dump(model, open(model_file_name, 'wb'))
+    logger.info('Save model in: {}{}'.format(models_path, model_file_name))
+    pickle.dump(model, open(models_path + model_file_name, 'wb'))
 
-    logger.info('Finish')
+    logger.info('::: Finish ::: ')
 
 
 if __name__ == "__main__":

@@ -39,12 +39,13 @@ def main():
     figures_path = config_object._sections['paths']['figures_path']
 
     # Initialize logs
-    log_file_name = 'exploratory_data_analysis'
+    log_file_name = 'data_analysis'
     logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
-    logger.info('Initialize logger')
+
+    logger.info('::: Start Exploratory data analysis :::')
 
     # Load data
-    logger.info('Load data')
+    logger.info('Load data from: {}'.format(data_path))
     df = dummy_project_utils.load_data(path=data_path, logger=logger)
     df.reset_index(inplace=True)
 
@@ -89,6 +90,8 @@ def main():
     columns = ['OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH']
 
     # Iter per columns ang ger the distribution of crimes ocurrence
+    logger.info('Iter per columns ang ger the distribution of crimes ocurrence')
+    logger.info('save figures in {}'.format(figures_path))
     for column in columns:
         logger.info(column)
 
@@ -109,8 +112,7 @@ def main():
             logger.info('column value:{} frequency of crimes:{}'.format(df_freq.loc[obs][column],
                                                                         df_freq.loc[obs]['FREQ_CRIMES_PERCENTAGE']))
 
-
-    logger.info('Finish')
+    logger.info('::: Finish :::')
 
 
 if __name__ == "__main__":

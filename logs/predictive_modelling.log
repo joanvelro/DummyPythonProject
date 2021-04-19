@@ -1,62 +1,38 @@
-2021-04-19 13:08:24,728 - logs\\predictive_modelling - INFO - Initialize logger
-2021-04-19 13:08:24,729 - logs\\predictive_modelling - INFO - Start Predictive modelling
-2021-04-19 13:08:24,729 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
-2021-04-19 13:08:25,028 - logs\\predictive_modelling - INFO - Check NaN values
-2021-04-19 13:08:25,517 - logs\\predictive_modelling - INFO - Split input features
-2021-04-19 13:08:25,522 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
-2021-04-19 13:08:25,523 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
-2021-04-19 13:08:25,564 - logs\\predictive_modelling - INFO - Split train-test data sets
-2021-04-19 13:08:25,572 - logs\\predictive_modelling - INFO - Initialize classification model: GradientBoostingClassifier
-2021-04-19 13:08:25,573 - logs\\predictive_modelling - INFO - fit model
-2021-04-19 13:08:26,762 - logs\\predictive_modelling - INFO - calculate accuracy training
-2021-04-19 13:08:26,798 - logs\\predictive_modelling - INFO - Train Accuracy: 0.9628589613987795
-2021-04-19 13:08:26,799 - logs\\predictive_modelling - INFO - Predict on test dataset
-2021-04-19 13:08:26,816 - logs\\predictive_modelling - INFO - Test confusion matrix
-2021-04-19 13:08:26,849 - logs\\predictive_modelling - INFO - Test Precision: 0.9862708453133985
-2021-04-19 13:08:26,849 - logs\\predictive_modelling - INFO - Test Recall: 0.9493530754860583
-2021-04-19 13:08:26,850 - logs\\predictive_modelling - INFO - Test AUC ROC: 0.9666229030660177
-2021-04-19 13:08:26,985 - logs\\predictive_modelling - INFO - Save model in: models\\\clf_model_gbdt.sav
-2021-04-19 13:08:26,988 - logs\\predictive_modelling - INFO - Finish
-2021-04-19 13:08:54,842 - logs\\predictive_modelling - INFO - Initialize logger
-2021-04-19 13:08:54,843 - logs\\predictive_modelling - INFO - Start Predictive modelling
-2021-04-19 13:08:54,843 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
-2021-04-19 13:08:55,153 - logs\\predictive_modelling - INFO - Check NaN values
-2021-04-19 13:08:55,862 - logs\\predictive_modelling - INFO - Split input features
-2021-04-19 13:08:55,869 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
-2021-04-19 13:08:55,869 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
-2021-04-19 13:08:55,933 - logs\\predictive_modelling - INFO - Split train-test data sets
-2021-04-19 13:10:09,242 - logs\\predictive_modelling - INFO - Initialize logger
-2021-04-19 13:10:09,242 - logs\\predictive_modelling - INFO - Start Predictive modelling
-2021-04-19 13:10:09,243 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
-2021-04-19 13:10:09,546 - logs\\predictive_modelling - INFO - Check NaN values
-2021-04-19 13:10:10,278 - logs\\predictive_modelling - INFO - Split input features
-2021-04-19 13:10:10,289 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
-2021-04-19 13:10:10,290 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
-2021-04-19 13:10:10,352 - logs\\predictive_modelling - INFO - Split train-test data sets
-2021-04-19 13:11:00,189 - logs\\predictive_modelling - INFO - Initialize classification model: GradientBoostingClassifier
-2021-04-19 13:11:00,190 - logs\\predictive_modelling - INFO - fit model
-2021-04-19 13:11:01,358 - logs\\predictive_modelling - INFO - calculate accuracy training
-2021-04-19 13:11:01,393 - logs\\predictive_modelling - INFO - Train Accuracy: 0.9628589613987795
-2021-04-19 13:11:01,393 - logs\\predictive_modelling - INFO - Predict on test dataset
-2021-04-19 13:11:01,410 - logs\\predictive_modelling - INFO - Test confusion matrix
-2021-04-19 13:11:01,447 - logs\\predictive_modelling - INFO - Test Precision: 0.9862708453133985
-2021-04-19 13:11:01,447 - logs\\predictive_modelling - INFO - Test Recall: 0.9493530754860583
-2021-04-19 13:11:01,447 - logs\\predictive_modelling - INFO - Test AUC ROC: 0.9666229030660177
-2021-04-19 13:11:01,658 - logs\\predictive_modelling - INFO - Save model in: models\\\clf_model_gbdt.sav
-2021-04-19 13:11:01,663 - logs\\predictive_modelling - INFO - Finish
-2021-04-19 13:11:07,182 - logs\\predictive_modelling - INFO - Initialize logger
-2021-04-19 13:11:07,183 - logs\\predictive_modelling - INFO - Start Predictive modelling
-2021-04-19 13:11:07,183 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
-2021-04-19 13:11:07,500 - logs\\predictive_modelling - INFO - Check NaN values
-2021-04-19 13:11:08,215 - logs\\predictive_modelling - INFO - Split input features
-2021-04-19 13:11:08,222 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
-2021-04-19 13:11:08,222 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
-2021-04-19 13:11:08,275 - logs\\predictive_modelling - INFO - Split train-test data sets
-2021-04-19 13:11:27,586 - logs\\predictive_modelling - INFO - Initialize logger
-2021-04-19 13:11:27,587 - logs\\predictive_modelling - INFO - Start Predictive modelling
-2021-04-19 13:11:27,587 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
-2021-04-19 13:11:27,918 - logs\\predictive_modelling - INFO - Check NaN values
-2021-04-19 13:11:28,618 - logs\\predictive_modelling - INFO - Split input features
-2021-04-19 13:11:28,624 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
-2021-04-19 13:11:28,624 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
-2021-04-19 13:11:28,679 - logs\\predictive_modelling - INFO - Split train-test data sets
+2021-04-19 13:20:24,104 - logs\\predictive_modelling - INFO - Initialize logger
+2021-04-19 13:20:24,104 - logs\\predictive_modelling - INFO - ::: Start Predictive modelling :::
+2021-04-19 13:20:24,104 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
+2021-04-19 13:20:24,437 - logs\\predictive_modelling - INFO - Check NaN values
+2021-04-19 13:20:24,946 - logs\\predictive_modelling - INFO - Split input features
+2021-04-19 13:20:24,962 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-19 13:20:24,962 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
+2021-04-19 13:20:25,009 - logs\\predictive_modelling - INFO - Split train-test data sets
+2021-04-19 13:20:25,009 - logs\\predictive_modelling - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-19 13:20:25,009 - logs\\predictive_modelling - INFO - fit model
+2021-04-19 13:20:26,237 - logs\\predictive_modelling - INFO - calculate accuracy training
+2021-04-19 13:20:26,270 - logs\\predictive_modelling - INFO - Train Accuracy: 0.9628589613987795
+2021-04-19 13:20:26,270 - logs\\predictive_modelling - INFO - Predict on test dataset
+2021-04-19 13:20:26,280 - logs\\predictive_modelling - INFO - Test confusion matrix
+2021-04-19 13:20:26,311 - logs\\predictive_modelling - INFO - Test Precision: 0.9862708453133985
+2021-04-19 13:20:26,311 - logs\\predictive_modelling - INFO - Test Recall: 0.9493530754860583
+2021-04-19 13:20:26,319 - logs\\predictive_modelling - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-19 13:20:26,447 - logs\\predictive_modelling - INFO - Save model in: models\\\clf_model_gbdt.sav
+2021-04-19 13:20:26,447 - logs\\predictive_modelling - INFO - ::: Finish ::: 
+2021-04-19 13:21:43,748 - logs\\predictive_modelling - INFO - Initialize logger
+2021-04-19 13:21:43,748 - logs\\predictive_modelling - INFO - ::: Start Predictive modelling :::
+2021-04-19 13:21:43,748 - logs\\predictive_modelling - INFO - Load data from: data\\crimes_dataset.csv
+2021-04-19 13:21:44,034 - logs\\predictive_modelling - INFO - Check NaN values
+2021-04-19 13:21:44,504 - logs\\predictive_modelling - INFO - Split input features
+2021-04-19 13:21:44,504 - logs\\predictive_modelling - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-19 13:21:44,504 - logs\\predictive_modelling - INFO - Encode input features (label encoder)
+2021-04-19 13:21:44,543 - logs\\predictive_modelling - INFO - Split train-test data sets
+2021-04-19 13:21:44,559 - logs\\predictive_modelling - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-19 13:21:44,559 - logs\\predictive_modelling - INFO - fit model
+2021-04-19 13:21:45,685 - logs\\predictive_modelling - INFO - calculate accuracy training
+2021-04-19 13:21:45,715 - logs\\predictive_modelling - INFO - Train Accuracy: 0.9628589613987795
+2021-04-19 13:21:45,715 - logs\\predictive_modelling - INFO - Predict on test dataset
+2021-04-19 13:21:45,734 - logs\\predictive_modelling - INFO - Test confusion matrix
+2021-04-19 13:21:45,766 - logs\\predictive_modelling - INFO - Test Precision: 0.9862708453133985
+2021-04-19 13:21:45,766 - logs\\predictive_modelling - INFO - Test Recall: 0.9493530754860583
+2021-04-19 13:21:45,766 - logs\\predictive_modelling - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-19 13:21:45,898 - logs\\predictive_modelling - INFO - Save model in: models\\clf_model_gbdt.sav
+2021-04-19 13:21:45,913 - logs\\predictive_modelling - INFO - ::: Finish ::: 
