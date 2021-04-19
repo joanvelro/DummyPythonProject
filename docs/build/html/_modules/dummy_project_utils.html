@@ -42,7 +42,6 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-
 <span class="c1"># GLOBAL VARIABLES</span>
 <span class="n">FONTSIZE</span> <span class="o">=</span> <span class="mi">12</span>
 
@@ -216,6 +215,95 @@
         <span class="c1"># matplotlib.pyplot.close()</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in plot_scatterplot:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="save_model"><a class="viewcode-back" href="../index.html#dummy_project_utils.save_model">[docs]</a><span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="n">models_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        ** Save Model**</span>
+
+<span class="sd">        Save the predictive mdel in .sav file in models path indicated in config.ini file</span>
+
+<span class="sd">        :param model: Model</span>
+<span class="sd">        :param model_name: model name (str)</span>
+<span class="sd">        :param logger: logger</span>
+<span class="sd">        :param models_path: path to the models folder (str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">pickle</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model_file_name</span> <span class="o">=</span> <span class="s1">&#39;clf_model_</span><span class="si">{}</span><span class="s1">.sav&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Save model in: </span><span class="si">{}{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">models_path</span><span class="p">,</span> <span class="n">model_file_name</span><span class="p">))</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">models_path</span> <span class="o">+</span> <span class="n">model_file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in save_model:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="calculate_classification_metrics"><a class="viewcode-back" href="../index.html#dummy_project_utils.calculate_classification_metrics">[docs]</a><span class="k">def</span> <span class="nf">calculate_classification_metrics</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        **Calculate Classification Metrics**</span>
+
+<span class="sd">         Calculate deveral classifcation metrics: confusion matrix, precision, recall and AUC ROC</span>
+
+<span class="sd">         :param y_hat: actual labels obteined</span>
+<span class="sd">         :param y_test: target labels</span>
+<span class="sd">         :param logger: logger to record errors</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">sklearn.metrics</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Calculate confusion matrix</span>
+        <span class="n">CM</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
+                                              <span class="n">y_pred</span><span class="o">=</span><span class="n">y_hat</span><span class="p">)</span>
+
+        <span class="c1"># Get  true positives  / (true positives  + false positives)</span>
+        <span class="n">precision</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
+                                                    <span class="n">y_pred</span><span class="o">=</span><span class="n">y_hat</span><span class="p">)</span>
+
+        <span class="c1"># Get  ratio true positives / (true positives + false negatives)</span>
+        <span class="n">recall</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
+                                              <span class="n">y_pred</span><span class="o">=</span><span class="n">y_hat</span><span class="p">)</span>
+
+        <span class="c1"># get Area Under the Receiver Operating Characteristic Curve (ROC AUC)</span>
+        <span class="n">roc</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
+                                            <span class="n">y_score</span><span class="o">=</span><span class="n">y_hat</span><span class="p">,</span>
+                                            <span class="n">average</span><span class="o">=</span><span class="s1">&#39;macro&#39;</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Test Confusion Matrix: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">CM</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Test Precision: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Test Recall: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Test AUC ROC: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">roc</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in calculate_classification_metrics:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="enconde_input_features"><a class="viewcode-back" href="../index.html#dummy_project_utils.enconde_input_features">[docs]</a><span class="k">def</span> <span class="nf">enconde_input_features</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        **Encode Input Features**</span>
+<span class="sd">        Encode the input features using label encoder</span>
+
+<span class="sd">        :param x: INput features dataframe</span>
+<span class="sd">        :param logger: logger:</span>
+<span class="sd">        :return x: Data frame with encoded input features (_ENCODED)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">sklearn.preprocessing</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Initialize encoder for input features</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Encode input features (label encoder)&#39;</span><span class="p">)</span>
+        <span class="n">le</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+
+        <span class="c1"># encode input features</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">le</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">column</span> <span class="o">+</span> <span class="s1">&#39;_ENCODED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">x</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in enconde_input_features:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">x</span></div>
 </pre></div>
 
           </div>

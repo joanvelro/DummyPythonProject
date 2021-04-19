@@ -28,6 +28,15 @@
 ```
 RUN pip install requirements.txt
 ```
+## Crimes data
+      
+
+  * INCIDENT_NUMBER: Identify the crime
+  * OFFENSE_CODE: Identify the kind of crime with an integer code
+  * OFFENSE_CODE_GROUP: Identify the kind of crime with a description
+  * REPORTING_AREA: Identify the region in which the crime takes placre
+    , 'OCCURRED_ON_DATE', 'YEAR', 'MONTH', 'DAY_OF_WEEK',
+ 'HOUR', 'UCR_PART', 'Location'
 
 ## Approach:
 * Define which crimes are violent (and so more important than others) and which not

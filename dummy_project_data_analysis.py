@@ -30,6 +30,10 @@ def main():
 
         This function execute a descriptive analysis of the crimes data set and provides insight about
         and it can support de decision process related to surveillance schedule
+
+
+
+
     """
     # Load configuration info
     config_object = configparser.ConfigParser()

@@ -15,9 +15,14 @@ Indices and tables
 
 
 
-Main
+Data Analysis
 ===================
-.. automodule:: dummy_project_main
+.. automodule:: dummy_project_data_analysis
+   :members:
+
+Predictive Modelling
+===================
+.. automodule:: dummy_project_predictive_modeling
    :members:
 
 Auxiliar Functions

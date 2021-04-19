@@ -147,7 +147,7 @@ def plot_barplot(df, var_x, var_y, path, logger):
         matplotlib.pyplot.tick_params(axis='both', labelsize=FONTSIZE)
         matplotlib.pyplot.savefig(path)
         matplotlib.pyplot.show()
-        # matplotlib.pyplot.close()
+        matplotlib.pyplot.close()
     except Exception as exception_msg:
         logger.error('(!) Error in plot_barplot:{}'.format(str(exception_msg)))
 
@@ -179,7 +179,7 @@ def plot_scatterplot(df, var_x, var_y, scale, path, logger):
         matplotlib.pyplot.ylabel(var_y, fontsize=FONTSIZE)
         matplotlib.pyplot.savefig(path)
         matplotlib.pyplot.show()
-        # matplotlib.pyplot.close()
+        matplotlib.pyplot.close()
     except Exception as exception_msg:
         logger.error('(!) Error in plot_scatterplot:{}'.format(str(exception_msg)))
 
