@@ -25,6 +25,11 @@ Predictive Modelling
 .. automodule:: dummy_project_predictive_modeling
    :members:
 
+Inference
+=====================
+.. automodule:: dummy_project_inference
+   :members:
+
 Auxiliar Functions
 =====================
 .. automodule:: dummy_project_utils

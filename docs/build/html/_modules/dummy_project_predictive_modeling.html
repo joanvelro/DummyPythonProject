@@ -62,192 +62,198 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        **Main program of Crimes Predictive Modelling**</span>
 
-<span class="sd">        This function execute a descriptive analysis of the crimes data set and provides insight about</span>
-<span class="sd">        and it can support de decision process related to surveillance schedule</span>
+<span class="sd">        This function execute a predictive modelling process in which the crimes data set is grouped in time-space</span>
+<span class="sd">        basis, and a flag indicating violent crime or not is added. Then a machine learning model is trained to classify</span>
+<span class="sd">        the crimes registers into violent /non-violent crimes</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Load configuration info</span>
-    <span class="n">config_object</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
-    <span class="n">config_object</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
-    <span class="n">data_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;data_path&#39;</span><span class="p">]</span>
-    <span class="n">logs_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;logs_path&#39;</span><span class="p">]</span>
-    <span class="n">models_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;models_path&#39;</span><span class="p">]</span>
 
-    <span class="c1"># Initialize logs</span>
-    <span class="n">log_file_name</span> <span class="o">=</span> <span class="s1">&#39;predictive_modelling&#39;</span>
-    <span class="n">logger</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">set_up_logger</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">logs_path</span> <span class="o">+</span> <span class="n">log_file_name</span><span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize logger&#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Load configuration info</span>
+        <span class="n">config_object</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+        <span class="n">config_object</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
+        <span class="n">data_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;data_path&#39;</span><span class="p">]</span>
+        <span class="n">logs_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;logs_path&#39;</span><span class="p">]</span>
+        <span class="n">models_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;models_path&#39;</span><span class="p">]</span>
+        <span class="n">processed_file</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">][</span><span class="s1">&#39;processed&#39;</span><span class="p">]</span>
+        <span class="n">inference_file</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">][</span><span class="s1">&#39;inference&#39;</span><span class="p">]</span>
 
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Start Predictive modelling :::&#39;</span><span class="p">)</span>
+        <span class="c1"># Initialize logs</span>
+        <span class="n">log_file_name</span> <span class="o">=</span> <span class="s1">&#39;predictive_modelling&#39;</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">set_up_logger</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">logs_path</span> <span class="o">+</span> <span class="n">log_file_name</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize logger&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Load data</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Load data from: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Start Predictive modelling :::&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Exist registers in REPORTING AREA column without an acceptable value, change for &quot;unknown&quot;</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="s1">&#39;unknown&#39;</span>
+        <span class="c1"># Load data</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Load data from: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">processed_file</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="c1"># Check that the dataframe do not contains NaN values</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Check NaN values&#39;</span><span class="p">)</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">check_nan</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+        <span class="c1"># Check that the dataframe do not contains NaN values</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Check NaN values&#39;</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">check_nan</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
 
-    <span class="c1"># Extract X and Y coordinates</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="c1"># Aggregate historical crime data for each spatial unit (reporting areas) and for each day</span>
+        <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">,</span> <span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">])[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> \
+            <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-    <span class="c1"># Filter by the crimes that have a valid location</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)]</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_X&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Location_Y&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+        <span class="c1"># Group crime types into violent and nonviolent crimes.</span>
+        <span class="c1"># 0: no violent crime, 1: violent crime</span>
+        <span class="n">crimes_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Fraud&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Investigate Property&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Property Lost&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Confidence Games&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Larceny&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Auto Theft&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Residential Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Harassment&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Counterfeiting&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Larceny From Motor Vehicle&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Police Service Incidents&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Investigate Person&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Recovered Stolen Property&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Embezzlement&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Motor Vehicle Accident Response&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Simple Assault&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Warrant Arrests&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Bomb Hoax&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Vandalism&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Missing Person Reported&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;License Plate Related Incidents&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Aggravated Assault&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Property Found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Robbery&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Restraining Order Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Property Related Damage&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Missing Person Located&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Landlord/Tenant Disputes&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Disorderly Conduct&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Auto Theft Recovery&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Medical Assistance&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;License Violation&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Towed&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Service&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Verbal Disputes&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Liquor Violation&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Fire Related Reports&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Ballistics&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Evading Fare&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Operating Under the Influence&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Offenses Against Child / Family&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Drug Violation&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Other Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Firearm Violations&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Commercial Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Search Warrants&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Biological Threat&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Harbor Related Incidents&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Firearm Discovery&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Prisoner Related Incidents&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Homicide&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Assembly or Gathering Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Manslaughter&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Arson&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Criminal Harassment&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Prostitution&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;HOME INVASION&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Phone Call Complaints&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Aircraft&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Gambling&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;INVESTIGATE PERSON&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;Explosives&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;HUMAN TRAFFICKING&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;HUMAN TRAFFICKING - INVOLUNTARY SERVITUDE&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;Burglary - No Property Taken&#39;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
 
-    <span class="c1"># Aggregate historical crime data for each spatial unit (reporting areas) and for each day</span>
-    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">,</span> <span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">])[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> \
-        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># Creates new column with violent crimes flag classification</span>
+        <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">crimes_dict</span><span class="p">)</span>
 
-    <span class="c1"># Group crime types into violent and nonviolent crimes.</span>
-    <span class="c1"># 0: no violent crime, 1: violent crime</span>
-    <span class="n">crimes_dict</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;Fraud&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Investigate Property&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Property Lost&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Confidence Games&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Larceny&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Auto Theft&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Residential Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Harassment&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Counterfeiting&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Larceny From Motor Vehicle&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Police Service Incidents&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Investigate Person&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Recovered Stolen Property&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Embezzlement&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Motor Vehicle Accident Response&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Simple Assault&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Warrant Arrests&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Bomb Hoax&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Vandalism&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Missing Person Reported&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;License Plate Related Incidents&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Aggravated Assault&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Property Found&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Robbery&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Restraining Order Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Property Related Damage&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Missing Person Located&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Landlord/Tenant Disputes&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Disorderly Conduct&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Auto Theft Recovery&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Medical Assistance&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;License Violation&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Towed&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Service&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Verbal Disputes&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Liquor Violation&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Fire Related Reports&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Ballistics&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Evading Fare&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Operating Under the Influence&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Offenses Against Child / Family&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Drug Violation&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Other Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Firearm Violations&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Commercial Burglary&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Search Warrants&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Biological Threat&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Harbor Related Incidents&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Firearm Discovery&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Prisoner Related Incidents&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Homicide&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Assembly or Gathering Violations&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Manslaughter&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Arson&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Criminal Harassment&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Prostitution&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;HOME INVASION&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Phone Call Complaints&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Aircraft&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Gambling&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;INVESTIGATE PERSON&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;Explosives&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;HUMAN TRAFFICKING&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;HUMAN TRAFFICKING - INVOLUNTARY SERVITUDE&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s1">&#39;Burglary - No Property Taken&#39;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">}</span>
+        <span class="c1"># Split input features</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Split input features&#39;</span><span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">,</span> <span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">,</span> <span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">]]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
-    <span class="c1"># Creates new column with violent crimes flag classification</span>
-    <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">crimes_dict</span><span class="p">)</span>
+        <span class="c1"># Determine the ratio of inbalance between violent crimes and non-violent crimes</span>
+        <span class="n">df_aux2</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">])[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 
-    <span class="c1"># Split input features</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Split input features&#39;</span><span class="p">)</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[[</span><span class="s1">&#39;REPORTING_AREA&#39;</span><span class="p">,</span> <span class="s1">&#39;OFFENSE_CODE_GROUP&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">,</span> <span class="s1">&#39;COUNT_CRIMES&#39;</span><span class="p">]]</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">ratio_imbalance</span> <span class="o">=</span> <span class="n">df_aux2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_aux2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Ratio imbalance (no. samples label 1/ no. sables plabel 0): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio_imbalance</span><span class="p">))</span>
 
-    <span class="c1"># Determine the ratio of inbalance between violent crimes and non-violent crimes</span>
-    <span class="n">df_aux2</span> <span class="o">=</span> <span class="n">df_aux</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">])[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+        <span class="c1"># Encode input features</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">enconde_input_features</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
 
-    <span class="n">ratio_imbalance</span> <span class="o">=</span> <span class="n">df_aux2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_aux2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Ratio imbalance (no. samples label 1/ no. sables plabel 0): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio_imbalance</span><span class="p">))</span>
+        <span class="c1"># Split train and test data sets</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Split train-test data sets&#39;</span><span class="p">)</span>
+        <span class="c1"># TO DO: replace unpacking like this</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">4</span><span class="p">:],</span>
+                                                                                    <span class="n">y</span><span class="p">,</span>
+                                                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span>
+                                                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-    <span class="c1"># Encode input features</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">enconde_input_features</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+        <span class="c1"># Initalize classification algorithm (gradient boosted decision trees) with hyperparameters manually introduced</span>
+        <span class="c1"># To do : train with more classification models (logistic, random forest, adaboost, neural network,..)</span>
+        <span class="c1"># To do : apply cross-validation and hyperparameter optimization</span>
+        <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;GradientBoostingClassifier&#39;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize classification model: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_name</span><span class="p">))</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;deviance&#39;</span><span class="p">,</span>
+                                                            <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                                            <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                                                            <span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                                            <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                                            <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                                            <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                                            <span class="n">max_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                                            <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                                            <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                                            <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span>
+                                                            <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Fit model to training data</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;fit model&#39;</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
+                  <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
 
-    <span class="c1"># Split train and test data sets</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Split train-test data sets&#39;</span><span class="p">)</span>
-    <span class="c1"># TO DO: replace unpacking like this</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">4</span><span class="p">:],</span>
-                                                                                <span class="n">y</span><span class="p">,</span>
-                                                                                <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span>
-                                                                                <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+        <span class="c1"># Get mean accuracy on the given test data and labels.</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;calculate accuracy training&#39;</span><span class="p">)</span>
+        <span class="n">accuracy_train</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
+                                     <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Train Accuracy: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_train</span><span class="p">))</span>
 
-    <span class="c1"># Initalize classification algorithm (gradient boosted decision trees) with hyperparameters manually introduced</span>
-    <span class="c1"># To do : train with more classification models (logistic, random forest, adaboost, neural network,..)</span>
-    <span class="c1"># To do : apply cross-validation and hyperparameter optimization</span>
-    <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;GradientBoostingClassifier&#39;</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize classification model: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_name</span><span class="p">))</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">ensemble</span><span class="o">.</span><span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;deviance&#39;</span><span class="p">,</span>
-                                                        <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-                                                        <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-                                                        <span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                                        <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-                                                        <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                                        <span class="n">min_weight_fraction_leaf</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                                                        <span class="n">max_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                                                        <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                                                        <span class="n">max_leaf_nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                                                        <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span>
-                                                        <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="c1"># Fit model to training data</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;fit model&#39;</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
-              <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="c1"># Predict in test</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Predict on test dataset&#39;</span><span class="p">)</span>
+        <span class="n">y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_test</span><span class="p">)</span>
 
-    <span class="c1"># Get mean accuracy on the given test data and labels.</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;calculate accuracy training&#39;</span><span class="p">)</span>
-    <span class="n">accuracy_train</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
-                                 <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Train Accuracy: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_train</span><span class="p">))</span>
+        <span class="c1"># Calculate classification metrics</span>
+        <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">calculate_classification_metrics</span><span class="p">(</span><span class="n">y_hat</span><span class="o">=</span><span class="n">y_hat</span><span class="p">,</span>
+                                                             <span class="n">y_test</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
+                                                             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
 
-    <span class="c1"># Predict in test</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Predict on test dataset&#39;</span><span class="p">)</span>
-    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="c1"># Plot test confusion matrix</span>
+        <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-    <span class="c1"># Calculate classification metrics</span>
-    <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">calculate_classification_metrics</span><span class="p">(</span><span class="n">y_hat</span><span class="o">=</span><span class="n">y_hat</span><span class="p">,</span>
-                                                         <span class="n">y_test</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span>
-                                                         <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+        <span class="c1"># Save model</span>
+        <span class="c1"># to do: Names of the model have to be stored in config ini</span>
+        <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+                                       <span class="n">model_name</span><span class="o">=</span><span class="n">model_name</span><span class="p">,</span>
+                                       <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+                                       <span class="n">models_path</span><span class="o">=</span><span class="n">models_path</span><span class="p">)</span>
 
-    <span class="c1"># Plot test confusion matrix</span>
-    <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-    <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="c1">## Save test data set</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Save test data set&#39;</span><span class="p">)</span>
+        <span class="n">df_test</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">})</span>
+        <span class="n">X_test</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df_test</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_test</span><span class="p">,</span> <span class="n">X_test</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">df_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">inference_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Save model</span>
-    <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-                                   <span class="n">model_name</span><span class="o">=</span><span class="n">model_name</span><span class="p">,</span>
-                                   <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
-                                   <span class="n">models_path</span><span class="o">=</span><span class="n">models_path</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Finish ::: &#39;</span><span class="p">)</span>
 
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Finish ::: &#39;</span><span class="p">)</span></div>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in dummy_project_predictive_modeling.main:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
