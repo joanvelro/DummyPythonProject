@@ -35,7 +35,7 @@ def set_up_logger(path):
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         fh.setFormatter(formatter)
         logger.addHandler(fh)
-        # logging.getLogger().addHandler(logging.StreamHandler())  # to display in console message
+        logging.getLogger().addHandler(logging.StreamHandler())  # to display in console message
         return logger
     except Exception as exception_msg:
         logger = []

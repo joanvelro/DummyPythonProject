@@ -35,88 +35,99 @@ def main():
 
 
     """
-    # Load configuration info
-    config_object = configparser.ConfigParser()
-    config_object.read('config.ini')
-    data_path = config_object._sections['paths']['data_path']
-    logs_path = config_object._sections['paths']['logs_path']
-    figures_path = config_object._sections['paths']['figures_path']
 
-    # Initialize logs
-    log_file_name = 'data_analysis'
-    logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
+    try:
+        # Load configuration info
+        config_object = configparser.ConfigParser()
+        config_object.read('config.ini')
+        data_path = config_object._sections['paths']['data_path']
+        logs_path = config_object._sections['paths']['logs_path']
+        figures_path = config_object._sections['paths']['figures_path']
+        raw_file = config_object._sections['dataset']['raw']
+        processed_file = config_object._sections['dataset']['processed']
 
-    logger.info('::: Start Exploratory data analysis :::')
+        # Initialize logs
+        log_file_name = 'data_analysis'
+        logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
 
-    # Load data
-    logger.info('Load data from: {}'.format(data_path))
-    df = dummy_project_utils.load_data(path=data_path, logger=logger)
-    df.reset_index(inplace=True)
+        logger.info('::: Start Exploratory data analysis :::')
 
-    # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
-    df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
+        # Load data
+        logger.info('Load data from: {}'.format(data_path))
+        df = dummy_project_utils.load_data(path=data_path + raw_file, logger=logger)
+        df.reset_index(inplace=True)
 
-    # Check that the dataframe do not contains NaN values
-    logger.info('Check NaN values')
-    df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
+        # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
+        df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
 
-    # Extract X and Y coordinates
-    df['Location_X'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[0]))
-    df['Location_Y'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[1]))
+        # Check that the dataframe do not contains NaN values
+        logger.info('Check NaN values')
+        df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
 
-    # Filter by the crimes that have a valid location
-    df = df[(df['Location_X'] != 0) & (df['Location_Y'] != 0)]
-    df = df[(df['Location_X'] != -1) | (df['Location_Y'] != -1)]
+        # Extract X and Y coordinates
+        df['Location_X'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[0]))
+        df['Location_Y'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[1]))
 
-    # Determine frequency of crimes per location
-    df_freq_loc_crimes = dummy_project_utils.get_frequencies(df=df,
-                                                             column='Location',
-                                                             logger=logger)
-    # Extract X and Y coordinates
-    df_freq_loc_crimes['Location_X'] = df_freq_loc_crimes['Location'].apply(
-        lambda x: float(x.strip('()').split(',')[0]))
-    df_freq_loc_crimes['Location_Y'] = df_freq_loc_crimes['Location'].apply(
-        lambda x: float(x.strip('()').split(',')[1]))
+        # Filter by the crimes that have a valid location
+        df = df[(df['Location_X'] != 0) & (df['Location_Y'] != 0)]
+        df = df[(df['Location_X'] != -1) | (df['Location_Y'] != -1)]
 
-    # Plot scatterplot of crimes
-    error = dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
-                                                 var_x='Location_X',
-                                                 var_y='Location_Y',
-                                                 scale='FREQ_CRIMES_PERCENTAGE',
-                                                 path=figures_path + 'crimes_map.png',
-                                                 logger=logger)
+        # Determine frequency of crimes per location
+        df_freq_loc_crimes = dummy_project_utils.get_frequencies(df=df,
+                                                                 column='Location',
+                                                                 logger=logger)
+        # Extract X and Y coordinates
+        df_freq_loc_crimes['Location_X'] = df_freq_loc_crimes['Location'].apply(
+            lambda x: float(x.strip('()').split(',')[0]))
+        df_freq_loc_crimes['Location_Y'] = df_freq_loc_crimes['Location'].apply(
+            lambda x: float(x.strip('()').split(',')[1]))
 
-    # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
-    # Add results to the logging file
-    logger.info('Obtain distribution of frequency of crimes occurence')
+        # Plot scatterplot of crimes
+        error = dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
+                                                     var_x='Location_X',
+                                                     var_y='Location_Y',
+                                                     scale='FREQ_CRIMES_PERCENTAGE',
+                                                     path=figures_path + 'crimes_map.png',
+                                                     logger=logger)
 
-    # Define relevant columns
-    columns = ['OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH']
+        # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
+        # Add results to the logging file
+        logger.info('Obtain distribution of frequency of crimes occurence')
 
-    # Iter per columns ang ger the distribution of crimes ocurrence
-    logger.info('Iter per columns ang ger the distribution of crimes ocurrence')
-    logger.info('save figures in {}'.format(figures_path))
-    for column in columns:
-        logger.info(column)
+        # Define relevant columns
+        columns = ['OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH']
 
-        # Get crimes frequencies
-        df_freq = dummy_project_utils.get_frequencies(df=df,
-                                                      column=column,
-                                                      logger=logger)
+        # Iter per columns ang ger the distribution of crimes ocurrence
+        logger.info('Iter per columns ang ger the distribution of crimes ocurrence')
+        logger.info('save figures in {}'.format(figures_path))
+        for column in columns:
+            logger.info(column)
 
-        # Plot crimes frequencies
-        dummy_project_utils.plot_barplot(df=df_freq[0:20],
-                                         var_x=column,
-                                         var_y='FREQ_CRIMES_PERCENTAGE',
-                                         path=figures_path + 'crimes_distribution_per_{}.png'.format(column),
-                                         logger=logger)
+            # Get crimes frequencies
+            df_freq = dummy_project_utils.get_frequencies(df=df,
+                                                          column=column,
+                                                          logger=logger)
 
-        # report the first 5 values in the log
-        for obs in range(0, 5):
-            logger.info('column value:{} frequency of crimes:{}'.format(df_freq.loc[obs][column],
-                                                                        df_freq.loc[obs]['FREQ_CRIMES_PERCENTAGE']))
+            # Plot crimes frequencies
+            dummy_project_utils.plot_barplot(df=df_freq[0:20],
+                                             var_x=column,
+                                             var_y='FREQ_CRIMES_PERCENTAGE',
+                                             path=figures_path + 'crimes_distribution_per_{}.png'.format(column),
+                                             logger=logger)
 
-    logger.info('::: Finish :::')
+            # report the first 5 values in the log
+            for obs in range(0, 5):
+                logger.info('column value:{} frequency of crimes:{}'.format(df_freq.loc[obs][column],
+                                                                            df_freq.loc[obs]['FREQ_CRIMES_PERCENTAGE']))
+
+        # Save processed data set
+        df.drop(columns=['index'], inplace=True)
+        df.to_csv(path_or_buf=data_path + processed_file, index=False, sep=';')
+
+        logger.info('::: Finish :::')
+
+    except Exception as exception_msg:
+        logger.error('(!) Error in dummy_project_data_analysis.main:{}'.format(str(exception_msg)))
 
 
 if __name__ == "__main__":
