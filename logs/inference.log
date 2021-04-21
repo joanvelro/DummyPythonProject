@@ -1,0 +1,12 @@
+2021-04-20 19:55:05,663 - logs\\inference - INFO - Initialize logger
+2021-04-20 19:55:05,663 - logs\\inference - INFO - ::: Start Inference :::
+2021-04-20 19:55:05,663 - logs\\inference - INFO - Load input data from: data\\
+2021-04-20 19:55:05,678 - logs\\inference - INFO - Split input features
+2021-04-20 19:55:05,701 - logs\\inference - INFO -  Calculate classification metrics
+2021-04-20 19:55:05,732 - logs\\inference - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-20 19:55:05,732 - logs\\inference - INFO - Test Precision: 0.9862708453133985
+2021-04-20 19:55:05,732 - logs\\inference - INFO - Test Recall: 0.9493530754860583
+2021-04-20 19:55:05,732 - logs\\inference - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-20 19:55:05,732 - logs\\inference - INFO - Plot test confusion matrix
+2021-04-20 19:55:05,868 - logs\\inference - INFO - ::: Finish ::: 
