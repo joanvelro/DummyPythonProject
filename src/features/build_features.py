@@ -6,22 +6,15 @@
     Data path and other configuration settings are indicated in config.ini
 
 .. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021
-
-
 """
 # Import dependencies
 import configparser
-# TO DO: Import only sklearn
-import sklearn
-import sklearn.preprocessing
-import sklearn.metrics
-import sklearn.model_selection
-import sklearn.ensemble
-import matplotlib.pyplot
-import pandas
+from sys import path
+
+path.append("../../")
 
 # Import custom libraries
-import dummy_project_utils
+import src.utils.utils
 
 
 def main():
@@ -31,38 +24,47 @@ def main():
         This function execute a descriptive analysis of the crimes data set and provides insight about
         and it can support de decision process related to surveillance schedule
 
-
-
-
     """
-
+    # Load configuration info
     try:
-        # Load configuration info
         config_object = configparser.ConfigParser()
-        config_object.read('config.ini')
+        config_object.read('..//config.ini')
         data_path = config_object._sections['paths']['data_path']
         logs_path = config_object._sections['paths']['logs_path']
         figures_path = config_object._sections['paths']['figures_path']
         raw_file = config_object._sections['dataset']['raw']
         processed_file = config_object._sections['dataset']['processed']
+    except Exception as exception_msg:
+        print('(!) Error in build_features.load_configuration:{}'.format(str(exception_msg)))
+        raise
 
-        # Initialize reports
-        log_file_name = 'data_analysis'
-        logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
-
+    # Initialize reports
+    try:
+        log_file_name = 'build_features'
+        logger = src.utils.utils.set_up_logger(path='..//..//' + logs_path + log_file_name)
         logger.info('::: Start Exploratory data analysis :::')
+    except Exception as exception_msg:
+        print('(!) Error in build_features.initialize_logging:{}'.format(str(exception_msg)))
+        raise
 
-        # Load data
-        logger.info('Load data from: {}'.format(data_path))
-        df = dummy_project_utils.load_data(path=data_path + raw_file, logger=logger)
+    # Load data
+    try:
+        logger.info('Loading raw data')
+        df = src.utils.utils.load_data(path='..\\..\\' + data_path + 'raw\\' + raw_file, logger=logger)
         df.reset_index(inplace=True)
+    except Exception as exception_msg:
+        logger.error('(!) Error in build_features.loading_data:{}'.format(str(exception_msg)))
+        raise
 
+    # preprocessing
+    try:
+        logger.info('Data Pre-processing')
         # Exist registers in REPORTING AREA column without an acceptable value, change for "unknown"
         df.loc[df['REPORTING_AREA'] == ' ', ['REPORTING_AREA']] = 'unknown'
 
         # Check that the dataframe do not contains NaN values
         logger.info('Check NaN values')
-        df = dummy_project_utils.check_nan(dataframe=df, logger=logger)
+        df = src.utils.utils.check_nan(dataframe=df, logger=logger)
 
         # Extract X and Y coordinates
         df['Location_X'] = df['Location'].apply(lambda x: float(x.strip('()').split(',')[0]))
@@ -72,62 +74,20 @@ def main():
         df = df[(df['Location_X'] != 0) & (df['Location_Y'] != 0)]
         df = df[(df['Location_X'] != -1) | (df['Location_Y'] != -1)]
 
-        # Determine frequency of crimes per location
-        df_freq_loc_crimes = dummy_project_utils.get_frequencies(df=df,
-                                                                 column='Location',
-                                                                 logger=logger)
-        # Extract X and Y coordinates
-        df_freq_loc_crimes['Location_X'] = df_freq_loc_crimes['Location'].apply(
-            lambda x: float(x.strip('()').split(',')[0]))
-        df_freq_loc_crimes['Location_Y'] = df_freq_loc_crimes['Location'].apply(
-            lambda x: float(x.strip('()').split(',')[1]))
-
-        # Plot scatterplot of crimes
-        error = dummy_project_utils.plot_scatterplot(df=df_freq_loc_crimes,
-                                                     var_x='Location_X',
-                                                     var_y='Location_Y',
-                                                     scale='FREQ_CRIMES_PERCENTAGE',
-                                                     path=figures_path + 'crimes_map.png',
-                                                     logger=logger)
-
-        # Obtain some distribution of frequency of occurrence to known how is distributed the crimes
-        # Add results to the logging file
-        logger.info('Obtain distribution of frequency of crimes occurence')
-
-        # Define relevant columns
-        columns = ['OFFENSE_CODE_GROUP', 'REPORTING_AREA', 'DAY_OF_WEEK', 'HOUR', 'MONTH']
-
-        # Iter per columns ang ger the distribution of crimes ocurrence
-        logger.info('Iter per columns ang ger the distribution of crimes ocurrence')
-        logger.info('save figures in {}'.format(figures_path))
-        for column in columns:
-            logger.info(column)
-
-            # Get crimes frequencies
-            df_freq = dummy_project_utils.get_frequencies(df=df,
-                                                          column=column,
-                                                          logger=logger)
-
-            # Plot crimes frequencies
-            dummy_project_utils.plot_barplot(df=df_freq[0:20],
-                                             var_x=column,
-                                             var_y='FREQ_CRIMES_PERCENTAGE',
-                                             path=figures_path + 'crimes_distribution_per_{}.png'.format(column),
-                                             logger=logger)
-
-            # report the first 5 values in the log
-            for obs in range(0, 5):
-                logger.info('column value:{} frequency of crimes:{}'.format(df_freq.loc[obs][column],
-                                                                            df_freq.loc[obs]['FREQ_CRIMES_PERCENTAGE']))
-
-        # Save processed data set
-        df.drop(columns=['index'], inplace=True)
-        df.to_csv(path_or_buf=data_path + processed_file, index=False, sep=';')
-
-        logger.info('::: Finish :::')
-
     except Exception as exception_msg:
-        logger.error('(!) Error in dummy_project_data_analysis.main:{}'.format(str(exception_msg)))
+        logger.error('(!) Error in build_features.pre_processing:{}'.format(str(exception_msg)))
+        raise
+
+    # Save processed data set
+    try:
+        logger.info('Save processed data set')
+        df.drop(columns=['index'], inplace=True)
+        df.to_csv(path_or_buf='..\\..\\' + data_path + 'processed\\' + processed_file, index=False, sep=';')
+    except Exception as exception_msg:
+        logger.error('(!) Error in build_features.save_processed_data:{}'.format(str(exception_msg)))
+        raise
+
+    logger.info('::: Finish :::')
 
 
 if __name__ == "__main__":

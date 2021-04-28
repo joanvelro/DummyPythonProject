@@ -36,15 +36,17 @@ def main():
     try:
         # Load configuration info
         config_object = configparser.ConfigParser()
-        config_object.read('config.ini')
+        config_object.read('..\\config.ini')
         data_path = config_object._sections['paths']['data_path']
         logs_path = config_object._sections['paths']['logs_path']
         models_path = config_object._sections['paths']['models_path']
         file_inference = config_object._sections['dataset']['inference']
+    except Exception as exception_msg:
+        print.error('(!) Error in dummy_project_inference.main:{}'.format(str(exception_msg)))
 
         # Initialize reports
-        log_file_name = 'inference'
-        logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
+        log_file_name = 'predict_model'
+        logger = dummy_project_utils.set_up_logger(path='..\\..\\'+ logs_path + log_file_name)
         logger.info('Initialize logger')
 
         logger.info('::: Start Inference :::')
