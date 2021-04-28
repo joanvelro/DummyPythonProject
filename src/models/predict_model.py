@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 .. module::Inference
-   :synopsis: This script loads the predictive model fitted and provides new predictions for a new data set with the
-   the same structure that the data set of the predictive modelling phase
+   :synopsis: This function execute a inference procedure to decide whether a crime is violent or not based on the machine learning
+        model trained for classification
 
 .. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021
 
@@ -20,72 +20,62 @@ import sklearn.model_selection
 import sklearn.ensemble
 import matplotlib.pyplot
 import pandas
+import glob
+
+from sys import path
+
+path.append("../../")
 
 # Import custom libraries
-import dummy_project_utils
+try:
+    import src.utils.utils
+    import src.data.data_processing
+    import src.models.train_model
+except Exception as exception_msg:
+    print('(!) Error in importing custom functions: ' + str(exception_msg))
 
+# Load configuration info
+configuration = src.data.data_processing.load_config_info(path='..\\config.ini')
 
-def main():
-    """
-        **Main program of Crimes Inference**
+data_path = configuration['paths']['data_path']
+logs_path = configuration['paths']['logs_path']
+models_path = configuration['paths']['models_path']
+file_inference = configuration['dataset']['inference']
 
-        This function execute a inference procedure to decide whether a crime is violent or not based on the machine learning
-        model trained for classification
-    """
+# Initialize reports
+log_file_name = 'predict_model'
+logger = src.utils.utils.set_up_logger(path=logs_path + log_file_name)
+logger.info('Initialize logger')
+logger.info('::: Start Inference :::')
 
-    try:
-        # Load configuration info
-        config_object = configparser.ConfigParser()
-        config_object.read('..\\config.ini')
-        data_path = config_object._sections['paths']['data_path']
-        logs_path = config_object._sections['paths']['logs_path']
-        models_path = config_object._sections['paths']['models_path']
-        file_inference = config_object._sections['dataset']['inference']
-    except Exception as exception_msg:
-        print.error('(!) Error in dummy_project_inference.main:{}'.format(str(exception_msg)))
+# Load data
+logger.info('Load input data from: {}'.format(data_path))
+df = src.data.data_processing.load_data(path=data_path + 'processed\\' + file_inference, logger=logger)
 
-        # Initialize reports
-        log_file_name = 'predict_model'
-        logger = dummy_project_utils.set_up_logger(path='..\\..\\'+ logs_path + log_file_name)
-        logger.info('Initialize logger')
+# Define features used
+# TO DO: load features used in predictive modelling
+features = ['REPORTING_AREA_ENCODED', 'OFFENSE_CODE_GROUP_ENCODED', 'DAY_OF_WEEK_ENCODED', 'COUNT_CRIMES_ENCODED']
 
-        logger.info('::: Start Inference :::')
+# Split input features
+logger.info('Split input features')
+X = df[features]
+y_true = df['VIOLENT_CRIME_FLAG'].values
 
-        # Load data
-        logger.info('Load input data from: {}'.format(data_path))
-        df = dummy_project_utils.load_data(path=data_path + file_inference, logger=logger)
+# Load models
+model_names = glob.glob(models_path + '*.sav')
+for model in model_names:
+    model = pickle.load(open(model, 'rb'))
+    y_hat = model.predict(X=X)
 
-        # Define features used
-        # TO DO: load features used in predictive modelling
-        features = ['REPORTING_AREA_ENCODED', 'OFFENSE_CODE_GROUP_ENCODED', 'DAY_OF_WEEK_ENCODED', 'COUNT_CRIMES_ENCODED']
+    # Calculate classification metrics
+    logger.info('Calculate classification metrics')
+    metrics = src.models.train_model.calculate_classification_metrics(y_hat=y_hat,
+                                                                      y_test=y_true,
+                                                                      logger=logger)
 
-        # Split input features
-        logger.info('Split input features')
-        X = df[features]
-        y_true = df['VIOLENT_CRIME_FLAG'].values
+    # Plot test confusion matrix
+    logger.info('Plot test confusion matrix')
+    sklearn.metrics.plot_confusion_matrix(model, X, y_hat)
+    matplotlib.pyplot.show()
 
-        # Load model
-        # to do_ load models names from congif ini
-        model_name = 'clf_model_GradientBoostingClassifier.sav'
-        model = pickle.load(open(models_path + model_name, 'rb'))
-        y_hat = model.predict(X=X)
-
-        # Calculate classification metrics
-        logger.info(' Calculate classification metrics')
-        dummy_project_utils.calculate_classification_metrics(y_hat=y_hat,
-                                                             y_test=y_true,
-                                                             logger=logger)
-
-        # Plot test confusion matrix
-        logger.info('Plot test confusion matrix')
-        sklearn.metrics.plot_confusion_matrix(model, X, y_hat)
-        matplotlib.pyplot.show()
-
-        logger.info('::: Finish ::: ')
-
-    except Exception as exception_msg:
-        logger.error('(!) Error in dummy_project_inference.main:{}'.format(str(exception_msg)))
-
-
-if __name__ == "__main__":
-    main()
+logger.info('::: Finish ::: ')
