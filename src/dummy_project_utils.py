@@ -19,7 +19,7 @@ def set_up_logger(path):
 
         Configure the logger to record all the envents in the execution of the code
 
-        :param path: path where to store logs example: 'logs\\log_file_name'
+        :param path: path where to store reports example: 'reports\\log_file_name'
         :type path: str
         :param logger: logger to record exception
         :return: logger logger

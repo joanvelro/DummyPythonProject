@@ -42,7 +42,7 @@ def main():
         models_path = config_object._sections['paths']['models_path']
         file_inference = config_object._sections['dataset']['inference']
 
-        # Initialize logs
+        # Initialize reports
         log_file_name = 'inference'
         logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
         logger.info('Initialize logger')

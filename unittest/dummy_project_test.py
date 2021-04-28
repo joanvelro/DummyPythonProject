@@ -39,7 +39,7 @@ class TestFunction(unittest.TestCase):
         """
 
         data_path = 'data\\crimes_dataset.csv'
-        logs_path = 'logs\\log_file_data_analyis'
+        logs_path = 'reports\\log_file_data_analyis'
         logger = dummy_project_utils.set_up_logger(logs_path)
         # get result
         df = dummy_project_utils.load_data(data_path, logger)
@@ -58,7 +58,7 @@ class TestFunction(unittest.TestCase):
 
         # define input data
         data_path = 'data\\crimes_dataset.csv'
-        logs_path = 'logs\\log_file_data_analyis'
+        logs_path = 'reports\\log_file_data_analyis'
         logger = dummy_project_utils.set_up_logger(path=logs_path)
         # get result
         df = dummy_project_utils.load_data(path=data_path, logger=logger)
@@ -78,7 +78,7 @@ class TestFunction(unittest.TestCase):
 
         # define input data
         data_path = 'data\\crimes_dataset.csv'
-        logs_path = 'logs\\log_file_data_analyis'
+        logs_path = 'reports\\log_file_data_analyis'
         logger = dummy_project_utils.set_up_logger(path=logs_path)
         # get result
         df = dummy_project_utils.load_data(path=data_path, logger=logger)

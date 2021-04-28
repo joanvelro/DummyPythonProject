@@ -46,7 +46,7 @@ def main():
         raw_file = config_object._sections['dataset']['raw']
         processed_file = config_object._sections['dataset']['processed']
 
-        # Initialize logs
+        # Initialize reports
         log_file_name = 'data_analysis'
         logger = dummy_project_utils.set_up_logger(path=logs_path + log_file_name)
 

@@ -136,5 +136,6 @@ RUN pip install requirements.txt
 * [Ref 3](https://blog.goodaudience.com/taxi-demand-prediction-new-york-city-5e7b12305475
   )
   
+* [Ref 4](https://drivendata.github.io/cookiecutter-data-science/)
 
 _(C) Tessella Spain by Capgemini Engineering - 2021_
