@@ -1,4 +1,4 @@
-Crimes Dummy Project Documentation
+Boston Crimes Project Documentation
 **************************
 .. toctree::
    :maxdepth: 2
@@ -15,27 +15,32 @@ Indices and tables
 
 
 
-Data Analysis
+Data
 ===================
-.. automodule:: dummy_project_data_analysis
+.. automodule:: src.data.data_processing
    :members:
 
-Predictive Modelling
+Build Features
 ===================
-.. automodule:: dummy_project_predictive_modeling
+.. automodule:: src.features.build_features
    :members:
 
-Inference
+Models (Predict)
 =====================
-.. automodule:: dummy_project_inference
+.. automodule:: src.models.predict_model
    :members:
 
-Auxiliar Functions
+Visualization
 =====================
-.. automodule:: dummy_project_utils
+.. automodule:: src.visualization.plots
+   :members:
+
+Utils
+=====================
+.. automodule:: src.utils.utils
    :members:
 
 Tests
 =====================
-.. automodule:: dummy_project_test
+.. automodule:: unittest.test
    :members:

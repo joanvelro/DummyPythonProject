@@ -11,3 +11,27 @@
 2021-04-28 12:14:34,887 - ..//..//reports\logs\build_features - INFO - Check NaN values
 2021-04-28 12:14:35,739 - ..//..//reports\logs\build_features - INFO - Save processed data set
 2021-04-28 12:14:37,119 - ..//..//reports\logs\build_features - INFO - ::: Finish :::
+2021-05-10 18:34:24,176 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-05-10 18:34:24,176 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-05-10 18:34:24,176 - ..\..\reports\logs\build_features - ERROR - (!) Error in build_features.loading_data:module 'src.utils.utils' has no attribute 'load_data'
+2021-05-10 18:35:20,412 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-05-10 18:35:20,412 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-05-10 18:35:20,412 - ..\..\reports\logs\build_features - ERROR - (!) Error in build_features.loading_data:module 'src' has no attribute 'data_processing'
+2021-05-10 18:35:57,681 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-05-10 18:35:57,681 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-05-10 18:35:58,835 - ..\..\reports\logs\build_features - INFO - Data Pre-processing
+2021-05-10 18:35:58,850 - ..\..\reports\logs\build_features - INFO - Check NaN values
+2021-05-10 18:35:59,483 - ..\..\reports\logs\build_features - INFO - Save processed data set
+2021-05-10 18:36:00,601 - ..\..\reports\logs\build_features - INFO - ::: Finish :::
+2021-05-10 18:38:04,238 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-05-10 18:38:04,238 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-05-10 18:38:05,086 - ..\..\reports\logs\build_features - INFO - Data Pre-processing
+2021-05-10 18:38:05,108 - ..\..\reports\logs\build_features - INFO - Check NaN values
+2021-05-10 18:38:05,555 - ..\..\reports\logs\build_features - INFO - Save processed data set
+2021-05-10 18:38:06,673 - ..\..\reports\logs\build_features - INFO - ::: Finish :::
+2021-05-10 19:25:18,887 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-05-10 19:25:18,887 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-05-10 19:25:19,689 - ..\..\reports\logs\build_features - INFO - Data Pre-processing
+2021-05-10 19:25:19,705 - ..\..\reports\logs\build_features - INFO - Check NaN values
+2021-05-10 19:25:20,137 - ..\..\reports\logs\build_features - INFO - Save processed data set
+2021-05-10 19:25:21,240 - ..\..\reports\logs\build_features - INFO - ::: Finish :::

@@ -17,7 +17,7 @@ def set_up_logger(path):
     """
         **Set up logger**
 
-        Configure the logger to record all the envents in the execution of the code
+        Configure the logger to record all the events in the execution of the code
 
         :param path: path where to store reports example: 'reports\\log_file_name'
         :type path: str
@@ -41,10 +41,6 @@ def set_up_logger(path):
         logger = []
         print('(!) Error in set_up_logger: ' + str(exception_msg))
         return logger
-
-
-
-
 
 
 def get_frequencies(df, column, logger):
@@ -76,75 +72,6 @@ def get_frequencies(df, column, logger):
         logger.error('(!) Error in get_frequencies: ' + str(exception_msg))
         df_aux = []
         return df_aux
-
-
-def plot_barplot(df, var_x, var_y, path, logger):
-    """
-
-        **Plot Barplot**
-
-        Plot a barplot to compare the incidence of crimes according to characteristics
-
-        :param df: Dataframe to plot
-        :param var_x: x-axis variable
-        :param var_y: y-axis variable
-        :param path: path where it is saved plot in png format
-        :param logger: logger to record exception
-    """
-    import matplotlib.pyplot
-
-    try:
-        matplotlib.pyplot.figure(figsize=(14, 14))
-        matplotlib.pyplot.barh(y=df[var_x].values,
-                               width=df[var_y].values,
-                               align='center',
-                               )
-        matplotlib.pyplot.grid(True)
-        matplotlib.pyplot.xlabel(var_x, fontsize=FONTSIZE)
-        matplotlib.pyplot.ylabel(var_y, fontsize=FONTSIZE)
-        matplotlib.pyplot.xticks(rotation=45)
-        matplotlib.pyplot.tick_params(axis='both', labelsize=FONTSIZE)
-        matplotlib.pyplot.savefig(path)
-        matplotlib.pyplot.show()
-        matplotlib.pyplot.close()
-    except Exception as exception_msg:
-        logger.error('(!) Error in plot_barplot:{}'.format(str(exception_msg)))
-
-
-def plot_scatterplot(df, var_x, var_y, scale, path, logger):
-    """
-
-        **Plot scatter**
-
-        plot with the coordinates of the crimes
-
-        :param df: Dataframe to plot
-        :param var_x: x-axis variable
-        :param var_y: y-axis variable
-        :param scale: scale of the point
-        :param path: path where it is saved plot in png format
-    """
-    import matplotlib.pyplot
-
-    try:
-        matplotlib.pyplot.figure(figsize=(14, 10))
-        matplotlib.pyplot.scatter(x=df[var_x],
-                                  y=df[var_y],
-                                  s=200 * df[scale],
-                                  alpha=0.9,
-                                  edgecolors='blue')
-        matplotlib.pyplot.grid(True)
-        matplotlib.pyplot.xlabel(var_x, fontsize=FONTSIZE)
-        matplotlib.pyplot.ylabel(var_y, fontsize=FONTSIZE)
-        matplotlib.pyplot.savefig(path)
-        matplotlib.pyplot.show()
-        matplotlib.pyplot.close()
-    except Exception as exception_msg:
-        logger.error('(!) Error in plot_scatterplot:{}'.format(str(exception_msg)))
-
-
-
-
 
 
 

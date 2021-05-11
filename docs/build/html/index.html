@@ -42,65 +42,11 @@
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
-<div class="section" id="module-dummy_project_data_analysis">
-<span id="data-analysis"></span><h2>Data Analysis<a class="headerlink" href="#module-dummy_project_data_analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.data.data_processing">
+<span id="data"></span><h2>Data<a class="headerlink" href="#module-src.data.data_processing" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="dummy_project_data_analysis.main">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_data_analysis.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_data_analysis.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_data_analysis.main" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Main program of Crimes Exploratory Data Analysis</strong></p>
-<p>This function execute a descriptive analysis of the crimes data set and provides insight about
-and it can support de decision process related to surveillance schedule</p>
-</dd></dl>
-
-</div>
-<div class="section" id="predictive-modelling">
-<h2>Predictive Modelling<a class="headerlink" href="#predictive-modelling" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-dummy_project_predictive_modeling"></span><dl class="py function">
-<dt id="dummy_project_predictive_modeling.main">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_predictive_modeling.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_predictive_modeling.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_predictive_modeling.main" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Main program of Crimes Predictive Modelling</strong></p>
-<p>This function execute a predictive modelling process in which the crimes data set is grouped in time-space
-basis, and a flag indicating violent crime or not is added. Then a machine learning model is trained to classify
-the crimes registers into violent /non-violent crimes</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-dummy_project_inference">
-<span id="inference"></span><h2>Inference<a class="headerlink" href="#module-dummy_project_inference" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt id="dummy_project_inference.main">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_inference.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_inference.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_inference.main" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Main program of Crimes Inference</strong></p>
-<p>This function execute a inference procedure to decide whether a crime is violent or not based on the machine learning
-model trained for classification</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-dummy_project_utils">
-<span id="auxiliar-functions"></span><h2>Auxiliar Functions<a class="headerlink" href="#module-dummy_project_utils" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-utils"></span><dl class="py function">
-<dt id="dummy_project_utils.calculate_classification_metrics">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">calculate_classification_metrics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_hat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#calculate_classification_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.calculate_classification_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Calculate Classification Metrics</strong></p>
-<blockquote>
-<div><p>Calculate deveral classifcation metrics: confusion matrix, precision, recall and AUC ROC</p>
-<dl class="field-list simple">
-<dt class="field-odd">param y_hat</dt>
-<dd class="field-odd"><p>actual labels obteined</p>
-</dd>
-<dt class="field-even">param y_test</dt>
-<dd class="field-even"><p>target labels</p>
-</dd>
-<dt class="field-odd">param logger</dt>
-<dd class="field-odd"><p>logger to record errors</p>
-</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-<dl class="py function">
-<dt id="dummy_project_utils.check_nan">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">check_nan</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#check_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.check_nan" title="Permalink to this definition">¶</a></dt>
+<dt id="src.data.data_processing.check_nan">
+<code class="sig-prename descclassname"><span class="pre">src.data.data_processing.</span></code><code class="sig-name descname"><span class="pre">check_nan</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/data/data_processing.html#check_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.data.data_processing.check_nan" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Check NaNs</strong></p>
 <p>Check if the input dataframe contains NaN values and fill with 0</p>
 <dl class="field-list simple">
@@ -117,8 +63,50 @@ model trained for classification</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="dummy_project_utils.enconde_input_features">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">enconde_input_features</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#enconde_input_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.enconde_input_features" title="Permalink to this definition">¶</a></dt>
+<dt id="src.data.data_processing.load_config_info">
+<code class="sig-prename descclassname"><span class="pre">src.data.data_processing.</span></code><code class="sig-name descname"><span class="pre">load_config_info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/data/data_processing.html#load_config_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.data.data_processing.load_config_info" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Load Configuration Info</em></p>
+<p>Load configuration info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – path of the config.ini file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary with config data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.data.data_processing.load_data">
+<code class="sig-prename descclassname"><span class="pre">src.data.data_processing.</span></code><code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/data/data_processing.html#load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.data.data_processing.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Load input data</strong></p>
+<p>Load the crimes input data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path of the csv file to upload</p></li>
+<li><p><strong>logger</strong> – logger to record exception</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe with the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="build-features">
+<h2>Build Features<a class="headerlink" href="#build-features" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="models-predict">
+<h2>Models (Predict)<a class="headerlink" href="#models-predict" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.utils.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-src.utils.utils" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-utils"></span><dl class="py function">
+<dt id="src.utils.utils.enconde_input_features">
+<code class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></code><code class="sig-name descname"><span class="pre">enconde_input_features</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils/utils.html#enconde_input_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.utils.enconde_input_features" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Encode Input Features</strong>
 Encode the input features using label encoder</p>
 <dl class="field-list simple">
@@ -135,8 +123,8 @@ Encode the input features using label encoder</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="dummy_project_utils.get_frequencies">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">get_frequencies</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#get_frequencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.get_frequencies" title="Permalink to this definition">¶</a></dt>
+<dt id="src.utils.utils.get_frequencies">
+<code class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></code><code class="sig-name descname"><span class="pre">get_frequencies</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils/utils.html#get_frequencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.utils.get_frequencies" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Get frequencies</strong></p>
 <p>Obtain some distribution of frequency to known how is distributed the incidences</p>
 <dl class="field-list simple">
@@ -154,26 +142,8 @@ Encode the input features using label encoder</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="dummy_project_utils.load_data">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.load_data" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Load input data</strong></p>
-<p>Load the crimes input data</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<em>str</em>) – path of the csv file to upload</p></li>
-<li><p><strong>logger</strong> – logger to record exception</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dataframe with the data</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="dummy_project_utils.plot_barplot">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">plot_barplot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#plot_barplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.plot_barplot" title="Permalink to this definition">¶</a></dt>
+<dt id="src.utils.utils.plot_barplot">
+<code class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></code><code class="sig-name descname"><span class="pre">plot_barplot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils/utils.html#plot_barplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.utils.plot_barplot" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Plot Barplot</strong></p>
 <p>Plot a barplot to compare the incidence of crimes according to characteristics</p>
 <dl class="field-list simple">
@@ -190,8 +160,8 @@ Encode the input features using label encoder</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="dummy_project_utils.plot_scatterplot">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">plot_scatterplot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#plot_scatterplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.plot_scatterplot" title="Permalink to this definition">¶</a></dt>
+<dt id="src.utils.utils.plot_scatterplot">
+<code class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></code><code class="sig-name descname"><span class="pre">plot_scatterplot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils/utils.html#plot_scatterplot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.utils.plot_scatterplot" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Plot scatter</strong></p>
 <p>plot with the coordinates of the crimes</p>
 <dl class="field-list simple">
@@ -208,31 +178,14 @@ Encode the input features using label encoder</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="dummy_project_utils.save_model">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">save_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#save_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.save_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>** Save Model**</p>
-<p>Save the predictive mdel in .sav file in models path indicated in config.ini file</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model</strong> – Model</p></li>
-<li><p><strong>model_name</strong> – model name (str)</p></li>
-<li><p><strong>logger</strong> – logger</p></li>
-<li><p><strong>models_path</strong> – path to the models folder (str)</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="dummy_project_utils.set_up_logger">
-<code class="sig-prename descclassname"><span class="pre">dummy_project_utils.</span></code><code class="sig-name descname"><span class="pre">set_up_logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_utils.html#set_up_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_utils.set_up_logger" title="Permalink to this definition">¶</a></dt>
+<dt id="src.utils.utils.set_up_logger">
+<code class="sig-prename descclassname"><span class="pre">src.utils.utils.</span></code><code class="sig-name descname"><span class="pre">set_up_logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/utils/utils.html#set_up_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.utils.set_up_logger" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Set up logger</strong></p>
-<p>Configure the logger to record all the envents in the execution of the code</p>
+<p>Configure the logger to record all the events in the execution of the code</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<em>str</em>) – path where to store logs example: ‘logslog_file_name’</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – path where to store reports example: ‘reportslog_file_name’</p></li>
 <li><p><strong>logger</strong> – logger to record exception</p></li>
 </ul>
 </dd>
@@ -243,39 +196,8 @@ Encode the input features using label encoder</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-dummy_project_test">
-<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-dummy_project_test" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-tests"></span><dl class="py class">
-<dt id="dummy_project_test.TestFunction">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">dummy_project_test.</span></code><code class="sig-name descname"><span class="pre">TestFunction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_test.html#TestFunction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_test.TestFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Test Case</strong></p>
-<p>This clase defines several unitary tests to be produced</p>
-<dl class="py method">
-<dt id="dummy_project_test.TestFunction.test_load_data">
-<code class="sig-name descname"><span class="pre">test_load_data</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_test.html#TestFunction.test_load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_test.TestFunction.test_load_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>** Test Load Data**</p>
-<p>Test that the load data is a data frame</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>self</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="dummy_project_test.TestFunction.test_load_data_empty">
-<code class="sig-name descname"><span class="pre">test_load_data_empty</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dummy_project_test.html#TestFunction.test_load_data_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dummy_project_test.TestFunction.test_load_data_empty" title="Permalink to this definition">¶</a></dt>
-<dd><p>** Test no-empty data frame**</p>
-<p>Test that the load data is a data frame and is not empty</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>self</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="module-unittest.test">
+<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-unittest.test" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
