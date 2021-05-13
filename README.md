@@ -1,7 +1,6 @@
-# Dummy project - Crimes 
-## Predictive modelling
+# Dummy project - Boston Crimes 
 
-* Detect the relationship between the crimes and the different features and characteristics availables
+* Detect the Locations and times when is more likely to find a crime in the city of Boston (Massachusetts, USA)
 
 
 ```
