@@ -8,10 +8,12 @@
 
 
 """
+import src.utils.utils
 
 def main():
 
-    # to do put here the code
+    logger = src.utils.utils.set_up_logger(path=logs_path + log_file_name)
+    logger.info('::: Start Build features :::')
 
 
 if __name__ == "__main__":

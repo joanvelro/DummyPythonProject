@@ -43,6 +43,27 @@ def set_up_logger(path):
         return logger
 
 
+def initialize_logger(log_file_name, logs_path):
+    """
+        **Get frequencies**
+
+        Obtain some distribution of frequency to known how is distributed the incidences
+
+        :param df: Data frame
+        :param column: Column to obtain the distribution of frequency of occurrence
+        :param logger: logger to record exception
+        :return: dataframe with the crimes frequencies
+        """
+
+    # Initialize reports
+    try:
+
+        logger = src.utils.utils.set_up_logger(path=logs_path + log_file_name)
+        logger.info('::: Start Build features :::')
+    except Exception as exception_msg:
+        print('(!) Error in initialize_logger:{}'.format(str(exception_msg)))
+        raise
+
 def get_frequencies(df, column, logger):
     """
         **Get frequencies**

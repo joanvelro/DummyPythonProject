@@ -35,3 +35,9 @@
 2021-05-10 19:25:19,705 - ..\..\reports\logs\build_features - INFO - Check NaN values
 2021-05-10 19:25:20,137 - ..\..\reports\logs\build_features - INFO - Save processed data set
 2021-05-10 19:25:21,240 - ..\..\reports\logs\build_features - INFO - ::: Finish :::
+2021-06-23 11:04:06,875 - ..\..\reports\logs\build_features - INFO - ::: Start Exploratory data analysis :::
+2021-06-23 11:04:06,875 - ..\..\reports\logs\build_features - INFO - Loading raw data
+2021-06-23 11:04:07,948 - ..\..\reports\logs\build_features - INFO - Data Pre-processing
+2021-06-23 11:04:07,969 - ..\..\reports\logs\build_features - INFO - Check NaN values
+2021-06-23 11:04:08,391 - ..\..\reports\logs\build_features - INFO - Save processed data set
+2021-06-23 11:04:09,455 - ..\..\reports\logs\build_features - INFO - ::: Finish :::

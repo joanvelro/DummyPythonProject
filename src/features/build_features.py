@@ -31,14 +31,7 @@ except Exception as exception_msg:
     print('(!) Error in build_features.load_configuration:{}'.format(str(exception_msg)))
     raise
 
-# Initialize reports
-try:
-    log_file_name = 'build_features'
-    logger = src.utils.utils.set_up_logger(path=logs_path + log_file_name)
-    logger.info('::: Start Exploratory data analysis :::')
-except Exception as exception_msg:
-    print('(!) Error in build_features.initialize_logging:{}'.format(str(exception_msg)))
-    raise
+
 
 # Load data
 try:
