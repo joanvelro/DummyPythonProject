@@ -1,15 +1,20 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+"""
+.. module:: src.utils
+   :synopsis: TBD
+
+.. moduleauthor:: Jose Angel Velasco - (C) Capgemini Engineering - 2021
+"""
+
 import numpy as np
 
 
 def function(x, y):
-    """ real function of two variables x and y
+    """ *function*
+    real function of two variables x and y
     :arg x: first variable
     :arg y: second variable
     :return: value of the function (-1 if error is present)
     """
-    import numpy as np
 
     try:
         # Check that input parameters are arrays
@@ -29,14 +34,14 @@ def function(x, y):
 
 
 def rosembrock(x, y, a, b):
-    """ real function of two variables x and y Rosenbrock
+    """ *rosembrock*
+    real function of two variables x and y Rosenbrock
     :arg x: first variable
     :arg y: second variable
     :arg a: second variable
     :arg b: second variable
     :return: value of the function
     """
-    import numpy as np
 
     try:
         # Check that input parameters are arrays
@@ -45,7 +50,7 @@ def rosembrock(x, y, a, b):
         if isinstance(y, list):
             y = np.array(y)
         # Calculate result
-        z = np.round((a - x) ** 2 + b * (y - x ** 2) ** 2)
+        z = np.array(np.round((a - x) ** 2 + b * (y - x ** 2) ** 2))
     except Exception as exception_msg:
         print('(!) Error in rosembrock: ' + str(exception_msg))
         z = -1

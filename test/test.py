@@ -1,15 +1,26 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+"""
+.. module:: test.test
+   :synopsis: TBD
+
+.. moduleauthor:: Jose Angel Velasco - (C) Capgemini Engineering - 2021
+"""
 import unittest
 import numpy as np
 
-from module.main import function
+from src.utils import function
 
 
 class TestFunction(unittest.TestCase):
+    """
+        *TestFunction*
+
+        Class for unit testing
+    """
 
     def test_output(self):
         """
+        *test_output*
         Test that the function provide the correct result
         """
 
@@ -27,7 +38,8 @@ class TestFunction(unittest.TestCase):
 
     def test_list(self):
         """
-        Test that it can work with a list
+            *test_list*
+            Test that it can work with a list
         """
         # define input data as lists
         x = [4.0237, -0.3734, 1.7, 2.3805, 2.8711, 0.9578, -0.2407,
