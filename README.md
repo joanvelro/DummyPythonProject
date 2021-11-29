@@ -79,11 +79,10 @@ Test
 * where automodule correspond with the name of the python file 
 ```
 """
-.. module:: Exploratory Data Analysis
-   :synopsis: Exploratory Data Analysis of the data set that contains the crimes in the city
-    Data path and other configuration settings are indicated in config.ini
+.. module:: src.main
+   :synopsis: define the functionality
 
-.. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021
+.. moduleauthor:: (C) Jose Angel Velasco - 2021
 """
 ```
 
