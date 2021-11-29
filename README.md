@@ -1,5 +1,20 @@
 # Dummy Project
 
+```
+├── docs                    # auto-documentation (latex, html, pdf)
+│ 
+├── src                     # source code
+│   ├── __init__.py         # make it a package
+│   └── main.py             # main program
+│   └── utils.py            # commom functionalities
+└── test
+│    ├── __init__.py        # also make test a package
+│    └── test.py            # unit tests
+│
+├── requirements.txt        # python dependencies 
+├── README.md               # this document
+```
+
 
 # Sphinx Tutorial
 *  Install Sphinx and Rinohtype in the virtual environment of the project you’re working on use the following commands below.
