@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Documentation for the Code}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}TeacherAPI main}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}utils}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}main}{7}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Indices and tables}{9}{chapter.5}%

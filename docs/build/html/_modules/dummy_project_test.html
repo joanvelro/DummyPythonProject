@@ -65,7 +65,9 @@
 <div class="viewcode-block" id="TestFunction.test_load_data"><a class="viewcode-back" href="../index.html#dummy_project_test.TestFunction.test_load_data">[docs]</a>    <span class="k">def</span> <span class="nf">test_load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            ** Test Load Data**</span>
+
 <span class="sd">            Test that the load data is a data frame</span>
+
 <span class="sd">            :param self:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -78,11 +80,32 @@
         <span class="c1"># Check that the input loaded is a dataframe</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">))</span></div>
 
+    <span class="k">def</span> <span class="nf">test_load_data_empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            ** Test no-empty data frame**</span>
+
+<span class="sd">            Test that the load data is a data frame and is not empty</span>
+
+<span class="sd">            :param self:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># define input data</span>
+        <span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;data</span><span class="se">\\</span><span class="s1">crimes_dataset.csv&#39;</span>
+        <span class="n">logs_path</span> <span class="o">=</span> <span class="s1">&#39;logs</span><span class="se">\\</span><span class="s1">log_file_data_analyis&#39;</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">set_up_logger</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">logs_path</span><span class="p">)</span>
+        <span class="c1"># get result</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+        <span class="c1"># Check that the resulting dataframe is not empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">)</span>
+
+
 <div class="viewcode-block" id="TestFunction.test_load_data_empty"><a class="viewcode-back" href="../index.html#dummy_project_test.TestFunction.test_load_data_empty">[docs]</a>    <span class="k">def</span> <span class="nf">test_load_data_empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            ** Test no-empty data frame**</span>
 
 <span class="sd">            Test that the load data is a data frame and is not empty</span>
+
 <span class="sd">            :param self:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 

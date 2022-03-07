@@ -1,0 +1,182 @@
+---------------------------------- page 1 ----------------------------------
+#### DownExpandingContainer('title')
+  StaticGroupedFlowables()
+    Paragraph('Dummy Project', style='title page title')
+         > (0,0,1,0,2) title page title [Sphinx] > DEFAULT
+           (0,0,0,0,2) body [Sphinx] > default
+        SingleStyledText('Dummy Project')
+    Paragraph('Release v.0.1', style='title page subtitle')
+         > (0,0,1,0,2) title page subtitle [Sphinx] > title page title
+           (0,0,0,0,2) body [Sphinx] > default
+        SingleStyledText('Release v.0.1')
+    Paragraph('Jose Angel', style='title page author')
+         > (0,0,1,0,2) title page author [Sphinx] > DEFAULT
+           (0,0,0,0,2) body [Sphinx] > default
+        SingleStyledText('Jose Angel')
+    Paragraph('Nov 29, 2021', style='title page date')
+         > (0,0,1,0,2) title page date [Sphinx] > DEFAULT
+           (0,0,0,0,2) body [Sphinx] > default
+        SingleStyledText('Nov 29, 2021')
+---------------------------------- page i ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Table of Contents', style='front matter section title')
+       > (0,0,1,0,2) front matter section title [Sphinx] > DEFAULT
+         (0,0,0,0,2) body [Sphinx] > default
+      Field('Table of Contents')
+        StringField('Table of Contents')
+          SingleStyledText('Table of Contents')
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    TableOfContentsSection(style='table of contents')
+         > (0,0,1,0,1) table of contents section [Sphinx] > DEFAULT
+           (0,0,0,1,1) chapter [Sphinx] > DEFAULT
+      TableOfContents()   table of contents
+           > (0,0,0,0,2) table of contents [Sphinx] > default
+        TableOfContentsEntry('1	Documentation for the Code	1')
+             > (0,0,0,1,2) toc level 1 [Sphinx] > table of contents
+            ReferenceField('1')
+                 > (0,0,0,1,4) toc entry number reference field [Sphinx] > linked reference
+                   (0,0,0,0,1) linked reference [Sphinx] > DEFAULT
+              SingleStyledText('1')
+            Tab('	')
+            ReferenceField('Documentation for the Code')
+                 > (0,0,0,0,1) linked reference [Sphinx] > DEFAULT
+              MixedStyledText('Documentation for the Code')
+                MixedStyledText('Documentation for the Code')
+                  SingleStyledText('Documentation for the Code')
+            Tab('	')
+            ReferenceField('1')
+                 > (0,0,0,0,1) linked reference [Sphinx] > DEFAULT
+              SingleStyledText('1')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		i')
+         > (0,0,0,0,2) footer [Sphinx] > header_footer
+        MixedStyledText('		i')
+          MixedStyledText('		i')
+            Tab('	')
+            Tab('	')
+            Field('i')
+              SingleStyledText('i')
+---------------------------------- page 1 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Chapter 1', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label [Sphinx] > DEFAULT
+         (0,0,0,0,2) body [Sphinx] > default
+      MixedStyledText('Chapter 1')
+        MixedStyledText('Chapter 1')
+          MixedStyledText('Chapter ')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+          Field('1', style='number')
+               > (0,0,2,0,3) body matter chapter number [Sphinx] > DEFAULT
+            SingleStyledText('1')
+  Paragraph('Documentation for the Code', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title [Sphinx] > DEFAULT
+         (0,0,0,0,2) body [Sphinx] > default
+      Field('Documentation for the Code')
+        MixedStyledText('Documentation for the Code')
+          MixedStyledText('Documentation for the Code')
+            SingleStyledText('Documentation for the Code')
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    DocumentTree()   C (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <document>
+      Section(id='documentation-for-the-code')   C:10 (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <section>
+           > (0,0,0,1,4) content chapter [Sphinx] > chapter
+             (0,0,0,1,2) chapter [Sphinx] > DEFAULT
+        StaticGroupedFlowables()   C (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <compound>
+      List(style='bulleted')   C:35 (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <bullet_list>
+           > (0,0,1,0,2) bulleted list [Sphinx] > enumerated list
+        ListItem()   C (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <list_item>
+             x (0,0,1,0,4) bulleted list item
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label [Sphinx] > list item label
+                 (0,0,0,0,2) list item label [Sphinx] > default
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()
+               > (0,0,0,0,3) list item body [Sphinx] > DEFAULT
+            Paragraph('genindex')   C:35 (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <paragraph>
+                 > (0,0,0,0,5) list item paragraph [Sphinx] > default
+                   (0,0,0,0,2) body [Sphinx] > default
+                MixedStyledText('genindex')
+                  MixedStyledText('genindex')
+                    MixedStyledText('genindex')   <inline>
+                      SingleStyledText('genindex')
+        ListItem()   C (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <list_item>
+             x (0,0,1,0,4) bulleted list item
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label [Sphinx] > list item label
+                 (0,0,0,0,2) list item label [Sphinx] > default
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()
+               > (0,0,0,0,3) list item body [Sphinx] > DEFAULT
+            Paragraph('modindex')   C:36 (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <paragraph>
+                 > (0,0,0,0,5) list item paragraph [Sphinx] > default
+                   (0,0,0,0,2) body [Sphinx] > default
+                MixedStyledText('modindex')
+                  MixedStyledText('modindex')
+                    MixedStyledText('modindex')   <inline>
+                      SingleStyledText('modindex')
+        ListItem()   C (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <list_item>
+             x (0,0,1,0,4) bulleted list item
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label [Sphinx] > list item label
+                 (0,0,0,0,2) list item label [Sphinx] > default
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()
+               > (0,0,0,0,3) list item body [Sphinx] > DEFAULT
+            Paragraph('search')   C:37 (\Users\jose.velasco\PyCharmProjects\dummy_project\docs\source\index.rst)   <paragraph>
+                 > (0,0,0,0,5) list item paragraph [Sphinx] > default
+                   (0,0,0,0,2) body [Sphinx] > default
+                MixedStyledText('search')
+                  MixedStyledText('search')
+                    MixedStyledText('search')   <inline>
+                      SingleStyledText('search')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		1')
+         > (0,0,0,0,2) footer [Sphinx] > header_footer
+        MixedStyledText('		1')
+          MixedStyledText('		1')
+            Tab('	')
+            Tab('	')
+            Field('1')
+              SingleStyledText('1')
+---------------------------------- page 3 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    StaticGroupedFlowables()
+#### ChainedContainer('column2')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		3')
+         > (0,0,0,0,2) footer [Sphinx] > header_footer
+        MixedStyledText('		3')
+          MixedStyledText('		3')
+            Tab('	')
+            Tab('	')
+            Field('3')
+              SingleStyledText('3')
