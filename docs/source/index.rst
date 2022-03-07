@@ -1,10 +1,44 @@
-Boston Crimes Project Documentation
+.. Dummy Project documentation master file, created by
+   sphinx-quickstart
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Dummy Project's documentation!
+=========================================
+
+Documentation for module
 **************************
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+Module
+===================
+.. automodule:: src
+   :members:
 
+
+utils
+===================
+.. automodule:: src.utils
+   :members:
+
+main
+===================
+.. automodule:: src.main
+   :members:
+
+
+Documentation for testing
+**************************
+.. toctree::
+   :maxdepth: 2
+   :caption: Test Contents:
+
+Test
+===================
+.. automodule:: test.test
+   :members:
 
 Indices and tables
 ==================
@@ -12,35 +46,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-
-
-Data
-===================
-.. automodule:: src.data.data_processing
-   :members:
-
-Build Features
-===================
-.. automodule:: src.features.build_features
-   :members:
-
-Models (Predict)
-=====================
-.. automodule:: src.models.predict_model
-   :members:
-
-Visualization
-=====================
-.. automodule:: src.visualization.plots
-   :members:
-
-Utils
-=====================
-.. automodule:: src.utils.utils
-   :members:
-
-Tests
-=====================
-.. automodule:: unittest.test
-   :members:

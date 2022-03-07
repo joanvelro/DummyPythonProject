@@ -1,20 +1,26 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 """
-.. module::Main
-   :synopsis: This script ...
+.. module:: src.main
+   :synopsis: TBD
 
-.. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021
-
-
+.. moduleauthor:: Jose Angel Velasco - (C) Capgemini Engineering - 2021
 """
-import src.utils.utils
+import numpy as np
+from src.utils import rosembrock
+
 
 def main():
+    """
+        *main*
 
-    logger = src.utils.utils.set_up_logger(path=logs_path + log_file_name)
-    logger.info('::: Start Build features :::')
+        This function execute all the code
+
+    """
+    x = np.random.normal(1, 0.5, 100)
+    y = np.random.normal(5, 0.8, 100)
+    a = 1
+    b = 100
+    f = rosembrock(x, y, a, b)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
