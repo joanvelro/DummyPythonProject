@@ -1,0 +1,656 @@
+2021-04-28 12:27:30,494 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:27:30,494 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:27:31,046 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'Location_X'
+2021-04-28 12:27:31,046 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-28 12:27:31,046 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-04-28 12:27:31,046 - ..\..\reports\logs\visualize - INFO - save figures in reports\figures\
+2021-04-28 12:27:31,046 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-04-28 12:27:34,910 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-04-28 12:27:34,914 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-04-28 12:27:34,919 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-04-28 12:27:34,920 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-04-28 12:27:34,920 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-04-28 12:27:34,920 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-04-28 12:27:36,828 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-04-28 12:27:36,830 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-04-28 12:27:36,831 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-04-28 12:27:36,832 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-04-28 12:27:36,833 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-04-28 12:27:36,833 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-04-28 12:27:38,220 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-04-28 12:27:38,222 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-04-28 12:27:38,224 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-04-28 12:27:38,226 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-04-28 12:27:38,228 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-04-28 12:27:38,228 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-04-28 12:27:39,717 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-04-28 12:27:39,719 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-04-28 12:27:39,722 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-04-28 12:27:39,724 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-04-28 12:27:39,729 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-04-28 12:27:39,730 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-04-28 12:27:41,020 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-04-28 12:27:41,021 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-04-28 12:27:41,023 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-04-28 12:27:41,025 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-04-28 12:27:41,027 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-04-28 12:27:41,028 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-04-28 12:31:08,889 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:31:08,889 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:32:05,154 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:32:05,154 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:32:30,256 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:32:30,256 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:32:30,654 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-04-28 12:32:31,233 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'Location_X'
+2021-04-28 12:32:45,059 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:32:45,059 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:32:45,479 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-04-28 12:33:14,388 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-04-28 12:33:14,388 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-04-28 12:33:14,787 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-04-28 12:33:18,673 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-04-28 12:33:18,673 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-04-28 12:33:18,673 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-04-28 12:33:18,674 - ..\..\reports\logs\visualize - INFO - save figures in reports\figures\
+2021-04-28 12:33:18,674 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-04-28 12:33:20,368 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-04-28 12:33:20,371 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-04-28 12:33:20,375 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-04-28 12:33:20,378 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-04-28 12:33:20,380 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-04-28 12:33:20,380 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-04-28 12:33:21,551 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-04-28 12:33:21,555 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-04-28 12:33:21,560 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-04-28 12:33:21,562 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-04-28 12:33:21,562 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-04-28 12:33:21,566 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-04-28 12:33:22,595 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-04-28 12:33:22,596 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-04-28 12:33:22,597 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-04-28 12:33:22,600 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-04-28 12:33:22,604 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-04-28 12:33:22,604 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-04-28 12:33:23,694 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-04-28 12:33:23,696 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-04-28 12:33:23,699 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-04-28 12:33:23,702 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-04-28 12:33:23,708 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-04-28 12:33:23,708 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-04-28 12:33:24,705 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-04-28 12:33:24,707 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-04-28 12:33:24,710 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-04-28 12:33:24,712 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-04-28 12:33:24,715 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-04-28 12:33:24,716 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 19:33:57,724 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:33:57,724 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:33:57,724 - ..\..\reports\logs\visualize - ERROR - (!) Error in visualize.loading_data:module 'src.utils.utils' has no attribute 'load_data'
+2021-05-10 19:35:40,302 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:35:40,302 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:35:41,076 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 19:35:41,147 - ..\..\reports\logs\visualize - ERROR - (!) Error in visualize.plot_scatter:module 'src.utils.utils' has no attribute 'plot_scatterplot'
+2021-05-10 19:36:05,407 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:36:05,407 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:36:06,211 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 19:36:06,768 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 19:36:06,834 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 19:36:06,897 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 19:36:06,959 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 19:36:07,012 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 19:36:07,063 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 19:53:27,065 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:53:27,065 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:53:28,046 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 19:53:28,847 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:28,898 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 19:53:28,898 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 19:53:28,898 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 19:53:28,898 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 19:53:28,898 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 19:53:28,956 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 19:53:29,029 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 19:53:29,092 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 19:53:29,145 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 19:53:29,181 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_barplot:name 'FONTSIZE' is not defined
+2021-05-10 19:53:29,181 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 19:53:29,181 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 19:53:29,181 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 19:53:29,181 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 19:53:29,196 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 19:53:29,196 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 19:57:44,596 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:57:44,596 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:57:45,386 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 19:57:45,818 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'c' argument must be a color, a sequence of colors, or a sequence of numbers, not FREQ_CRIMES_PERCENTAGE
+2021-05-10 19:57:45,937 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 19:57:45,937 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 19:57:45,937 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 19:57:45,937 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 19:57:45,938 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 19:57:45,938 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 19:57:46,224 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 19:57:46,224 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 19:57:46,225 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 19:57:46,225 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 19:57:46,226 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 19:57:46,226 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 19:57:46,466 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 19:57:46,467 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 19:57:46,468 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 19:57:46,469 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 19:57:46,469 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 19:57:46,469 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 19:57:46,711 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 19:57:46,711 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 19:57:46,711 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 19:57:46,712 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 19:57:46,712 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 19:57:46,712 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 19:57:46,903 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 19:57:46,903 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 19:57:46,904 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 19:57:46,904 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 19:57:46,905 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 19:57:46,905 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 19:57:47,092 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 19:57:47,092 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 19:57:47,093 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 19:57:47,093 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 19:57:47,093 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 19:57:47,094 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 19:58:22,860 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 19:58:22,860 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 19:58:23,664 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 19:58:24,681 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 19:58:24,682 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 19:58:24,682 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 19:58:24,682 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 19:58:24,682 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 19:58:24,682 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 19:58:24,946 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 19:58:24,947 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 19:58:24,947 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 19:58:24,947 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 19:58:24,948 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 19:58:24,949 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 19:58:25,276 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 19:58:25,277 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 19:58:25,278 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 19:58:25,279 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 19:58:25,280 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 19:58:25,280 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 19:58:25,657 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 19:58:25,657 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 19:58:25,658 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 19:58:25,658 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 19:58:25,659 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 19:58:25,659 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 19:58:25,857 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 19:58:25,857 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 19:58:25,858 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 19:58:25,858 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 19:58:25,859 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 19:58:25,859 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 19:58:26,033 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 19:58:26,034 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 19:58:26,035 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 19:58:26,035 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 19:58:26,036 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 19:58:26,036 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:14:30,984 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:14:30,984 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:14:32,384 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:14:34,274 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:14:34,274 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:14:34,274 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:14:34,274 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:14:34,275 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:14:34,275 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:14:34,656 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:14:34,657 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:14:34,657 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:14:34,658 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:14:34,659 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:14:34,659 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:14:34,959 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:14:34,960 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:14:34,962 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:14:34,963 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:14:34,964 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:14:34,965 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:14:35,273 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:14:35,509 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:14:35,510 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:14:35,510 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:14:35,511 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:14:35,511 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:14:35,511 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:14:35,734 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:14:35,734 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:14:35,735 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:14:35,735 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:14:35,736 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:14:35,736 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:18:36,344 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:18:36,344 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:18:38,099 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:18:43,351 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:19:10,388 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:19:10,388 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:19:11,482 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:19:12,924 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:19:12,925 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:19:12,925 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:19:12,925 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:19:12,925 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:19:12,925 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:19:13,264 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:19:13,264 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:19:13,264 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:19:13,265 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:19:13,266 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:19:13,266 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:19:13,580 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:19:13,581 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:19:13,581 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:19:13,581 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:19:13,583 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:19:13,583 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:19:13,905 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:19:13,906 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:19:13,907 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:19:13,907 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:19:13,908 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:19:13,908 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:19:14,146 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:19:14,146 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:19:14,147 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:19:14,148 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:19:14,148 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:19:14,149 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:19:14,378 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:19:14,379 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:19:14,380 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:19:14,380 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:19:14,381 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:19:14,381 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:20:20,477 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:20:20,477 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:20:21,606 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:20:22,971 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:20:22,971 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:20:22,971 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:20:22,971 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:20:22,972 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:20:22,972 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:20:23,312 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:20:23,312 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:20:23,312 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:20:23,313 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:20:23,314 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:20:23,314 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:20:23,670 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:20:23,671 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:20:23,671 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:20:23,671 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:20:23,672 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:20:23,672 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:20:24,017 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:20:24,018 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:20:24,020 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:20:24,021 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:20:24,022 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:20:24,022 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:20:24,262 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:20:24,263 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:20:24,263 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:20:24,264 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:20:24,264 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:20:24,264 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:20:24,494 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:20:24,494 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:20:24,495 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:20:24,495 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:20:24,496 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:20:24,496 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:21:57,204 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:21:57,204 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:21:58,809 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:22:00,612 - ..\..\reports\logs\visualize - ERROR - (!) Error in visualize.plot_scatter:plot_scatterplot() got an unexpected keyword argument 'var_color'
+2021-05-10 23:22:30,815 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:22:30,815 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:22:31,883 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:22:33,288 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:22:33,289 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:22:33,289 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:22:33,289 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:22:33,289 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:22:33,289 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:22:33,619 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:22:33,620 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:22:33,621 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:22:33,622 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:22:33,622 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:22:33,622 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:22:33,977 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:22:33,978 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:22:33,979 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:22:33,979 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:22:33,979 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:22:33,980 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:22:34,410 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:22:34,411 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:22:34,411 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:22:34,412 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:22:34,412 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:22:34,412 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:22:34,661 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:22:34,662 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:22:34,662 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:22:34,663 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:22:34,663 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:22:34,663 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:22:34,886 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:22:34,886 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:22:34,887 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:22:34,888 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:22:34,888 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:22:34,888 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:23:03,058 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'FREQ_CRIMES_PERCENTAGE'
+2021-05-10 23:26:58,351 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:26:58,351 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:26:59,388 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:27:01,527 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:27:01,528 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:27:01,528 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:27:01,528 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:27:01,528 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:27:01,868 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:27:01,869 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:27:01,870 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:27:01,871 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:27:01,872 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:27:01,872 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:27:02,288 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:27:02,290 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:27:02,291 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:27:02,292 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:27:02,293 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:27:02,293 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:27:02,646 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:27:02,647 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:27:02,648 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:27:02,649 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:27:02,650 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:27:02,650 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:27:02,881 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:27:02,882 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:27:02,882 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:27:02,883 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:27:02,883 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:27:02,884 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:27:03,107 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:27:03,108 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:27:03,108 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:27:03,109 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:27:03,111 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:27:03,111 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:40:40,465 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:40:40,466 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:40:42,720 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:40:47,060 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:40:47,060 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:40:47,060 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:40:47,060 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:40:47,060 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:40:47,610 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:40:47,611 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:40:47,612 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:40:47,613 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:40:47,613 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:40:47,613 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:40:48,101 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:40:48,101 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:40:48,102 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:40:48,103 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:40:48,104 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:40:48,104 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:40:48,644 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:40:48,645 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:40:48,646 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:40:48,647 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:40:48,649 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:40:48,649 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:40:49,033 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:40:49,035 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:40:49,036 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:40:49,037 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:40:49,038 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:40:49,039 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:40:49,449 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:40:49,450 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:40:49,452 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:40:49,453 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:40:49,454 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:40:49,454 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:42:17,071 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:42:17,072 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:42:19,692 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:42:25,490 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:42:25,490 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:42:25,492 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:42:25,492 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:42:25,492 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:42:26,144 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:42:26,145 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:42:26,145 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:42:26,146 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:42:26,147 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:42:26,147 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:42:26,772 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:42:26,774 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:42:26,775 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:42:26,776 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:42:26,777 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:42:26,777 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:42:27,342 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:42:27,344 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:42:27,345 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:42:27,347 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:42:27,347 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:42:27,348 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:42:27,771 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:42:27,772 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:42:27,774 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:42:27,774 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:42:27,775 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:42:27,775 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:42:28,428 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:42:28,429 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:42:28,431 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:42:28,432 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:42:28,433 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:42:28,433 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:43:03,192 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:43:03,193 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:43:05,993 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:43:11,105 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:43:11,106 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:43:11,106 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:43:11,107 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:43:11,107 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:43:11,788 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:43:11,789 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:43:11,790 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:43:11,790 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:43:11,791 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:43:11,791 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:43:12,349 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:43:12,352 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:43:12,353 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:43:12,354 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:43:12,355 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:43:12,356 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:43:12,962 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:43:12,963 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:43:12,964 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:43:12,966 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:43:12,967 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:43:12,967 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:43:13,421 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:43:13,423 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:43:13,424 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:43:13,425 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:43:13,426 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:43:13,426 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:43:13,848 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:43:13,849 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:43:13,851 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:43:13,852 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:43:13,852 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:43:13,853 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:54:42,473 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:54:42,474 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:54:45,186 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:54:51,032 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:54:51,033 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:54:51,033 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:54:51,033 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:54:51,034 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:54:51,623 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:54:51,625 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:54:51,628 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:54:51,630 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:54:51,631 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:54:51,631 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:54:52,344 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:54:52,345 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:54:52,346 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:54:52,347 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:54:52,348 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:54:52,349 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:54:52,853 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:54:52,855 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:54:52,856 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:54:52,857 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:54:52,858 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:54:52,858 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:54:53,269 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:54:53,270 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:54:53,274 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:54:53,275 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:54:53,276 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:54:53,276 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:54:53,792 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:54:53,793 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:54:53,795 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:54:53,796 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:54:53,797 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:54:53,798 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-10 23:56:25,460 - ..\..\reports\logs\visualize - INFO - ::: Start visualize :::
+2021-05-10 23:56:25,460 - ..\..\reports\logs\visualize - INFO - Loading processed data
+2021-05-10 23:56:27,599 - ..\..\reports\logs\visualize - INFO - scatterplots
+2021-05-10 23:56:33,812 - ..\..\reports\logs\visualize - INFO - Bar plot distributions
+2021-05-10 23:56:33,813 - ..\..\reports\logs\visualize - INFO - Obtain distribution of frequency of crimes occurence
+2021-05-10 23:56:33,813 - ..\..\reports\logs\visualize - INFO - Iter per columns ang ger the distribution of crimes ocurrence
+2021-05-10 23:56:33,813 - ..\..\reports\logs\visualize - INFO - save figures in ..\..\reports\figures\
+2021-05-10 23:56:33,813 - ..\..\reports\logs\visualize - INFO - OFFENSE_CODE_GROUP
+2021-05-10 23:56:34,345 - ..\..\reports\logs\visualize - INFO - column value:Motor Vehicle Accident Response frequency of crimes:10.409293820254934
+2021-05-10 23:56:34,346 - ..\..\reports\logs\visualize - INFO - column value:Larceny frequency of crimes:8.157371053622331
+2021-05-10 23:56:34,348 - ..\..\reports\logs\visualize - INFO - column value:Medical Assistance frequency of crimes:7.560372183079654
+2021-05-10 23:56:34,349 - ..\..\reports\logs\visualize - INFO - column value:Investigate Person frequency of crimes:6.392728446189426
+2021-05-10 23:56:34,350 - ..\..\reports\logs\visualize - INFO - column value:Other frequency of crimes:5.491313935352014
+2021-05-10 23:56:34,351 - ..\..\reports\logs\visualize - INFO - REPORTING_AREA
+2021-05-10 23:56:34,930 - ..\..\reports\logs\visualize - INFO - column value:unknown frequency of crimes:0.8024525359006077
+2021-05-10 23:56:34,932 - ..\..\reports\logs\visualize - INFO - column value:111 frequency of crimes:0.7239283601355349
+2021-05-10 23:56:34,933 - ..\..\reports\logs\visualize - INFO - column value:117 frequency of crimes:0.63787446888614
+2021-05-10 23:56:34,935 - ..\..\reports\logs\visualize - INFO - column value:329 frequency of crimes:0.610982627870704
+2021-05-10 23:56:34,938 - ..\..\reports\logs\visualize - INFO - column value:143 frequency of crimes:0.6002258914645296
+2021-05-10 23:56:34,938 - ..\..\reports\logs\visualize - INFO - DAY_OF_WEEK
+2021-05-10 23:56:35,420 - ..\..\reports\logs\visualize - INFO - column value:Friday frequency of crimes:15.263808960361427
+2021-05-10 23:56:35,422 - ..\..\reports\logs\visualize - INFO - column value:Wednesday frequency of crimes:14.606572365944173
+2021-05-10 23:56:35,424 - ..\..\reports\logs\visualize - INFO - column value:Thursday frequency of crimes:14.599580487280159
+2021-05-10 23:56:35,426 - ..\..\reports\logs\visualize - INFO - column value:Tuesday frequency of crimes:14.423707847039209
+2021-05-10 23:56:35,427 - ..\..\reports\logs\visualize - INFO - column value:Monday frequency of crimes:14.164470499650406
+2021-05-10 23:56:35,428 - ..\..\reports\logs\visualize - INFO - HOUR
+2021-05-10 23:56:35,810 - ..\..\reports\logs\visualize - INFO - column value:17.0 frequency of crimes:6.476093153337278
+2021-05-10 23:56:35,812 - ..\..\reports\logs\visualize - INFO - column value:16.0 frequency of crimes:6.2991448394557095
+2021-05-10 23:56:35,814 - ..\..\reports\logs\visualize - INFO - column value:18.0 frequency of crimes:6.272790835260582
+2021-05-10 23:56:35,816 - ..\..\reports\logs\visualize - INFO - column value:12.0 frequency of crimes:5.8629591781853385
+2021-05-10 23:56:35,818 - ..\..\reports\logs\visualize - INFO - column value:19.0 frequency of crimes:5.612865056741785
+2021-05-10 23:56:35,818 - ..\..\reports\logs\visualize - INFO - MONTH
+2021-05-10 23:56:36,212 - ..\..\reports\logs\visualize - INFO - column value:8.0 frequency of crimes:8.96305061044479
+2021-05-10 23:56:36,213 - ..\..\reports\logs\visualize - INFO - column value:6.0 frequency of crimes:8.805464422094337
+2021-05-10 23:56:36,214 - ..\..\reports\logs\visualize - INFO - column value:7.0 frequency of crimes:8.785564459742915
+2021-05-10 23:56:36,216 - ..\..\reports\logs\visualize - INFO - column value:9.0 frequency of crimes:8.681224116603023
+2021-05-10 23:56:36,217 - ..\..\reports\logs\visualize - INFO - column value:5.0 frequency of crimes:8.658097133329747
+2021-05-10 23:56:36,217 - ..\..\reports\logs\visualize - INFO - ::: Finish :::
+2021-05-11 00:00:31,189 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:loop of ufunc does not support argument 0 of type str which has no callable sqrt method
+2021-05-11 00:01:03,763 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:loop of ufunc does not support argument 0 of type str which has no callable sqrt method
+2021-05-11 01:33:18,290 - ..\..\reports\logs\visualize - ERROR - (!) Error in plot_scatterplot:'Location_X'

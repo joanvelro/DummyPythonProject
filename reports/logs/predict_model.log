@@ -1,0 +1,46 @@
+2021-04-28 20:23:07,926 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:23:07,926 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:23:07,926 - ..\..\reports\logs\predict_model - INFO - Load input data from: data\
+2021-04-28 20:23:07,926 - ..\..\reports\logs\predict_model - ERROR - (!) Error in load_data: [Errno 2] No such file or directory: 'data\\crimes_dataset_inference.csv'
+2021-04-28 20:23:07,926 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:28:15,745 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:28:15,745 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:28:15,745 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..data\
+2021-04-28 20:28:15,745 - ..\..\reports\logs\predict_model - ERROR - (!) Error in load_data: [Errno 2] No such file or directory: '..\\..data\\processed\\crimes_dataset_inference.csv'
+2021-04-28 20:28:15,745 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:28:39,261 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:28:39,276 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:28:39,276 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..\data\
+2021-04-28 20:28:39,292 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:28:39,326 - ..\..\reports\logs\predict_model - INFO -  Calculate classification metrics
+2021-04-28 20:28:39,372 - ..\..\reports\logs\predict_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 20:28:39,372 - ..\..\reports\logs\predict_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 20:28:39,372 - ..\..\reports\logs\predict_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 20:28:39,372 - ..\..\reports\logs\predict_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 20:28:39,372 - ..\..\reports\logs\predict_model - INFO - Plot test confusion matrix
+2021-04-28 20:28:41,857 - ..\..\reports\logs\predict_model - INFO - ::: Finish ::: 
+2021-04-28 20:34:52,860 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:34:52,860 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:34:52,860 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..\data\
+2021-04-28 20:34:52,876 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:35:26,734 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:35:26,734 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:35:26,734 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..\data\
+2021-04-28 20:35:26,749 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:35:26,765 - ..\..\reports\logs\predict_model - INFO - Calculate classification metrics
+2021-04-28 20:35:26,796 - ..\..\reports\logs\predict_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 20:35:26,796 - ..\..\reports\logs\predict_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 20:35:26,796 - ..\..\reports\logs\predict_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 20:35:26,796 - ..\..\reports\logs\predict_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 20:35:26,796 - ..\..\reports\logs\predict_model - INFO - Plot test confusion matrix
+2021-04-28 20:35:26,934 - ..\..\reports\logs\predict_model - INFO - ::: Finish ::: 
+2021-04-28 20:48:55,421 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:48:55,421 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:48:55,421 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..\data\
+2021-04-28 20:50:22,917 - ..\..\reports\logs\predict_model - INFO - Initialize logger
+2021-04-28 20:50:22,917 - ..\..\reports\logs\predict_model - INFO - ::: Start Inference :::
+2021-04-28 20:50:22,917 - ..\..\reports\logs\predict_model - INFO - Load input data from: ..\..\data\
+2021-04-28 20:50:22,932 - ..\..\reports\logs\predict_model - INFO - Split input features
+2021-04-28 20:50:22,948 - ..\..\reports\logs\predict_model - INFO - Calculate classification metrics

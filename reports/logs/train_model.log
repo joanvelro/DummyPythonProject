@@ -1,0 +1,684 @@
+2021-04-28 13:04:58,732 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 13:04:58,732 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 13:04:58,732 - ..\..\reports\logs\train_model - INFO - Load data from: data\
+2021-04-28 13:04:59,138 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 13:04:59,300 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 13:04:59,310 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 13:04:59,310 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 13:04:59,357 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 13:04:59,357 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 13:04:59,373 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 13:05:00,872 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 13:05:00,913 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 13:05:00,913 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 13:05:00,973 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 13:05:00,973 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 13:05:00,973 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 13:05:00,973 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 13:05:01,205 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 13:05:01,205 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 13:05:01,243 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 17:21:05,020 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 17:21:05,020 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 17:21:05,020 - ..\..\reports\logs\train_model - INFO - Load data from: data\
+2021-04-28 17:21:05,337 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 17:21:05,467 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 17:21:05,469 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 17:21:05,469 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 17:21:05,509 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 17:21:05,519 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 17:21:05,519 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 17:21:06,687 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 17:21:06,720 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 17:21:06,720 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 17:21:06,770 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 17:21:06,770 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 17:21:06,770 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 17:21:06,770 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 17:21:06,905 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 17:21:06,905 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 17:21:06,920 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 17:21:06,960 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:13:59,064 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:13:59,064 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:13:59,064 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:13:59,380 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:13:59,527 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:13:59,527 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:13:59,527 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:13:59,565 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:13:59,581 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:13:59,581 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:14:00,728 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:14:00,760 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:14:00,760 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:15:05,575 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:15:05,575 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:15:05,575 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:15:05,868 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:15:05,998 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:15:05,998 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:15:05,998 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:15:06,039 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:15:06,054 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:15:06,054 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:15:07,206 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:15:07,244 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:15:07,244 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:15:07,287 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:15:07,287 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:15:07,287 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:15:07,287 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:15:07,446 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:15:07,446 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:15:07,446 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:15:07,493 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:15:43,879 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:15:43,879 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:15:43,879 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:15:44,180 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:15:44,311 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:15:44,327 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:15:44,327 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:15:44,382 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:15:44,392 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:15:44,392 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:15:45,538 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:15:45,578 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:15:45,578 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:15:45,629 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:15:45,629 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:15:45,629 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:15:45,629 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:15:47,623 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:15:47,623 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:15:47,629 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:29:51,658 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:29:51,658 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:29:51,658 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:29:52,004 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:29:52,126 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:29:52,136 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:29:52,136 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:29:52,177 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:29:52,185 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:30:12,975 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:30:12,975 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:30:12,975 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:30:13,290 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:30:13,436 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:30:13,436 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:30:13,436 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:30:13,483 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:30:13,492 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:30:13,530 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:30:13,530 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:30:14,666 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:30:14,699 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:30:14,699 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:30:14,740 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:30:14,740 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:30:14,740 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:30:14,740 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:30:14,870 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:30:30,672 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:30:30,672 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:30:30,672 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:30:30,986 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:30:31,109 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:30:31,119 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:30:31,119 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:30:31,159 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:30:31,169 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:30:31,210 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:30:31,210 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:30:32,313 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:30:32,344 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:30:32,344 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:30:32,395 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:30:32,395 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:30:32,395 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:30:32,395 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:30:32,529 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:30:32,529 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:30:32,529 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:30:32,529 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:32:43,965 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:32:43,965 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:32:43,965 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:32:44,274 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:32:44,395 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:32:44,405 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:32:44,405 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:32:44,446 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:32:44,446 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:32:44,484 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:32:44,484 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:32:45,679 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:32:45,710 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:32:45,710 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:32:45,760 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:32:45,760 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:32:45,760 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:32:45,760 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:32:45,886 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:32:45,886 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:32:45,886 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:32:45,886 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:32:45,902 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:32:45,902 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:38:00,922 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:38:00,922 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:38:00,922 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:38:01,251 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:38:01,372 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:38:01,383 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:38:01,383 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:38:01,423 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:38:01,433 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:38:01,467 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:38:01,467 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:38:29,421 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:38:29,421 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:38:29,421 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:38:29,738 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:38:29,885 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:38:29,891 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:38:29,891 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:38:29,923 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:38:29,938 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:38:29,969 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:38:29,969 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:38:31,092 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:38:31,130 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:38:31,130 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:38:31,173 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:38:31,173 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:38:31,173 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:38:31,173 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:38:31,298 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:38:31,298 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:38:31,298 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:38:31,298 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:38:31,314 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:38:31,314 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:38:31,314 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:38:32,234 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:38:32,237 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.45844097495226327
+2021-04-28 21:38:32,237 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:38:32,279 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11802    56]
+ [14167   286]]
+2021-04-28 21:38:32,279 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.8362573099415205
+2021-04-28 21:38:32,279 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.019788279249982704
+2021-04-28 21:38:32,279 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5075328645364434
+2021-04-28 21:38:32,355 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:38:32,355 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_SGDClassifier.sav
+2021-04-28 21:38:32,356 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:41:22,204 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:41:22,204 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:41:22,204 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:41:22,597 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:41:22,778 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:41:22,778 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:41:22,778 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:41:22,836 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:41:22,846 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:41:22,889 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:41:22,889 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:41:24,308 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:41:24,348 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:41:24,348 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:41:24,408 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:41:24,408 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:41:24,408 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:41:24,408 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:41:24,577 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:41:24,577 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:41:24,577 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:41:24,577 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:41:24,592 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:41:24,592 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:41:24,592 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:41:25,755 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:41:25,765 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5543262570669063
+2021-04-28 21:41:25,765 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:41:25,805 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  887 10971]
+ [  832 13621]]
+2021-04-28 21:41:25,805 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5538793103448276
+2021-04-28 21:41:25,813 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.942434096727323
+2021-04-28 21:41:25,813 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5086179591411957
+2021-04-28 21:41:25,918 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:41:25,918 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_SGDClassifier.sav
+2021-04-28 21:41:25,919 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:41:25,919 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:41:29,407 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:41:29,409 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5154067917181474
+2021-04-28 21:41:29,409 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:41:29,461 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[8781 3077]
+ [9715 4738]]
+2021-04-28 21:41:29,461 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.6062699936020474
+2021-04-28 21:41:29,461 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.3278212135888743
+2021-04-28 21:41:29,461 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5341669738040509
+2021-04-28 21:41:29,566 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:41:29,566 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_LinearSVC.sav
+2021-04-28 21:41:29,568 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:42:29,549 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:42:29,549 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:42:29,549 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:42:29,950 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:42:30,112 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:42:30,119 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:42:30,119 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:42:30,166 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:42:30,166 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:42:30,219 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:42:30,219 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:42:31,656 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:42:31,697 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:42:31,697 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:42:31,758 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:42:31,758 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:42:31,758 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:42:31,758 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:42:31,916 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:42:31,916 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_GradientBoostingClassifier.sav
+2021-04-28 21:42:31,932 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:42:31,932 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:42:31,932 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:42:31,932 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:42:31,932 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:42:33,431 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:42:33,441 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5536897674941031
+2021-04-28 21:42:33,441 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:42:33,481 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  584 11274]
+ [  524 13929]]
+2021-04-28 21:42:33,481 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5526723009165575
+2021-04-28 21:42:33,481 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9637445513042275
+2021-04-28 21:42:33,481 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.506497001575541
+2021-04-28 21:42:33,595 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:42:33,595 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_SGDClassifier.sav
+2021-04-28 21:42:33,596 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:42:33,596 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:42:38,896 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:42:38,904 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5379834512711071
+2021-04-28 21:42:38,904 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:42:38,946 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  713 11145]
+ [ 1019 13434]]
+2021-04-28 21:42:38,946 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5465641401196143
+2021-04-28 21:42:38,954 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9294956064484882
+2021-04-28 21:42:38,954 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.4948118949766475
+2021-04-28 21:42:39,064 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:42:39,065 - ..\..\reports\logs\train_model - INFO - Save model in: ..\..\models\clf_model_LinearSVC.sav
+2021-04-28 21:42:39,066 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:43:45,186 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:43:45,186 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:43:45,186 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:43:45,573 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:43:45,727 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:43:45,733 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:43:45,733 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:43:45,782 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:43:45,792 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:43:45,833 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:43:45,833 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:43:47,843 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:43:47,912 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:43:47,912 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:43:48,003 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:43:48,003 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:43:48,003 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:43:48,004 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:43:48,219 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:43:48,223 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:43:48,224 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:43:48,235 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:43:48,236 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:43:48,237 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:43:50,255 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:43:50,268 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5513684525815268
+2021-04-28 21:43:50,269 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:43:50,343 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[ 1199 10659]
+ [ 1165 13288]]
+2021-04-28 21:43:50,343 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5548920532843362
+2021-04-28 21:43:50,343 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9193938974607347
+2021-04-28 21:43:50,343 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5102535350012394
+2021-04-28 21:43:50,496 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:43:50,498 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:43:50,498 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:44:04,236 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:44:04,245 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5473435920476244
+2021-04-28 21:44:04,245 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:44:04,302 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  442 11416]
+ [  545 13908]]
+2021-04-28 21:44:04,302 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5492023377033644
+2021-04-28 21:44:04,302 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.962291565764893
+2021-04-28 21:44:04,302 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.4997829898313418
+2021-04-28 21:44:04,404 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:44:04,405 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:45:09,121 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:45:09,121 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:45:09,121 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:45:09,519 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:45:09,671 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:45:09,681 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:45:09,681 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:45:09,732 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:45:09,742 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:45:09,782 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:45:09,782 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:11,271 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:45:11,307 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:45:11,307 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:45:11,376 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:45:11,376 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:45:11,376 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:45:11,376 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:45:11,564 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:45:11,576 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:45:11,576 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:11,576 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:45:11,576 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:45:11,576 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:12,865 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:45:12,875 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.4851173761653375
+2021-04-28 21:45:12,875 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:45:12,925 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[10930   928]
+ [12622  1831]]
+2021-04-28 21:45:12,925 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.6636462486408119
+2021-04-28 21:45:12,925 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.1266865010724417
+2021-04-28 21:45:12,925 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.524213549068857
+2021-04-28 21:45:13,030 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:45:13,031 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:45:13,032 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:23,677 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:45:23,685 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.4622973529521884
+2021-04-28 21:45:23,685 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:45:23,717 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11705   153]
+ [13992   461]]
+2021-04-28 21:45:23,717 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.750814332247557
+2021-04-28 21:45:23,717 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.031896492077769324
+2021-04-28 21:45:23,717 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5094969051719594
+2021-04-28 21:45:23,797 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:45:23,798 - ..\..\reports\logs\train_model - INFO - Initialize classification model: MLPClassifier
+2021-04-28 21:45:23,799 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:23,799 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: fit() missing 1 required positional argument: 'self'
+2021-04-28 21:45:23,799 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
+2021-04-28 21:45:52,293 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:45:52,293 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:45:52,293 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:45:52,601 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:45:52,734 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:45:52,734 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:45:52,734 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:45:52,795 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:45:52,805 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:45:52,835 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:45:52,835 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:54,134 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:45:54,184 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:45:54,184 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:45:54,254 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:45:54,254 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:45:54,254 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:45:54,254 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:45:56,080 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:45:56,085 - ..\..\reports\logs\train_model - INFO - Initialize classification model: KNeighborsClassifier
+2021-04-28 21:45:56,085 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:56,094 - ..\..\reports\logs\train_model - ERROR - (!) Error in fit: '<' not supported between instances of 'str' and 'int'
+2021-04-28 21:45:56,094 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:45:56,094 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:45:56,816 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:45:56,816 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5544385787562245
+2021-04-28 21:45:56,816 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:45:56,854 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[ 1367 10491]
+ [ 1313 13140]]
+2021-04-28 21:45:56,854 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5560492573314714
+2021-04-28 21:45:56,854 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9091538088978067
+2021-04-28 21:45:56,854 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5122173159854189
+2021-04-28 21:46:00,870 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:46:00,871 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:46:00,872 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:46:03,386 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:46:03,396 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.546538619940844
+2021-04-28 21:46:03,396 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:46:03,444 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  500 11358]
+ [  592 13861]]
+2021-04-28 21:46:03,444 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5496252825250802
+2021-04-28 21:46:03,444 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9590396457482876
+2021-04-28 21:46:03,444 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5006026361647493
+2021-04-28 21:46:06,316 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:46:06,319 - ..\..\reports\logs\train_model - INFO - Initialize classification model: MLPClassifier
+2021-04-28 21:46:06,319 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:46:11,412 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:46:11,461 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5869369875322925
+2021-04-28 21:46:11,461 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:46:11,513 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[ 2646  9212]
+ [ 1658 12795]]
+2021-04-28 21:46:11,513 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5814059162993593
+2021-04-28 21:46:11,513 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.8852833321801702
+2021-04-28 21:46:11,513 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5542119140239694
+2021-04-28 21:46:13,729 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:49:12,533 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:49:12,533 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:49:12,533 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:49:12,845 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:49:12,976 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:49:12,986 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:49:12,986 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:49:13,035 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:49:13,047 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:49:13,087 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:49:13,087 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:49:14,251 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:49:14,281 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:49:14,281 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:49:14,342 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:49:14,342 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:49:14,342 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:49:14,342 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:49:19,008 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:49:19,012 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:49:47,575 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:49:47,575 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:49:47,575 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:49:47,901 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:49:48,036 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:49:48,042 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:49:48,042 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:49:48,100 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:49:48,111 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:49:48,148 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:49:48,149 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:49:49,351 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:49:49,388 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:49:49,388 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:49:49,442 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:49:49,443 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:49:49,443 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:49:49,443 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:51:19,916 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:51:19,916 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:51:19,916 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:51:20,257 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:51:20,388 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:51:20,390 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:51:20,390 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:51:20,448 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:51:20,460 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:51:20,501 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:51:20,501 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:51:21,654 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:51:21,684 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:51:21,684 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:51:21,743 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:51:21,743 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:51:21,743 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:51:21,743 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:51:23,920 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:51:23,925 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:51:23,925 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:51:25,001 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:51:25,001 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5551312291736867
+2021-04-28 21:51:25,001 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:51:25,048 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  680 11178]
+ [  572 13881]]
+2021-04-28 21:51:25,048 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5539327187836706
+2021-04-28 21:51:25,048 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9604234415000346
+2021-04-28 21:51:25,048 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5088843468252408
+2021-04-28 21:51:26,208 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:51:26,210 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:51:26,210 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:51:28,770 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:51:28,778 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5511250889213374
+2021-04-28 21:51:28,778 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:51:28,818 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  189 11669]
+ [  167 14286]]
+2021-04-28 21:51:28,818 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5504141783856675
+2021-04-28 21:51:28,818 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9884453054729122
+2021-04-28 21:51:28,818 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.502191956160305
+2021-04-28 21:51:36,555 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:51:36,556 - ..\..\reports\logs\train_model - INFO - Initialize classification model: MLPClassifier
+2021-04-28 21:51:36,557 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:52:06,178 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:52:06,329 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5770713991538433
+2021-04-28 21:52:06,329 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:52:06,458 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[6876 4982]
+ [6149 8304]]
+2021-04-28 21:52:06,458 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.6250188167996387
+2021-04-28 21:52:06,458 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.5745519961253719
+2021-04-28 21:52:06,458 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5772068464350928
+2021-04-28 21:52:10,201 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:52:10,203 - ..\..\reports\logs\train_model - INFO - Initialize classification model: RandomForestClassifier
+2021-04-28 21:52:10,204 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:52:13,678 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:52:14,343 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 1.0
+2021-04-28 21:52:14,344 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:52:14,820 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11802    56]
+ [   89 14364]]
+2021-04-28 21:52:14,820 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.996116504854369
+2021-04-28 21:52:14,820 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9938421089047257
+2021-04-28 21:52:14,821 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.994559779363815
+2021-04-28 21:52:16,694 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:54:42,649 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:54:42,665 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:54:42,665 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:54:42,974 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:54:43,105 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:54:43,113 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:54:43,113 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:54:43,166 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:54:43,176 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:54:43,214 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:54:43,214 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:54:44,387 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:54:44,418 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:54:44,418 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:02,309 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:55:02,309 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:55:02,309 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:55:02,662 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:55:02,794 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:55:02,802 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:55:02,805 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:55:02,855 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:55:02,863 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:55:02,906 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:55:02,906 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:55:04,092 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:55:04,131 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:55:04,131 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:11,188 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:55:11,188 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:55:11,188 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:55:11,504 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:55:11,636 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:55:11,651 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:55:11,651 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:55:11,705 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:55:11,705 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:55:11,752 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:55:11,752 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:55:12,970 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:55:13,011 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:55:13,011 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:27,759 - ..\..\reports\logs\train_model - INFO - Initialize logger
+2021-04-28 21:55:27,759 - ..\..\reports\logs\train_model - INFO - ::: Start Predictive modelling :::
+2021-04-28 21:55:27,759 - ..\..\reports\logs\train_model - INFO - Load data from
+2021-04-28 21:55:28,060 - ..\..\reports\logs\train_model - INFO - Check NaN values
+2021-04-28 21:55:28,192 - ..\..\reports\logs\train_model - INFO - Split input features
+2021-04-28 21:55:28,207 - ..\..\reports\logs\train_model - INFO - Ratio imbalance (no. samples label 1/ no. sables plabel 0): 0.8190093769250074
+2021-04-28 21:55:28,207 - ..\..\reports\logs\train_model - INFO - Encode input features (label encoder)
+2021-04-28 21:55:28,262 - ..\..\reports\logs\train_model - INFO - Split train-test data sets
+2021-04-28 21:55:28,272 - ..\..\reports\logs\train_model - INFO - Save test data set
+2021-04-28 21:55:28,311 - ..\..\reports\logs\train_model - INFO - Initialize classification model: GradientBoostingClassifier
+2021-04-28 21:55:28,311 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:55:29,463 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:55:29,503 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.9628589613987795
+2021-04-28 21:55:29,503 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:29,554 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11667   191]
+ [  732 13721]]
+2021-04-28 21:55:29,554 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9862708453133985
+2021-04-28 21:55:29,554 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9493530754860583
+2021-04-28 21:55:29,554 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9666229030660177
+2021-04-28 21:55:32,619 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:55:32,626 - ..\..\reports\logs\train_model - INFO - Initialize classification model: SGDClassifier
+2021-04-28 21:55:32,626 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:55:33,843 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:55:33,858 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5515182148339511
+2021-04-28 21:55:33,858 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:33,912 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[  247 11611]
+ [  217 14236]]
+2021-04-28 21:55:33,912 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5507795875730259
+2021-04-28 21:55:33,912 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9849858160935446
+2021-04-28 21:55:33,912 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5029078178123315
+2021-04-28 21:55:35,332 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:55:35,334 - ..\..\reports\logs\train_model - INFO - Initialize classification model: LinearSVC
+2021-04-28 21:55:35,334 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:55:37,883 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:55:37,891 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.4500542888165038
+2021-04-28 21:55:37,891 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:55:37,933 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11858     0]
+ [14453     0]]
+2021-04-28 21:55:37,933 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.0
+2021-04-28 21:55:37,933 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.0
+2021-04-28 21:55:37,933 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5
+2021-04-28 21:55:39,579 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:55:39,581 - ..\..\reports\logs\train_model - INFO - Initialize classification model: MLPClassifier
+2021-04-28 21:55:39,582 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:56:16,949 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:56:17,090 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 0.5626942229211127
+2021-04-28 21:56:17,090 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:56:17,240 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[ 4185  7673]
+ [ 3879 10574]]
+2021-04-28 21:56:17,240 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.5794925193182441
+2021-04-28 21:56:17,240 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.7316128139486612
+2021-04-28 21:56:17,240 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.5422695542166985
+2021-04-28 21:56:18,874 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:56:18,876 - ..\..\reports\logs\train_model - INFO - Initialize classification model: RandomForestClassifier
+2021-04-28 21:56:18,877 - ..\..\reports\logs\train_model - INFO - fit model
+2021-04-28 21:56:22,093 - ..\..\reports\logs\train_model - INFO - calculate accuracy training
+2021-04-28 21:56:22,742 - ..\..\reports\logs\train_model - INFO - Train Accuracy: 1.0
+2021-04-28 21:56:22,742 - ..\..\reports\logs\train_model - INFO - Predict on test dataset
+2021-04-28 21:56:23,109 - ..\..\reports\logs\train_model - INFO - Test Confusion Matrix: [[11818    40]
+ [   70 14383]]
+2021-04-28 21:56:23,109 - ..\..\reports\logs\train_model - INFO - Test Precision: 0.9972266518754767
+2021-04-28 21:56:23,109 - ..\..\reports\logs\train_model - INFO - Test Recall: 0.9951567148688854
+2021-04-28 21:56:23,109 - ..\..\reports\logs\train_model - INFO - Test AUC ROC: 0.9958917323711941
+2021-04-28 21:56:27,578 - ..\..\reports\logs\train_model - INFO - Save model
+2021-04-28 21:56:27,747 - ..\..\reports\logs\train_model - INFO - ::: Finish ::: 
