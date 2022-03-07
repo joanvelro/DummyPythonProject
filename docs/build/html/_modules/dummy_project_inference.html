@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dummy_project_inference &#8212; Crimes Dummy Project v.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for dummy_project_inference</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module::Inference</span>
+<span class="sd">   :synopsis: This script loads the predictive model fitted and provides new predictions for a new data set with the</span>
+<span class="sd">   the same structure that the data set of the predictive modelling phase</span>
+
+<span class="sd">.. moduleauthor:: Jose Angel Velasco - (C) Tessella Spain by Capgemini Engineering - 2021</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># Import dependencies</span>
+<span class="kn">import</span> <span class="nn">configparser</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="c1"># TO DO: Import only sklearn</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="kn">import</span> <span class="nn">sklearn.preprocessing</span>
+<span class="kn">import</span> <span class="nn">sklearn.metrics</span>
+<span class="kn">import</span> <span class="nn">sklearn.model_selection</span>
+<span class="kn">import</span> <span class="nn">sklearn.ensemble</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="c1"># Import custom libraries</span>
+<span class="kn">import</span> <span class="nn">dummy_project_utils</span>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../index.html#dummy_project_inference.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        **Main program of Crimes Inference**</span>
+
+<span class="sd">        This function execute a inference procedure to decide whether a crime is violent or not based on the machine learning</span>
+<span class="sd">        model trained for classification</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Load configuration info</span>
+        <span class="n">config_object</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+        <span class="n">config_object</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
+        <span class="n">data_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;data_path&#39;</span><span class="p">]</span>
+        <span class="n">logs_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;logs_path&#39;</span><span class="p">]</span>
+        <span class="n">models_path</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;paths&#39;</span><span class="p">][</span><span class="s1">&#39;models_path&#39;</span><span class="p">]</span>
+        <span class="n">file_inference</span> <span class="o">=</span> <span class="n">config_object</span><span class="o">.</span><span class="n">_sections</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">][</span><span class="s1">&#39;inference&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Initialize logs</span>
+        <span class="n">log_file_name</span> <span class="o">=</span> <span class="s1">&#39;inference&#39;</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">set_up_logger</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">logs_path</span> <span class="o">+</span> <span class="n">log_file_name</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initialize logger&#39;</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Start Inference :::&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Load data</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Load input data from: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">file_inference</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+        <span class="c1"># Define features used</span>
+        <span class="c1"># TO DO: load features used in predictive modelling</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;REPORTING_AREA_ENCODED&#39;</span><span class="p">,</span> <span class="s1">&#39;OFFENSE_CODE_GROUP_ENCODED&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK_ENCODED&#39;</span><span class="p">,</span> <span class="s1">&#39;COUNT_CRIMES_ENCODED&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Split input features</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Split input features&#39;</span><span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
+        <span class="n">y_true</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;VIOLENT_CRIME_FLAG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1"># Load model</span>
+        <span class="c1"># to do_ load models names from congif ini</span>
+        <span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;clf_model_GradientBoostingClassifier.sav&#39;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">models_path</span> <span class="o">+</span> <span class="n">model_name</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+        <span class="n">y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="c1"># Calculate classification metrics</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39; Calculate classification metrics&#39;</span><span class="p">)</span>
+        <span class="n">dummy_project_utils</span><span class="o">.</span><span class="n">calculate_classification_metrics</span><span class="p">(</span><span class="n">y_hat</span><span class="o">=</span><span class="n">y_hat</span><span class="p">,</span>
+                                                             <span class="n">y_test</span><span class="o">=</span><span class="n">y_true</span><span class="p">,</span>
+                                                             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">)</span>
+
+        <span class="c1"># Plot test confusion matrix</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Plot test confusion matrix&#39;</span><span class="p">)</span>
+        <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">)</span>
+        <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;::: Finish ::: &#39;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception_msg</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;(!) Error in dummy_project_inference.main:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exception_msg</span><span class="p">)))</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Crimes Dummy Project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;(C), Tessella Spain by Capgemini Engineering - 2021.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -13,10 +13,10 @@
          > (0,0,1,0,2) title page author
            (0,0,0,0,2) body
         SingleStyledText('Jose Angel Velasco')
-    Paragraph('Apr 16, 2021', style='title page date')
+    Paragraph('Apr 20, 2021', style='title page date')
          > (0,0,1,0,2) title page date
            (0,0,0,0,2) body
-        SingleStyledText('Apr 16, 2021')
+        SingleStyledText('Apr 20, 2021')
 ---------------------------------- page i ----------------------------------
 #### FootnoteContainer('footnotes')
   StaticGroupedFlowables()
@@ -52,28 +52,60 @@
             ReferenceField('1')
                  > (0,0,0,0,1) linked reference
               SingleStyledText('1')
-        TableOfContentsEntry('2	Main	3')
+        TableOfContentsEntry('2	Data Analysis	3')
              > (0,0,0,1,2) toc level 1
             ReferenceField('2')
                  > (0,0,0,1,4) toc entry number reference field
                    (0,0,0,0,1) linked reference
               SingleStyledText('2')
             Tab('	')
-            ReferenceField('Main')
+            ReferenceField('Data Analysis')
                  > (0,0,0,0,1) linked reference
-              MixedStyledText('Main')
-                MixedStyledText('Main')
-                  SingleStyledText('Main')
+              MixedStyledText('Data Analysis')
+                MixedStyledText('Data Analysis')
+                  SingleStyledText('Data Analysis')
             Tab('	')
             ReferenceField('3')
                  > (0,0,0,0,1) linked reference
               SingleStyledText('3')
-        TableOfContentsEntry('3	Auxiliar Functions	5')
+        TableOfContentsEntry('3	Predictive Modelling	5')
              > (0,0,0,1,2) toc level 1
             ReferenceField('3')
                  > (0,0,0,1,4) toc entry number reference field
                    (0,0,0,0,1) linked reference
               SingleStyledText('3')
+            Tab('	')
+            ReferenceField('Predictive Modelling')
+                 > (0,0,0,0,1) linked reference
+              MixedStyledText('Predictive Modelling')
+                MixedStyledText('Predictive Modelling')
+                  SingleStyledText('Predictive Modelling')
+            Tab('	')
+            ReferenceField('5')
+                 > (0,0,0,0,1) linked reference
+              SingleStyledText('5')
+        TableOfContentsEntry('4	Inference	7')
+             > (0,0,0,1,2) toc level 1
+            ReferenceField('4')
+                 > (0,0,0,1,4) toc entry number reference field
+                   (0,0,0,0,1) linked reference
+              SingleStyledText('4')
+            Tab('	')
+            ReferenceField('Inference')
+                 > (0,0,0,0,1) linked reference
+              MixedStyledText('Inference')
+                MixedStyledText('Inference')
+                  SingleStyledText('Inference')
+            Tab('	')
+            ReferenceField('7')
+                 > (0,0,0,0,1) linked reference
+              SingleStyledText('7')
+        TableOfContentsEntry('5	Auxiliar Functions	9')
+             > (0,0,0,1,2) toc level 1
+            ReferenceField('5')
+                 > (0,0,0,1,4) toc entry number reference field
+                   (0,0,0,0,1) linked reference
+              SingleStyledText('5')
             Tab('	')
             ReferenceField('Auxiliar Functions')
                  > (0,0,0,0,1) linked reference
@@ -81,10 +113,26 @@
                 MixedStyledText('Auxiliar Functions')
                   SingleStyledText('Auxiliar Functions')
             Tab('	')
-            ReferenceField('5')
+            ReferenceField('9')
                  > (0,0,0,0,1) linked reference
-              SingleStyledText('5')
-        TableOfContentsEntry('	Python Module Index	7')
+              SingleStyledText('9')
+        TableOfContentsEntry('6	Tests	11')
+             > (0,0,0,1,2) toc level 1
+            ReferenceField('6')
+                 > (0,0,0,1,4) toc entry number reference field
+                   (0,0,0,0,1) linked reference
+              SingleStyledText('6')
+            Tab('	')
+            ReferenceField('Tests')
+                 > (0,0,0,0,1) linked reference
+              MixedStyledText('Tests')
+                MixedStyledText('Tests')
+                  SingleStyledText('Tests')
+            Tab('	')
+            ReferenceField('11')
+                 > (0,0,0,0,1) linked reference
+              SingleStyledText('11')
+        TableOfContentsEntry('	Python Module Index	13')
              > (0,0,0,1,2) toc level 1
             ReferenceField('')
                  > (0,0,0,1,4) toc entry number reference field
@@ -95,10 +143,10 @@
                  > (0,0,0,0,1) linked reference
               SingleStyledText('Python Module Index')
             Tab('	')
-            ReferenceField('7')
+            ReferenceField('13')
                  > (0,0,0,0,1) linked reference
-              SingleStyledText('7')
-        TableOfContentsEntry('	Index	9')
+              SingleStyledText('13')
+        TableOfContentsEntry('	Index	15')
              > (0,0,0,1,2) toc level 1
             ReferenceField('')
                  > (0,0,0,1,4) toc entry number reference field
@@ -110,9 +158,9 @@
               StringField('Index')
                 SingleStyledText('Index')
             Tab('	')
-            ReferenceField('9')
+            ReferenceField('15')
                  > (0,0,0,0,1) linked reference
-              SingleStyledText('9')
+              SingleStyledText('15')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
     Footer('		i')
@@ -280,34 +328,34 @@
           Field('2', style='number')
                > (0,0,2,0,3) body matter chapter number
             SingleStyledText('2')
-  Paragraph('Main', style='body matter chapter title')
+  Paragraph('Data Analysis', style='body matter chapter title')
        > (0,0,1,0,2) body matter chapter title
          (0,0,0,0,2) body
-      Field('Main')
-        MixedStyledText('Main')
-          MixedStyledText('Main')
-            SingleStyledText('Main')
+      Field('Data Analysis')
+        MixedStyledText('Data Analysis')
+          MixedStyledText('Data Analysis')
+            SingleStyledText('Data Analysis')
 #### ChainedContainer('column1')
   (continued) StaticGroupedFlowables()
     (continued) DocumentTree()
-      Section(id='module-dummy_project_main')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:19 <section>
+      Section(id='module-dummy_project_data_analysis')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:19 <section>
            > (0,0,0,1,2) chapter
-        LabeledFlowable(style='object description')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:None <desc>
+        LabeledFlowable(style='object description')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:None <desc>
              > (0,0,1,0,2) object description
           StaticGroupedFlowables(style='signatures')
                > (0,0,2,0,3) object signatures
-            Paragraph('dummy_project_main.main (  ) ', id='dummy_project_main.main')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:1 <desc_signature>
+            Paragraph('dummy_project_data_analysis.main...', id='dummy_project_data_analysis.main')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:1 <desc_signature>
                  > (0,0,2,0,5) object signature
                    (0,0,0,0,2) body
-                MixedStyledText('dummy_project_main.main (  ) ')
-                  MixedStyledText('dummy_project_main.main (  ) ')
-                    MixedStyledText('dummy_project_main.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:None <desc_addname>
+                MixedStyledText('dummy_project_data_analysis.main...')
+                  MixedStyledText('dummy_project_data_analysis.main...')
+                    MixedStyledText('dummy_project_data_analysis.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:None <desc_addname>
                          > (0,0,3,0,6) additional name part
-                      SingleStyledText('dummy_project_main.')
-                    MixedStyledText('main', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:None <desc_name>
+                      SingleStyledText('dummy_project_data_analysis.')
+                    MixedStyledText('main', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:None <desc_name>
                          > (0,0,3,0,6) object name
                       SingleStyledText('main')
-                    MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:None <desc_parameterlist>
+                    MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:None <desc_parameterlist>
                       MixedStyledText(' ( ')
                         SingleStyledText(' ( ', style='parentheses')
                              > (0,0,3,0,6) object parentheses
@@ -315,17 +363,17 @@
                              > (0,0,3,0,6) object parameter list
                       SingleStyledText(' ) ', style='parentheses')
                            > (0,0,3,0,6) object parentheses
-          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:None <desc_content>
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:None <desc_content>
                > (0,0,2,0,3) object description content
-            Paragraph('Main program of Crime Data Analy...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:1 <paragraph>
+            Paragraph('Main program of Crimes Explorato...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:1 <paragraph>
                  > (0,0,2,0,5) object description content paragraph
                    (0,0,0,0,2) body
-                MixedStyledText('Main program of Crime Data Analy...')
-                  MixedStyledText('Main program of Crime Data Analy...')
-                    MixedStyledText('Main program of Crime Data Analy...', style='strong')   None:None <strong>
+                MixedStyledText('Main program of Crimes Explorato...')
+                  MixedStyledText('Main program of Crimes Explorato...')
+                    MixedStyledText('Main program of Crimes Explorato...', style='strong')   None:None <strong>
                          > (0,0,1,0,1) strong
-                      SingleStyledText('Main program of Crime Data Analy...')
-            Paragraph('This function execute a descript...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_main.py:docstring of dummy_project_main.main:3 <paragraph>
+                      SingleStyledText('Main program of Crimes Explorato...')
+            Paragraph('This function execute a descript...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_data_analysis.py:docstring of dummy_project_data_analysis.main:3 <paragraph>
                  > (0,0,2,0,5) object description content paragraph
                    (0,0,0,0,2) body
                 MixedStyledText('This function execute a descript...')
@@ -362,10 +410,10 @@
               SingleStyledText('Release v.0.1')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
-    Footer('4		Chapter 2.  Main')
+    Footer('4		Chapter 2.  Data Analysis')
          > (0,0,0,0,2) footer
-        MixedStyledText('4		Chapter 2.  Main')
-          MixedStyledText('4		Chapter 2.  Main')
+        MixedStyledText('4		Chapter 2.  Data Analysis')
+          MixedStyledText('4		Chapter 2.  Data Analysis')
             Field('4')
               SingleStyledText('4')
             Tab('	')
@@ -376,10 +424,10 @@
             Field('2')
               SingleStyledText('2')
             SingleStyledText('.  ')
-            Field('Main')
-              MixedStyledText('Main')
-                MixedStyledText('Main')
-                  SingleStyledText('Main')
+            Field('Data Analysis')
+              MixedStyledText('Data Analysis')
+                MixedStyledText('Data Analysis')
+                  SingleStyledText('Data Analysis')
 ---------------------------------- page 5 ----------------------------------
 #### FootnoteContainer('footnotes')
   StaticGroupedFlowables()
@@ -398,6 +446,242 @@
           Field('3', style='number')
                > (0,0,2,0,3) body matter chapter number
             SingleStyledText('3')
+  Paragraph('Predictive Modelling', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+      Field('Predictive Modelling')
+        MixedStyledText('Predictive Modelling')
+          MixedStyledText('Predictive Modelling')
+            SingleStyledText('Predictive Modelling')
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+      Section(id='predictive-modelling')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:24 <section>
+           > (0,0,0,1,2) chapter
+        LabeledFlowable(style='object description')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('dummy_project_predictive_modelin...', id='dummy_project_predictive_modeling.main')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('dummy_project_predictive_modelin...')
+                  MixedStyledText('dummy_project_predictive_modelin...')
+                    MixedStyledText('dummy_project_predictive_modelin...', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_predictive_modelin...')
+                    MixedStyledText('main', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('main')
+                    MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:None <desc_parameterlist>
+                      MixedStyledText(' ( ')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('Main program of Crimes Predictiv...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Main program of Crimes Predictiv...')
+                  MixedStyledText('Main program of Crimes Predictiv...')
+                    MixedStyledText('Main program of Crimes Predictiv...', style='strong')   None:None <strong>
+                         > (0,0,1,0,1) strong
+                      SingleStyledText('Main program of Crimes Predictiv...')
+            Paragraph('This function execute a predicti...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_predictive_modeling.py:docstring of dummy_project_predictive_modeling.main:3 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('This function execute a predicti...')
+                  MixedStyledText('This function execute a predicti...')
+                    SingleStyledText('This function execute a predicti...')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		5')
+         > (0,0,0,0,2) footer
+        MixedStyledText('		5')
+          MixedStyledText('		5')
+            Tab('	')
+            Tab('	')
+            Field('5')
+              SingleStyledText('5')
+---------------------------------- page 6 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+#### UpExpandingContainer('header')
+  StaticGroupedFlowables()
+    Header('Crimes Dummy Project, Release v....')
+         > (0,0,0,0,2) header
+        MixedStyledText('Crimes Dummy Project, Release v....')
+          MixedStyledText('Crimes Dummy Project, Release v....')
+            Field('Crimes Dummy Project')
+              SingleStyledText('Crimes Dummy Project')
+            SingleStyledText(', ')
+            Field('Release v.0.1')
+              SingleStyledText('Release v.0.1')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('6		Chapter 3.  Predictive Modell...')
+         > (0,0,0,0,2) footer
+        MixedStyledText('6		Chapter 3.  Predictive Modell...')
+          MixedStyledText('6		Chapter 3.  Predictive Modell...')
+            Field('6')
+              SingleStyledText('6')
+            Tab('	')
+            Tab('	')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+            Field('3')
+              SingleStyledText('3')
+            SingleStyledText('.  ')
+            Field('Predictive Modelling')
+              MixedStyledText('Predictive Modelling')
+                MixedStyledText('Predictive Modelling')
+                  SingleStyledText('Predictive Modelling')
+---------------------------------- page 7 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Chapter 4', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+      MixedStyledText('Chapter 4')
+        MixedStyledText('Chapter 4')
+          MixedStyledText('Chapter ')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+          Field('4', style='number')
+               > (0,0,2,0,3) body matter chapter number
+            SingleStyledText('4')
+  Paragraph('Inference', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+      Field('Inference')
+        MixedStyledText('Inference')
+          MixedStyledText('Inference')
+            SingleStyledText('Inference')
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+      Section(id='module-dummy_project_inference')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:29 <section>
+           > (0,0,0,1,2) chapter
+        LabeledFlowable(style='object description')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('dummy_project_inference.main (  ...', id='dummy_project_inference.main')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('dummy_project_inference.main (  ...')
+                  MixedStyledText('dummy_project_inference.main (  ...')
+                    MixedStyledText('dummy_project_inference.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_inference.')
+                    MixedStyledText('main', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('main')
+                    MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:None <desc_parameterlist>
+                      MixedStyledText(' ( ')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('Main program of Crimes Inference')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Main program of Crimes Inference')
+                  MixedStyledText('Main program of Crimes Inference')
+                    MixedStyledText('Main program of Crimes Inference', style='strong')   None:None <strong>
+                         > (0,0,1,0,1) strong
+                      SingleStyledText('Main program of Crimes Inference')
+            Paragraph('This function execute a inferenc...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_inference.py:docstring of dummy_project_inference.main:3 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('This function execute a inferenc...')
+                  MixedStyledText('This function execute a inferenc...')
+                    SingleStyledText('This function execute a inferenc...')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		7')
+         > (0,0,0,0,2) footer
+        MixedStyledText('		7')
+          MixedStyledText('		7')
+            Tab('	')
+            Tab('	')
+            Field('7')
+              SingleStyledText('7')
+---------------------------------- page 8 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+#### UpExpandingContainer('header')
+  StaticGroupedFlowables()
+    Header('Crimes Dummy Project, Release v....')
+         > (0,0,0,0,2) header
+        MixedStyledText('Crimes Dummy Project, Release v....')
+          MixedStyledText('Crimes Dummy Project, Release v....')
+            Field('Crimes Dummy Project')
+              SingleStyledText('Crimes Dummy Project')
+            SingleStyledText(', ')
+            Field('Release v.0.1')
+              SingleStyledText('Release v.0.1')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('8		Chapter 4.  Inference')
+         > (0,0,0,0,2) footer
+        MixedStyledText('8		Chapter 4.  Inference')
+          MixedStyledText('8		Chapter 4.  Inference')
+            Field('8')
+              SingleStyledText('8')
+            Tab('	')
+            Tab('	')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+            Field('4')
+              SingleStyledText('4')
+            SingleStyledText('.  ')
+            Field('Inference')
+              MixedStyledText('Inference')
+                MixedStyledText('Inference')
+                  SingleStyledText('Inference')
+---------------------------------- page 9 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Chapter 5', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+      MixedStyledText('Chapter 5')
+        MixedStyledText('Chapter 5')
+          MixedStyledText('Chapter ')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+          Field('5', style='number')
+               > (0,0,2,0,3) body matter chapter number
+            SingleStyledText('5')
   Paragraph('Auxiliar Functions', style='body matter chapter title')
        > (0,0,1,0,2) body matter chapter title
          (0,0,0,0,2) body
@@ -408,8 +692,110 @@
 #### ChainedContainer('column1')
   (continued) StaticGroupedFlowables()
     (continued) DocumentTree()
-      Section(id='module-dummy_project_utils')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:24 <section>
+      Section(id='module-dummy_project_utils')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:34 <section>
            > (0,0,0,1,2) chapter
+        LabeledFlowable(style='object description')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('dummy_project_utils.calculate_cl...', id='dummy_project_utils.calculate_classification_metrics')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('dummy_project_utils.calculate_cl...')
+                  MixedStyledText('dummy_project_utils.calculate_cl...')
+                    MixedStyledText('dummy_project_utils.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_utils.')
+                    MixedStyledText('calculate_classification_metrics', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('calculate_classification_metrics')
+                    MixedStyledText(' ( y_hat, y_test, logger ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:None <desc_parameterlist>
+                      MixedStyledText(' ( y_hat, y_test, logger')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('y_hat, y_test, logger', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                          MixedStyledText('y_hat', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('y_hat')   None:None <inline>
+                              SingleStyledText('y_hat')
+                          SingleStyledText(', ')
+                          MixedStyledText('y_test', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('y_test')   None:None <inline>
+                              SingleStyledText('y_test')
+                          SingleStyledText(', ')
+                          MixedStyledText('logger', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('logger')   None:None <inline>
+                              SingleStyledText('logger')
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('Calculate Classification Metrics')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Calculate Classification Metrics')
+                  MixedStyledText('Calculate Classification Metrics')
+                    MixedStyledText('Calculate Classification Metrics', style='strong')   None:None <strong>
+                         > (0,0,1,0,1) strong
+                      SingleStyledText('Calculate Classification Metrics')
+            StaticGroupedFlowables(style='block quote')   None:None <block_quote>
+                 > (0,0,1,0,1) block quote
+              Paragraph('Calculate deveral classifcation ...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:3 <paragraph>
+                   > (0,0,0,0,2) body
+                  MixedStyledText('Calculate deveral classifcation ...')
+                    MixedStyledText('Calculate deveral classifcation ...')
+                      SingleStyledText('Calculate deveral classifcation ...')
+              DefinitionList(style='field list')   None:None <field_list>
+                   > (0,0,1,0,2) field list
+                     (0,0,0,0,2) definition list
+                LabeledFlowable()   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:5 <field>
+                     > (0,0,1,0,4) field list item
+                       (0,0,0,0,4) definition list item
+                  Paragraph('param y_hat', style='field name')
+                       > (0,0,2,0,6) field name
+                         (0,0,0,0,2) body
+                      MixedStyledText('param y_hat')
+                        MixedStyledText('param y_hat')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:0 <field_name>
+                          SingleStyledText('param y_hat')
+                  StaticGroupedFlowables()   None:None <field_body>
+                    Paragraph('actual labels obteined')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:5 <paragraph>
+                         > (0,0,0,0,2) body
+                        MixedStyledText('actual labels obteined')
+                          MixedStyledText('actual labels obteined')
+                            SingleStyledText('actual labels obteined')
+                LabeledFlowable()   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:6 <field>
+                     > (0,0,1,0,4) field list item
+                       (0,0,0,0,4) definition list item
+                  Paragraph('param y_test', style='field name')
+                       > (0,0,2,0,6) field name
+                         (0,0,0,0,2) body
+                      MixedStyledText('param y_test')
+                        MixedStyledText('param y_test')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:0 <field_name>
+                          SingleStyledText('param y_test')
+                  StaticGroupedFlowables()   None:None <field_body>
+                    Paragraph('target labels')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:6 <paragraph>
+                         > (0,0,0,0,2) body
+                        MixedStyledText('target labels')
+                          MixedStyledText('target labels')
+                            SingleStyledText('target labels')
+                LabeledFlowable()   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:7 <field>
+                     > (0,0,1,0,4) field list item
+                       (0,0,0,0,4) definition list item
+                  Paragraph('param logger', style='field name')
+                       > (0,0,2,0,6) field name
+                         (0,0,0,0,2) body
+                      MixedStyledText('param logger')
+                        MixedStyledText('param logger')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:0 <field_name>
+                          SingleStyledText('param logger')
+                  StaticGroupedFlowables()   None:None <field_body>
+                    Paragraph('logger to record errors')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.calculate_classification_metrics:7 <paragraph>
+                         > (0,0,0,0,2) body
+                        MixedStyledText('logger to record errors')
+                          MixedStyledText('logger to record errors')
+                            SingleStyledText('logger to record errors')
         LabeledFlowable(style='object description')   None:None <desc>
              > (0,0,1,0,2) object description
           StaticGroupedFlowables(style='signatures')
@@ -532,6 +918,123 @@
                       MixedStyledText('output dataframe with 0 values i...')
                         MixedStyledText('output dataframe with 0 values i...')
                           SingleStyledText('output dataframe with 0 values i...')
+        LabeledFlowable(style='object description')   None:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('dummy_project_utils.enconde_inpu...', id='dummy_project_utils.enconde_input_features')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('dummy_project_utils.enconde_inpu...')
+                  MixedStyledText('dummy_project_utils.enconde_inpu...')
+                    MixedStyledText('dummy_project_utils.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_utils.')
+                    MixedStyledText('enconde_input_features', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('enconde_input_features')
+                    MixedStyledText(' ( x, logger ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:None <desc_parameterlist>
+                      MixedStyledText(' ( x, logger')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('x, logger', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                          MixedStyledText('x', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('x')   None:None <inline>
+                              SingleStyledText('x')
+                          SingleStyledText(', ')
+                          MixedStyledText('logger', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('logger')   None:None <inline>
+                              SingleStyledText('logger')
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('Encode Input Features Encode the...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Encode Input Features Encode the...')
+                  MixedStyledText('Encode Input Features Encode the...')
+                    MixedStyledText('Encode Input Features', style='strong')   None:None <strong>
+                         > (0,0,1,0,1) strong
+                      SingleStyledText('Encode Input Features')
+                    SingleStyledText(' Encode the input features using...')
+            DefinitionList(style='field list')   None:None <field_list>
+                 > (0,0,1,0,2) field list
+                   (0,0,0,0,2) definition list
+              LabeledFlowable()   None:None <field>
+                   > (0,0,1,0,4) field list item
+                     (0,0,0,0,4) definition list item
+                Paragraph('Parameters', style='field name')
+                     > (0,0,2,0,6) field name
+                       (0,0,0,0,2) body
+                    MixedStyledText('Parameters')
+                      MixedStyledText('Parameters')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:0 <field_name>
+                        SingleStyledText('Parameters')
+                StaticGroupedFlowables()   None:None <field_body>
+                  List(style='bulleted')   None:None <bullet_list>
+                       > (0,0,1,0,2) bulleted list
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('x – INput features dataframe')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('x – INput features dataframe')
+                              MixedStyledText('x – INput features dataframe')
+                                MixedStyledText('x', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('x')
+                                SingleStyledText(' – ')
+                                SingleStyledText('INput features dataframe')
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('logger – logger:')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('logger – logger:')
+                              MixedStyledText('logger – logger:')
+                                MixedStyledText('logger', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('logger')
+                                SingleStyledText(' – ')
+                                SingleStyledText('logger:')
+              LabeledFlowable()   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:6 <field>
+                   > (0,0,1,0,4) field list item
+                     (0,0,0,0,4) definition list item
+                Paragraph('Return x', style='field name')
+                     > (0,0,2,0,6) field name
+                       (0,0,0,0,2) body
+                    MixedStyledText('Return x')
+                      MixedStyledText('Return x')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:0 <field_name>
+                        SingleStyledText('Return x')
+                StaticGroupedFlowables()   None:None <field_body>
+                  Paragraph('Data frame with encoded input fe...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.enconde_input_features:6 <paragraph>
+                       > (0,0,0,0,2) body
+                      MixedStyledText('Data frame with encoded input fe...')
+                        MixedStyledText('Data frame with encoded input fe...')
+                          SingleStyledText('Data frame with encoded input fe...')
         LabeledFlowable(style='object description')   None:None <desc>
              > (0,0,1,0,2) object description
           StaticGroupedFlowables(style='signatures')
@@ -793,6 +1296,33 @@
                                   SingleStyledText('logger')
                                 SingleStyledText(' – ')
                                 SingleStyledText('logger to record exception')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		9')
+         > (0,0,0,0,2) footer
+        MixedStyledText('		9')
+          MixedStyledText('		9')
+            Tab('	')
+            Tab('	')
+            Field('9')
+              SingleStyledText('9')
+---------------------------------- page 10 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+      (continued) Section(id='module-dummy_project_utils')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:34 <section>
+           > (0,0,0,1,2) chapter
+        (continued) LabeledFlowable(style='object description')   None:None <desc>
+             > (0,0,1,0,2) object description
+          (continued) StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.load_data:None <desc_content>
+               > (0,0,2,0,3) object description content
+            (continued) DefinitionList(style='field list')   None:None <field_list>
+                 > (0,0,1,0,2) field list
+                   (0,0,0,0,2) definition list
               LabeledFlowable()   None:None <field>
                    > (0,0,1,0,4) field list item
                      (0,0,0,0,4) definition list item
@@ -1058,33 +1588,12 @@
                     MixedStyledText('Plot scatter', style='strong')   None:None <strong>
                          > (0,0,1,0,1) strong
                       SingleStyledText('Plot scatter')
-#### DownExpandingContainer('footer')
-  StaticGroupedFlowables()
-    Footer('		5')
-         > (0,0,0,0,2) footer
-        MixedStyledText('		5')
-          MixedStyledText('		5')
-            Tab('	')
-            Tab('	')
-            Field('5')
-              SingleStyledText('5')
----------------------------------- page 6 ----------------------------------
-#### FootnoteContainer('footnotes')
-  StaticGroupedFlowables()
-#### DownExpandingContainer('floats')
-  StaticGroupedFlowables()
-#### ChainedContainer('column1')
-  (continued) StaticGroupedFlowables()
-    (continued) DocumentTree()
-      (continued) Section(id='module-dummy_project_utils')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:24 <section>
-           > (0,0,0,1,2) chapter
-        (continued) LabeledFlowable(style='object description')   None:None <desc>
-             > (0,0,1,0,2) object description
-          (continued) StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.plot_scatterplot:None <desc_content>
-               > (0,0,2,0,3) object description content
             Paragraph('plot with the coordinates of the...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.plot_scatterplot:3 <paragraph>
                  > (0,0,2,0,5) object description content paragraph
                    (0,0,0,0,2) body
+                MixedStyledText('plot with the coordinates of the...')
+                  MixedStyledText('plot with the coordinates of the...')
+                    SingleStyledText('plot with the coordinates of the...')
             DefinitionList(style='field list')   None:None <field_list>
                  > (0,0,1,0,2) field list
                    (0,0,0,0,2) definition list
@@ -1210,6 +1719,165 @@
                                   SingleStyledText('path')
                                 SingleStyledText(' – ')
                                 SingleStyledText('path where it is saved plot in p...')
+        LabeledFlowable(style='object description')   None:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('dummy_project_utils.save_model (...', id='dummy_project_utils.save_model')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('dummy_project_utils.save_model (...')
+                  MixedStyledText('dummy_project_utils.save_model (...')
+                    MixedStyledText('dummy_project_utils.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_utils.')
+                    MixedStyledText('save_model', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('save_model')
+                    MixedStyledText(' ( model, model_name, logger, mo...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:None <desc_parameterlist>
+                      MixedStyledText(' ( model, model_name, logger, mo...')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('model, model_name, logger, model...', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                          MixedStyledText('model', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('model')   None:None <inline>
+                              SingleStyledText('model')
+                          SingleStyledText(', ')
+                          MixedStyledText('model_name', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('model_name')   None:None <inline>
+                              SingleStyledText('model_name')
+                          SingleStyledText(', ')
+                          MixedStyledText('logger', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('logger')   None:None <inline>
+                              SingleStyledText('logger')
+                          SingleStyledText(', ')
+                          MixedStyledText('models_path', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('models_path')   None:None <inline>
+                              SingleStyledText('models_path')
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('** Save Model**')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('** Save Model**')
+                  MixedStyledText('** Save Model**')
+                    SingleStyledText('** Save Model**')
+            Paragraph('Save the predictive mdel in .sav...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:3 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Save the predictive mdel in .sav...')
+                  MixedStyledText('Save the predictive mdel in .sav...')
+                    SingleStyledText('Save the predictive mdel in .sav...')
+            DefinitionList(style='field list')   None:None <field_list>
+                 > (0,0,1,0,2) field list
+                   (0,0,0,0,2) definition list
+              LabeledFlowable()   None:None <field>
+                   > (0,0,1,0,4) field list item
+                     (0,0,0,0,4) definition list item
+                Paragraph('Parameters', style='field name')
+                     > (0,0,2,0,6) field name
+                       (0,0,0,0,2) body
+                    MixedStyledText('Parameters')
+                      MixedStyledText('Parameters')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_utils.py:docstring of dummy_project_utils.save_model:0 <field_name>
+                        SingleStyledText('Parameters')
+                StaticGroupedFlowables()   None:None <field_body>
+                  List(style='bulleted')   None:None <bullet_list>
+                       > (0,0,1,0,2) bulleted list
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('model – Model')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('model – Model')
+                              MixedStyledText('model – Model')
+                                MixedStyledText('model', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('model')
+                                SingleStyledText(' – ')
+                                SingleStyledText('Model')
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('model_name – model name (str)')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('model_name – model name (str)')
+                              MixedStyledText('model_name – model name (str)')
+                                MixedStyledText('model_name', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('model_name')
+                                SingleStyledText(' – ')
+                                SingleStyledText('model name (str)')
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('logger – logger')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('logger – logger')
+                              MixedStyledText('logger – logger')
+                                MixedStyledText('logger', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('logger')
+                                SingleStyledText(' – ')
+                                SingleStyledText('logger')
+                    ListItem()   None:None <list_item>
+                         x (0,0,1,0,4) bulleted list item
+                         > fallback to default style
+                      ListItemLabel('•')
+                           > (0,0,1,0,6) bulleted list item label
+                             (0,0,0,0,2) list item label
+                          MixedStyledText('•')
+                            SingleStyledText('')
+                            SingleStyledText('•')
+                            SingleStyledText('')
+                      StaticGroupedFlowables()
+                           > (0,0,0,0,3) list item body
+                        Paragraph('models_path – path to the models...')   None:None <paragraph>
+                             > (0,0,0,0,5) list item paragraph
+                               (0,0,0,0,2) body
+                            MixedStyledText('models_path – path to the models...')
+                              MixedStyledText('models_path – path to the models...')
+                                MixedStyledText('models_path', style='literal strong')   None:None <literal_strong>
+                                     > (0,0,1,0,1) literal strong
+                                  SingleStyledText('models_path')
+                                SingleStyledText(' – ')
+                                SingleStyledText('path to the models folder (str)')
         LabeledFlowable(style='object description')   None:None <desc>
              > (0,0,1,0,2) object description
           StaticGroupedFlowables(style='signatures')
@@ -1345,25 +2013,225 @@
               SingleStyledText('Release v.0.1')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
-    Footer('6		Chapter 3.  Auxiliar Function...')
+    Footer('10		Chapter 5.  Auxiliar Functio...')
          > (0,0,0,0,2) footer
-        MixedStyledText('6		Chapter 3.  Auxiliar Function...')
-          MixedStyledText('6		Chapter 3.  Auxiliar Function...')
-            Field('6')
-              SingleStyledText('6')
+        MixedStyledText('10		Chapter 5.  Auxiliar Functio...')
+          MixedStyledText('10		Chapter 5.  Auxiliar Functio...')
+            Field('10')
+              SingleStyledText('10')
             Tab('	')
             Tab('	')
             StringField('Chapter')
               SingleStyledText('Chapter')
             SingleStyledText(' ')
-            Field('3')
-              SingleStyledText('3')
+            Field('5')
+              SingleStyledText('5')
             SingleStyledText('.  ')
             Field('Auxiliar Functions')
               MixedStyledText('Auxiliar Functions')
                 MixedStyledText('Auxiliar Functions')
                   SingleStyledText('Auxiliar Functions')
----------------------------------- page 7 ----------------------------------
+---------------------------------- page 11 ----------------------------------
+#### FootnoteContainer('footnotes')
+  StaticGroupedFlowables()
+#### DownExpandingContainer('floats')
+  StaticGroupedFlowables()
+#### FlowablesContainer('chapter title')
+  Paragraph('Chapter 6', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+      MixedStyledText('Chapter 6')
+        MixedStyledText('Chapter 6')
+          MixedStyledText('Chapter ')
+            StringField('Chapter')
+              SingleStyledText('Chapter')
+            SingleStyledText(' ')
+          Field('6', style='number')
+               > (0,0,2,0,3) body matter chapter number
+            SingleStyledText('6')
+  Paragraph('Tests', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+      Field('Tests')
+        MixedStyledText('Tests')
+          MixedStyledText('Tests')
+            SingleStyledText('Tests')
+#### ChainedContainer('column1')
+  (continued) StaticGroupedFlowables()
+    (continued) DocumentTree()
+      Section(id='module-dummy_project_test')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\docs\source\index.rst:39 <section>
+           > (0,0,0,1,2) chapter
+        LabeledFlowable(style='object description')   None:None <desc>
+             > (0,0,1,0,2) object description
+          StaticGroupedFlowables(style='signatures')
+               > (0,0,2,0,3) object signatures
+            Paragraph('class dummy_project_test.TestFun...', id='dummy_project_test.TestFunction')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:1 <desc_signature>
+                 > (0,0,2,0,5) object signature
+                   (0,0,0,0,2) body
+                MixedStyledText('class dummy_project_test.TestFun...')
+                  MixedStyledText('class dummy_project_test.TestFun...')
+                    MixedStyledText('class ', style='annotation')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:None <desc_annotation>
+                         > (0,0,3,0,6) object annotation
+                      SingleStyledText('class ')
+                    MixedStyledText('dummy_project_test.', style='additional name part')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:None <desc_addname>
+                         > (0,0,3,0,6) additional name part
+                      SingleStyledText('dummy_project_test.')
+                    MixedStyledText('TestFunction', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:None <desc_name>
+                         > (0,0,3,0,6) object name
+                      SingleStyledText('TestFunction')
+                    MixedStyledText(' ( methodName='runTest' ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:None <desc_parameterlist>
+                      MixedStyledText(' ( methodName='runTest'')
+                        SingleStyledText(' ( ', style='parentheses')
+                             > (0,0,3,0,6) object parentheses
+                        MixedStyledText('methodName='runTest'', style='parameter list')
+                             > (0,0,3,0,6) object parameter list
+                          MixedStyledText('methodName='runTest'', style='parameter')   None:None <desc_parameter>
+                               > (0,0,3,0,6) object parameter
+                            MixedStyledText('methodName')   None:None <inline>
+                              SingleStyledText('methodName')
+                            MixedStyledText('=')   None:None <inline>
+                              SingleStyledText('=')
+                            MixedStyledText(''runTest'')   None:None <inline>
+                              SingleStyledText(''runTest'')
+                      SingleStyledText(' ) ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+          StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:None <desc_content>
+               > (0,0,2,0,3) object description content
+            Paragraph('Test Case')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:1 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('Test Case')
+                  MixedStyledText('Test Case')
+                    MixedStyledText('Test Case', style='strong')   None:None <strong>
+                         > (0,0,1,0,1) strong
+                      SingleStyledText('Test Case')
+            Paragraph('This clase defines several unita...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction:3 <paragraph>
+                 > (0,0,2,0,5) object description content paragraph
+                   (0,0,0,0,2) body
+                MixedStyledText('This clase defines several unita...')
+                  MixedStyledText('This clase defines several unita...')
+                    SingleStyledText('This clase defines several unita...')
+            LabeledFlowable(style='object description')   None:None <desc>
+                 > (0,0,1,0,2) object description
+              StaticGroupedFlowables(style='signatures')
+                   > (0,0,2,0,3) object signatures
+                Paragraph('test_load_data (  ) ', id='dummy_project_test.TestFunction.test_load_data')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:1 <desc_signature>
+                     > (0,0,2,0,5) object signature
+                       (0,0,0,0,2) body
+                    MixedStyledText('test_load_data (  ) ')
+                      MixedStyledText('test_load_data (  ) ')
+                        MixedStyledText('test_load_data', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:None <desc_name>
+                             > (0,0,3,0,6) object name
+                          SingleStyledText('test_load_data')
+                        MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:None <desc_parameterlist>
+                          MixedStyledText(' ( ')
+                            SingleStyledText(' ( ', style='parentheses')
+                                 > (0,0,3,0,6) object parentheses
+                            MixedStyledText('', style='parameter list')
+                                 > (0,0,3,0,6) object parameter list
+                          SingleStyledText(' ) ', style='parentheses')
+                               > (0,0,3,0,6) object parentheses
+              StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:None <desc_content>
+                   > (0,0,2,0,3) object description content
+                Paragraph('** Test Load Data**')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:1 <paragraph>
+                     > (0,0,2,0,5) object description content paragraph
+                       (0,0,0,0,2) body
+                    MixedStyledText('** Test Load Data**')
+                      MixedStyledText('** Test Load Data**')
+                        SingleStyledText('** Test Load Data**')
+                Paragraph('Test that the load data is a dat...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:3 <paragraph>
+                     > (0,0,2,0,5) object description content paragraph
+                       (0,0,0,0,2) body
+                    MixedStyledText('Test that the load data is a dat...')
+                      MixedStyledText('Test that the load data is a dat...')
+                        SingleStyledText('Test that the load data is a dat...')
+                DefinitionList(style='field list')   None:None <field_list>
+                     > (0,0,1,0,2) field list
+                       (0,0,0,0,2) definition list
+                  LabeledFlowable()   None:None <field>
+                       > (0,0,1,0,4) field list item
+                         (0,0,0,0,4) definition list item
+                    Paragraph('Parameters', style='field name')
+                         > (0,0,2,0,6) field name
+                           (0,0,0,0,2) body
+                        MixedStyledText('Parameters')
+                          MixedStyledText('Parameters')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data:0 <field_name>
+                            SingleStyledText('Parameters')
+                    StaticGroupedFlowables()   None:None <field_body>
+                      Paragraph('self – ')   None:None <paragraph>
+                           > (0,0,0,0,2) body
+                          MixedStyledText('self – ')
+                            MixedStyledText('self – ')
+                              MixedStyledText('self', style='literal strong')   None:None <literal_strong>
+                                   > (0,0,1,0,1) literal strong
+                                SingleStyledText('self')
+                              SingleStyledText(' – ')
+            LabeledFlowable(style='object description')   None:None <desc>
+                 > (0,0,1,0,2) object description
+              StaticGroupedFlowables(style='signatures')
+                   > (0,0,2,0,3) object signatures
+                Paragraph('test_load_data_empty (  ) ', id='dummy_project_test.TestFunction.test_load_data_empty')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:1 <desc_signature>
+                     > (0,0,2,0,5) object signature
+                       (0,0,0,0,2) body
+                    MixedStyledText('test_load_data_empty (  ) ')
+                      MixedStyledText('test_load_data_empty (  ) ')
+                        MixedStyledText('test_load_data_empty', style='main object name')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:None <desc_name>
+                             > (0,0,3,0,6) object name
+                          SingleStyledText('test_load_data_empty')
+                        MixedStyledText(' (  ) ')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:None <desc_parameterlist>
+                          MixedStyledText(' ( ')
+                            SingleStyledText(' ( ', style='parentheses')
+                                 > (0,0,3,0,6) object parentheses
+                            MixedStyledText('', style='parameter list')
+                                 > (0,0,3,0,6) object parameter list
+                          SingleStyledText(' ) ', style='parentheses')
+                               > (0,0,3,0,6) object parentheses
+              StaticGroupedFlowables(style='content')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:None <desc_content>
+                   > (0,0,2,0,3) object description content
+                Paragraph('** Test no-empty data frame**')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:1 <paragraph>
+                     > (0,0,2,0,5) object description content paragraph
+                       (0,0,0,0,2) body
+                    MixedStyledText('** Test no-empty data frame**')
+                      MixedStyledText('** Test no-empty data frame**')
+                        SingleStyledText('** Test no-empty data frame**')
+                Paragraph('Test that the load data is a dat...')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:3 <paragraph>
+                     > (0,0,2,0,5) object description content paragraph
+                       (0,0,0,0,2) body
+                    MixedStyledText('Test that the load data is a dat...')
+                      MixedStyledText('Test that the load data is a dat...')
+                        SingleStyledText('Test that the load data is a dat...')
+                DefinitionList(style='field list')   None:None <field_list>
+                     > (0,0,1,0,2) field list
+                       (0,0,0,0,2) definition list
+                  LabeledFlowable()   None:None <field>
+                       > (0,0,1,0,4) field list item
+                         (0,0,0,0,4) definition list item
+                    Paragraph('Parameters', style='field name')
+                         > (0,0,2,0,6) field name
+                           (0,0,0,0,2) body
+                        MixedStyledText('Parameters')
+                          MixedStyledText('Parameters')   C:\Users\jose.velasco\Documents\GitHub\dummy_project\dummy_project_test.py:docstring of dummy_project_test.TestFunction.test_load_data_empty:0 <field_name>
+                            SingleStyledText('Parameters')
+                    StaticGroupedFlowables()   None:None <field_body>
+                      Paragraph('self – ')   None:None <paragraph>
+                           > (0,0,0,0,2) body
+                          MixedStyledText('self – ')
+                            MixedStyledText('self – ')
+                              MixedStyledText('self', style='literal strong')   None:None <literal_strong>
+                                   > (0,0,1,0,1) literal strong
+                                SingleStyledText('self')
+                              SingleStyledText(' – ')
+#### DownExpandingContainer('footer')
+  StaticGroupedFlowables()
+    Footer('		11')
+         > (0,0,0,0,2) footer
+        MixedStyledText('		11')
+          MixedStyledText('		11')
+            Tab('	')
+            Tab('	')
+            Field('11')
+              SingleStyledText('11')
+---------------------------------- page 13 ----------------------------------
 #### FootnoteContainer('footnotes')
   StaticGroupedFlowables()
 #### DownExpandingContainer('floats')
@@ -1383,69 +2251,102 @@
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('d')
-        IndexEntry('dummy_project_main, 3')
+        IndexEntry('dummy_project_data_analysis, 3')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            MixedStyledText('dummy_project_main, 3')
-              MixedStyledText('dummy_project_main, 3')
-                SingleStyledText('dummy_project_main', style='domain')
+            MixedStyledText('dummy_project_data_analysis, 3')
+              MixedStyledText('dummy_project_data_analysis, 3')
+                SingleStyledText('dummy_project_data_analysis', style='domain')
                      > (0,0,1,0,3) domain index entry name
                 SingleStyledText(', ')
                 Reference('3')
                      > (0,0,0,0,1) linked reference
                   SingleStyledText('3')
-        IndexEntry('dummy_project_utils, 5')
+        IndexEntry('dummy_project_inference, 7')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            MixedStyledText('dummy_project_utils, 5')
-              MixedStyledText('dummy_project_utils, 5')
-                SingleStyledText('dummy_project_utils', style='domain')
+            MixedStyledText('dummy_project_inference, 7')
+              MixedStyledText('dummy_project_inference, 7')
+                SingleStyledText('dummy_project_inference', style='domain')
+                     > (0,0,1,0,3) domain index entry name
+                SingleStyledText(', ')
+                Reference('7')
+                     > (0,0,0,0,1) linked reference
+                  SingleStyledText('7')
+        IndexEntry('dummy_project_predictive_modelin...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('dummy_project_predictive_modelin...')
+              MixedStyledText('dummy_project_predictive_modelin...')
+                SingleStyledText('dummy_project_predictive_modelin...', style='domain')
                      > (0,0,1,0,3) domain index entry name
                 SingleStyledText(', ')
                 Reference('5')
                      > (0,0,0,0,1) linked reference
                   SingleStyledText('5')
-        IndexLabel('m')
-             > (0,0,0,0,2) index section label
-               (0,0,0,0,1) body
-            SingleStyledText('m')
-        IndexEntry('main, 3')
+        IndexEntry('dummy_project_test, 11')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            MixedStyledText('main, 3')
-              MixedStyledText('main, 3')
-                SingleStyledText('main', style='domain')
+            MixedStyledText('dummy_project_test, 11')
+              MixedStyledText('dummy_project_test, 11')
+                SingleStyledText('dummy_project_test', style='domain')
                      > (0,0,1,0,3) domain index entry name
                 SingleStyledText(', ')
-                Reference('3')
+                Reference('11')
                      > (0,0,0,0,1) linked reference
-                  SingleStyledText('3')
+                  SingleStyledText('11')
+        IndexEntry('dummy_project_utils, 9')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('dummy_project_utils, 9')
+              MixedStyledText('dummy_project_utils, 9')
+                SingleStyledText('dummy_project_utils', style='domain')
+                     > (0,0,1,0,3) domain index entry name
+                SingleStyledText(', ')
+                Reference('9')
+                     > (0,0,0,0,1) linked reference
+                  SingleStyledText('9')
+        IndexLabel('t')
+             > (0,0,0,0,2) index section label
+               (0,0,0,0,1) body
+            SingleStyledText('t')
+        IndexEntry('tests, 11')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('tests, 11')
+              MixedStyledText('tests, 11')
+                SingleStyledText('tests', style='domain')
+                     > (0,0,1,0,3) domain index entry name
+                SingleStyledText(', ')
+                Reference('11')
+                     > (0,0,0,0,1) linked reference
+                  SingleStyledText('11')
         IndexLabel('u')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('u')
-        IndexEntry('utils, 5')
+        IndexEntry('utils, 9')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            MixedStyledText('utils, 5')
-              MixedStyledText('utils, 5')
+            MixedStyledText('utils, 9')
+              MixedStyledText('utils, 9')
                 SingleStyledText('utils', style='domain')
                      > (0,0,1,0,3) domain index entry name
                 SingleStyledText(', ')
-                Reference('5')
+                Reference('9')
                      > (0,0,0,0,1) linked reference
-                  SingleStyledText('5')
+                  SingleStyledText('9')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
-    Footer('		7')
+    Footer('		13')
          > (0,0,0,0,2) footer
-        MixedStyledText('		7')
-          MixedStyledText('		7')
+        MixedStyledText('		13')
+          MixedStyledText('		13')
             Tab('	')
             Tab('	')
-            Field('7')
-              SingleStyledText('7')
----------------------------------- page 8 ----------------------------------
+            Field('13')
+              SingleStyledText('13')
+---------------------------------- page 14 ----------------------------------
 #### FootnoteContainer('footnotes')
   StaticGroupedFlowables()
 #### DownExpandingContainer('floats')
@@ -1465,17 +2366,17 @@
               SingleStyledText('Release v.0.1')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
-    Footer('8		Python Module Index')
+    Footer('14		Python Module Index')
          > (0,0,0,0,2) footer
-        MixedStyledText('8		Python Module Index')
-          MixedStyledText('8		Python Module Index')
-            Field('8')
-              SingleStyledText('8')
+        MixedStyledText('14		Python Module Index')
+          MixedStyledText('14		Python Module Index')
+            Field('14')
+              SingleStyledText('14')
             Tab('	')
             Tab('	')
             Field('Python Module Index')
               SingleStyledText('Python Module Index')
----------------------------------- page 9 ----------------------------------
+---------------------------------- page 15 ----------------------------------
 #### FootnoteContainer('footnotes')
   StaticGroupedFlowables()
 #### DownExpandingContainer('floats')
@@ -1497,24 +2398,34 @@
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('C')
+        IndexEntry('calculate_classification_metrics...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('calculate_classification_metrics...')
+              MixedStyledText('calculate_classification_metrics...')
+                SingleStyledText('calculate_classification_metrics...')
+                MixedStyledText('9')
+                  Reference('9')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('9')
         IndexEntry('check_nan() (in module dummy_pro...')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
             MixedStyledText('check_nan() (in module dummy_pro...')
               MixedStyledText('check_nan() (in module dummy_pro...')
                 SingleStyledText('check_nan() (in module dummy_pro...')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('9')
         IndexLabel('D')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('D')
-        IndexEntry('dummy_project_main')
+        IndexEntry('dummy_project_data_analysis')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            SingleStyledText('dummy_project_main')
+            SingleStyledText('dummy_project_data_analysis')
         IndexEntry('module, 3')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
@@ -1525,10 +2436,24 @@
                   Reference('3')
                        > (0,0,0,0,1) linked reference
                     SingleStyledText('3')
-        IndexEntry('dummy_project_utils')
+        IndexEntry('dummy_project_inference')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
-            SingleStyledText('dummy_project_utils')
+            SingleStyledText('dummy_project_inference')
+        IndexEntry('module, 7')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('module, 7')
+              MixedStyledText('module, 7')
+                SingleStyledText('module, ')
+                MixedStyledText('7')
+                  Reference('7')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('7')
+        IndexEntry('dummy_project_predictive_modelin...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            SingleStyledText('dummy_project_predictive_modelin...')
         IndexEntry('module, 5')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
@@ -1539,6 +2464,48 @@
                   Reference('5')
                        > (0,0,0,0,1) linked reference
                     SingleStyledText('5')
+        IndexEntry('dummy_project_test')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            SingleStyledText('dummy_project_test')
+        IndexEntry('module, 11')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('module, 11')
+              MixedStyledText('module, 11')
+                SingleStyledText('module, ')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
+        IndexEntry('dummy_project_utils')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            SingleStyledText('dummy_project_utils')
+        IndexEntry('module, 9')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('module, 9')
+              MixedStyledText('module, 9')
+                SingleStyledText('module, ')
+                MixedStyledText('9')
+                  Reference('9')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('9')
+        IndexLabel('E')
+             > (0,0,0,0,2) index section label
+               (0,0,0,0,1) body
+            SingleStyledText('E')
+        IndexEntry('enconde_input_features() (in mod...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('enconde_input_features() (in mod...')
+              MixedStyledText('enconde_input_features() (in mod...')
+                SingleStyledText('enconde_input_features() (in mod...')
+                MixedStyledText('9')
+                  Reference('9')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('9')
         IndexLabel('G')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
@@ -1549,10 +2516,10 @@
             MixedStyledText('get_frequencies() (in module dum...')
               MixedStyledText('get_frequencies() (in module dum...')
                 SingleStyledText('get_frequencies() (in module dum...')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('9')
         IndexLabel('L')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
@@ -1563,28 +2530,14 @@
             MixedStyledText('load_data() (in module dummy_pro...')
               MixedStyledText('load_data() (in module dummy_pro...')
                 SingleStyledText('load_data() (in module dummy_pro...')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('9')
         IndexLabel('M')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('M')
-        IndexEntry('main')
-             > (0,0,0,1,2) level 1 index entry
-               (0,0,0,0,1) body
-            SingleStyledText('main')
-        IndexEntry('module, 3')
-             > (0,0,0,1,2) level 2 index entry
-               (0,0,0,0,1) body
-            MixedStyledText('module, 3')
-              MixedStyledText('module, 3')
-                SingleStyledText('module, ')
-                MixedStyledText('3')
-                  Reference('3')
-                       > (0,0,0,0,1) linked reference
-                    SingleStyledText('3')
         IndexEntry('main() (in module dummy_project_...')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
@@ -1595,50 +2548,99 @@
                   Reference('3')
                        > (0,0,0,0,1) linked reference
                     SingleStyledText('3')
+        IndexEntry('main() (in module dummy_project_...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('main() (in module dummy_project_...')
+              MixedStyledText('main() (in module dummy_project_...')
+                SingleStyledText('main() (in module dummy_project_...')
+                MixedStyledText('7')
+                  Reference('7')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('7')
+        IndexEntry('main() (in module dummy_project_...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('main() (in module dummy_project_...')
+              MixedStyledText('main() (in module dummy_project_...')
+                SingleStyledText('main() (in module dummy_project_...')
+                MixedStyledText('5')
+                  Reference('5')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('5')
         IndexEntry('module')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
             SingleStyledText('module')
-        IndexEntry('dummy_project_main, 3')
+        IndexEntry('dummy_project_data_analysis, 3')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
-            MixedStyledText('dummy_project_main, 3')
-              MixedStyledText('dummy_project_main, 3')
-                SingleStyledText('dummy_project_main, ')
+            MixedStyledText('dummy_project_data_analysis, 3')
+              MixedStyledText('dummy_project_data_analysis, 3')
+                SingleStyledText('dummy_project_data_analysis, ')
                 MixedStyledText('3')
                   Reference('3')
                        > (0,0,0,0,1) linked reference
                     SingleStyledText('3')
-        IndexEntry('dummy_project_utils, 5')
+        IndexEntry('dummy_project_inference, 7')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
-            MixedStyledText('dummy_project_utils, 5')
-              MixedStyledText('dummy_project_utils, 5')
+            MixedStyledText('dummy_project_inference, 7')
+              MixedStyledText('dummy_project_inference, 7')
+                SingleStyledText('dummy_project_inference, ')
+                MixedStyledText('7')
+                  Reference('7')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('7')
+#### ChainedContainer('column2')
+  (continued) StaticGroupedFlowables()
+    (continued) IndexSection()
+         > (0,0,0,1,1) chapter
+      (continued) Index()   index
+           > (0,0,0,0,2) index
+        IndexEntry('dummy_project_predictive_modelin...')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+        IndexEntry('dummy_project_test, 11')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('dummy_project_test, 11')
+              MixedStyledText('dummy_project_test, 11')
+                SingleStyledText('dummy_project_test, ')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
+        IndexEntry('dummy_project_utils, 9')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('dummy_project_utils, 9')
+              MixedStyledText('dummy_project_utils, 9')
                 SingleStyledText('dummy_project_utils, ')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
-        IndexEntry('main, 3')
+                    SingleStyledText('9')
+        IndexEntry('tests, 11')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
-            MixedStyledText('main, 3')
-              MixedStyledText('main, 3')
-                SingleStyledText('main, ')
-                MixedStyledText('3')
-                  Reference('3')
+            MixedStyledText('tests, 11')
+              MixedStyledText('tests, 11')
+                SingleStyledText('tests, ')
+                MixedStyledText('11')
+                  Reference('11')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('3')
-        IndexEntry('utils, 5')
+                    SingleStyledText('11')
+        IndexEntry('utils, 9')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
-            MixedStyledText('utils, 5')
-              MixedStyledText('utils, 5')
+            MixedStyledText('utils, 9')
+              MixedStyledText('utils, 9')
                 SingleStyledText('utils, ')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('9')
         IndexLabel('P')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
@@ -1649,40 +2651,92 @@
             MixedStyledText('plot_barplot() (in module dummy_...')
               MixedStyledText('plot_barplot() (in module dummy_...')
                 SingleStyledText('plot_barplot() (in module dummy_...')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('10')
+                  Reference('10')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('10')
         IndexEntry('plot_scatterplot() (in module du...')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
             MixedStyledText('plot_scatterplot() (in module du...')
               MixedStyledText('plot_scatterplot() (in module du...')
                 SingleStyledText('plot_scatterplot() (in module du...')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('10')
+                  Reference('10')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('10')
         IndexLabel('S')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
             SingleStyledText('S')
+        IndexEntry('save_model() (in module dummy_pr...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('save_model() (in module dummy_pr...')
+              MixedStyledText('save_model() (in module dummy_pr...')
+                SingleStyledText('save_model() (in module dummy_pr...')
+                MixedStyledText('10')
+                  Reference('10')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('10')
         IndexEntry('set_up_logger() (in module dummy...')
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
             MixedStyledText('set_up_logger() (in module dummy...')
               MixedStyledText('set_up_logger() (in module dummy...')
                 SingleStyledText('set_up_logger() (in module dummy...')
-                MixedStyledText('6')
-                  Reference('6')
+                MixedStyledText('10')
+                  Reference('10')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('6')
-#### ChainedContainer('column2')
-  (continued) StaticGroupedFlowables()
-    (continued) IndexSection()
-         > (0,0,0,1,1) chapter
-      (continued) Index()   index
-           > (0,0,0,0,2) index
+                    SingleStyledText('10')
+        IndexLabel('T')
+             > (0,0,0,0,2) index section label
+               (0,0,0,0,1) body
+            SingleStyledText('T')
+        IndexEntry('test_load_data() (dummy_project_...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('test_load_data() (dummy_project_...')
+              MixedStyledText('test_load_data() (dummy_project_...')
+                SingleStyledText('test_load_data() (dummy_project_...')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
+        IndexEntry('test_load_data_empty() (dummy_pr...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('test_load_data_empty() (dummy_pr...')
+              MixedStyledText('test_load_data_empty() (dummy_pr...')
+                SingleStyledText('test_load_data_empty() (dummy_pr...')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
+        IndexEntry('TestFunction (class in dummy_pro...')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('TestFunction (class in dummy_pro...')
+              MixedStyledText('TestFunction (class in dummy_pro...')
+                SingleStyledText('TestFunction (class in dummy_pro...')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
+        IndexEntry('tests')
+             > (0,0,0,1,2) level 1 index entry
+               (0,0,0,0,1) body
+            SingleStyledText('tests')
+        IndexEntry('module, 11')
+             > (0,0,0,1,2) level 2 index entry
+               (0,0,0,0,1) body
+            MixedStyledText('module, 11')
+              MixedStyledText('module, 11')
+                SingleStyledText('module, ')
+                MixedStyledText('11')
+                  Reference('11')
+                       > (0,0,0,0,1) linked reference
+                    SingleStyledText('11')
         IndexLabel('U')
              > (0,0,0,0,2) index section label
                (0,0,0,0,1) body
@@ -1691,23 +2745,23 @@
              > (0,0,0,1,2) level 1 index entry
                (0,0,0,0,1) body
             SingleStyledText('utils')
-        IndexEntry('module, 5')
+        IndexEntry('module, 9')
              > (0,0,0,1,2) level 2 index entry
                (0,0,0,0,1) body
-            MixedStyledText('module, 5')
-              MixedStyledText('module, 5')
+            MixedStyledText('module, 9')
+              MixedStyledText('module, 9')
                 SingleStyledText('module, ')
-                MixedStyledText('5')
-                  Reference('5')
+                MixedStyledText('9')
+                  Reference('9')
                        > (0,0,0,0,1) linked reference
-                    SingleStyledText('5')
+                    SingleStyledText('9')
 #### DownExpandingContainer('footer')
   StaticGroupedFlowables()
-    Footer('		9')
+    Footer('		15')
          > (0,0,0,0,2) footer
-        MixedStyledText('		9')
-          MixedStyledText('		9')
+        MixedStyledText('		15')
+          MixedStyledText('		15')
             Tab('	')
             Tab('	')
-            Field('9')
-              SingleStyledText('9')
+            Field('15')
+              SingleStyledText('15')
