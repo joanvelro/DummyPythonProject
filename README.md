@@ -1,8 +1,4 @@
-# Dummy project - Crimes 
-## Predictive modelling
-
-* Detect the relationship between the crimes and the different features and characteristics availables
-
+# Dummy Project
 
 ```
 ├── docs                    # auto-documentation (latex, html, pdf)
@@ -54,6 +50,84 @@ Module
 ===================
 .. automodule:: src
    :members:
+
+
+utils
+===================
+.. automodule:: src.utils
+   :members:
+
+main
+===================
+.. automodule:: src.main
+   :members:
+
+
+Documentation for testing
+**************************
+.. toctree::
+   :maxdepth: 2
+   :caption: Test Contents:
+
+Test
+===================
+.. automodule:: test.test
+   :members:
+
+```
+
+* where automodule correspond with the name of the python file 
+```
+"""
+.. module:: src.main
+   :synopsis: define the functionality
+
+.. moduleauthor:: (C) Jose Angel Velasco - 2021
+"""
+```
+
+* Still inside the docs directory run, Create the HTML documentation files.
+```
+make html
+```
+* Create the latex documentation files
+```
+make latex
+```
+* Create the PDF documentation files
+```
+sphinx-build -b rinoh source _build/rinoh
+```
+
+* To build up the python environment using Docker:
+```
+RUN pip install requirements.txt
+```
+## Crimes data
+      
+
+  * INCIDENT_NUMBER: Identify the crime
+  * OFFENSE_CODE: Identify the kind of crime with an integer code
+  * OFFENSE_CODE_GROUP: Identify the kind of crime with a description
+  * REPORTING_AREA: Identify the region in which the crime takes placre
+    , 'OCCURRED_ON_DATE', 'YEAR', 'MONTH', 'DAY_OF_WEEK',
+ 'HOUR', 'UCR_PART', 'Location'
+
+## Approach:
+* Define which crimes are violent (and so more important than others) and which not
+* Binary classification problem to classify new crimes into violent or not
+* First approach with gradient boosted decision trees 
+
+## Offense code groups
+* Manually define wich crimes are violent or not 
+
+| Offense code group   |      Violent      |
+|----------|:-------------:|
+| Fraud|  No | 
+| Investigate Property |    No   | 
+| Property Lost | No |
+
+
 
 * 'Other',no Violent Crime
 * 'Confidence Games'no Violent Crime
@@ -120,49 +194,22 @@ Module
 * 'HUMAN TRAFFICKING - INVOLUNTARY SERVITUDE', - Violent Crime
 * 'Burglary - No Property Taken' - No violent crime
 
-utils
-===================
-.. automodule:: src.utils
-   :members:
 
-main
-===================
-.. automodule:: src.main
-   :members:
+# References
+* [Kaggle Data Set](https://www.kaggle.com/AnalyzeBoston/crimes-in-boston)
+  
+* [Dataset Boston Police](https://data.boston.gov/dataset/crime-incident-reports-august-2015-to-date-source-new-system
+    )
+  
+* [Analyze Boston](https://data.boston.gov/)
 
+* [Ref 1](https://towardsdatascience.com/understanding-the-confusion-matrix-and-how-to-implement-it-in-python-319202e0fe4d
+  )
+  
+* [Ref 2](https://towardsdatascience.com/demand-forecast-boston-crime-data-64a0cff54820)
 
-Documentation for testing
-**************************
-.. toctree::
-   :maxdepth: 2
-   :caption: Test Contents:
+* [Ref 3](https://blog.goodaudience.com/taxi-demand-prediction-new-york-city-5e7b12305475
+  )
+  
 
-Test
-===================
-.. automodule:: test.test
-   :members:
-
-```
-
-* where automodule correspond with the name of the python file 
-```
-"""
-.. module:: src.main
-   :synopsis: define the functionality
-
-.. moduleauthor:: (C) Jose Angel Velasco - 2021
-"""
-```
-
-* Still inside the docs directory run, Create the HTML documentation files.
-```
-make html
-```
-* Create the latex documentation files
-```
-make latex
-```
-* Create the PDF documentation files
-```
-sphinx-build -b rinoh source _build/rinoh
-```
+(C) Hybrid Intelligence Spain by Capgemini Engineering - 2022
